@@ -1,0 +1,7 @@
+{
+    "mplab.clangd.arguments": [
+        "--compile-commands-dir=c:\\Users\\JeeJ\\MPLABXProjects\\_build\\Lab6_interrupt\\default"
+    ],
+    "mplab.clangd.path": "",
+    "C_Cpp.intelliSenseEngine": "disabled"
+}

@@ -1,0 +1,14 @@
+[
+{
+  "directory": "C:/Users/JeeJ/MPLABXProjects/ProjetoF_micro.X/_build/ProjetoF_micro/default",
+  "command": "c:\\PROGRA~1\\MICROC~1\\xc8\\v2.32\\bin\\xc8-cc.exe -mcpu=18F4550 -c -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -mwarn=-3 -Wa,-a -DXPRJ_default=default -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -o CMakeFiles\\ProjetoF_micro_default_compile.dir\\C_\\Users\\JeeJ\\MPLABXProjects\\ProjetoF_micro.X\\main.c.p1 -c C:\\Users\\JeeJ\\MPLABXProjects\\ProjetoF_micro.X\\main.c",
+  "file": "C:\\Users\\JeeJ\\MPLABXProjects\\ProjetoF_micro.X\\main.c",
+  "output": "CMakeFiles\\ProjetoF_micro_default_compile.dir\\C_\\Users\\JeeJ\\MPLABXProjects\\ProjetoF_micro.X\\main.c.p1"
+},
+{
+  "directory": "C:/Users/JeeJ/MPLABXProjects/ProjetoF_micro.X/_build/ProjetoF_micro/default",
+  "command": "c:\\PROGRA~1\\MICROC~1\\xc8\\v2.32\\bin\\xc8-cc.exe -mcpu=18F4550 -c -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -mwarn=-3 -Wa,-a -DXPRJ_default=default -msummary=-psect,-class,+mem,-hex,-file -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto -o CMakeFiles\\ProjetoF_micro_default_compile.dir\\C_\\Users\\JeeJ\\MPLABXProjects\\ProjetoF_micro.X\\nxlcd.c.p1 -c C:\\Users\\JeeJ\\MPLABXProjects\\ProjetoF_micro.X\\nxlcd.c",
+  "file": "C:\\Users\\JeeJ\\MPLABXProjects\\ProjetoF_micro.X\\nxlcd.c",
+  "output": "CMakeFiles\\ProjetoF_micro_default_compile.dir\\C_\\Users\\JeeJ\\MPLABXProjects\\ProjetoF_micro.X\\nxlcd.c.p1"
+}
+]

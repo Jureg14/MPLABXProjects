@@ -1,0 +1,7 @@
+{
+    "mplab.clangd.arguments": [
+        "--compile-commands-dir=c:\\Users\\JeeJ\\MPLABXProjects\\ProjetoF_micro.X\\_build\\ProjetoF_micro\\default"
+    ],
+    "mplab.clangd.path": "",
+    "C_Cpp.intelliSenseEngine": "disabled"
+}

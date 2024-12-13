@@ -1,0 +1,779 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4550 ]
+[d frameptr 4065 ]
+"7 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"7 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"4 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"4 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
+"15 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\flneg.c
+[v ___flneg __flneg `(d  1 e 4 0 ]
+"62 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"43 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+"86 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"7 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"10 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"10 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+"126 C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"238
+[v _displayMenu displayMenu `(v  1 e 1 0 ]
+"368
+[v _readTwoDigitValue readTwoDigitValue `(i  1 e 2 0 ]
+"403
+[v _ISR ISR `IIH(v  1 e 1 0 ]
+"431
+[v _millis millis `(ul  1 e 4 0 ]
+"445
+[v _configureIO configureIO `(v  1 e 1 0 ]
+"457
+[v _configureLCD configureLCD `(v  1 e 1 0 ]
+"471
+[v _configureInterrupt configureInterrupt `(v  1 e 1 0 ]
+"489
+[v _configureTimer configureTimer `(v  1 e 1 0 ]
+"514
+[v _readKey readKey `(uc  1 e 1 0 ]
+"563
+[v _configureADC configureADC `(v  1 e 1 0 ]
+"569
+[v _readAnalog readAnalog `(ui  1 e 2 0 ]
+"593
+[v _tempRead tempRead `(f  1 e 4 0 ]
+"598
+[v _humidade humidade `(f  1 e 4 0 ]
+"603
+[v _gasRead gasRead `(f  1 e 4 0 ]
+"610
+[v _displayStuff displayStuff `(v  1 e 1 0 ]
+"634
+[v _buzzer buzzer `(v  1 e 1 0 ]
+"642
+[v _itoa itoa `(i  1 e 2 0 ]
+"688
+[v _floatToString floatToString `(v  1 e 1 0 ]
+"12 C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\nxlcd.c
+[v _DelayFor18TCY DelayFor18TCY `(v  1 e 1 0 ]
+"17
+[v _DelayPORXLCD DelayPORXLCD `(v  1 e 1 0 ]
+"22
+[v _DelayXLCD DelayXLCD `(v  1 e 1 0 ]
+"41
+[v _OpenXLCD OpenXLCD `(v  1 e 1 0 ]
+"171
+[v _SetDDRamAddr SetDDRamAddr `(v  1 e 1 0 ]
+"227
+[v _BusyXLCD BusyXLCD `(uc  1 e 1 0 ]
+"388
+[v _WriteCmdXLCD WriteCmdXLCD `(v  1 e 1 0 ]
+"449
+[v _WriteDataXLCD WriteDataXLCD `(v  1 e 1 0 ]
+"2454 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\include\proc\pic18f4550.h
+[v _PORTB PORTB `VEuc  1 e 1 @3969 ]
+[s S179 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"2606
+[s S188 . 1 `uc 1 T1OSO 1 0 :1:0 
+`uc 1 T1OSI 1 0 :1:1 
+`uc 1 CCP1 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 TX 1 0 :1:6 
+`uc 1 RX 1 0 :1:7 
+]
+[s S195 . 1 `uc 1 T13CKI 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 P1A 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 CK 1 0 :1:6 
+`uc 1 DT 1 0 :1:7 
+]
+[s S202 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 CCP2 1 0 :1:1 
+`uc 1 PA1 1 0 :1:2 
+]
+[s S206 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 PA2 1 0 :1:1 
+]
+[u S209 . 1 `S179 1 . 1 0 `S188 1 . 1 0 `S195 1 . 1 0 `S202 1 . 1 0 `S206 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES209  1 e 1 @3970 ]
+"2706
+[v _PORTD PORTD `VEuc  1 e 1 @3971 ]
+[s S53 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+"2737
+[s S141 . 1 `uc 1 SPP0 1 0 :1:0 
+`uc 1 SPP1 1 0 :1:1 
+`uc 1 SPP2 1 0 :1:2 
+`uc 1 SPP3 1 0 :1:3 
+`uc 1 SPP4 1 0 :1:4 
+`uc 1 SPP5 1 0 :1:5 
+`uc 1 SPP6 1 0 :1:6 
+`uc 1 SPP7 1 0 :1:7 
+]
+[s S150 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 SS2 1 0 :1:7 
+]
+[u S153 . 1 `S53 1 . 1 0 `S141 1 . 1 0 `S150 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES153  1 e 1 @3971 ]
+"3074
+[v _LATB LATB `VEuc  1 e 1 @3978 ]
+[s S828 . 1 `uc 1 LATE0 1 0 :1:0 
+`uc 1 LATE1 1 0 :1:1 
+`uc 1 LATE2 1 0 :1:2 
+]
+"3393
+[s S832 . 1 `uc 1 LE0 1 0 :1:0 
+`uc 1 LE1 1 0 :1:1 
+`uc 1 LE2 1 0 :1:2 
+]
+[u S836 . 1 `S828 1 . 1 0 `S832 1 . 1 0 ]
+[v _LATEbits LATEbits `VES836  1 e 1 @3981 ]
+[s S315 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+]
+"3458
+[s S323 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+]
+[u S331 . 1 `S315 1 . 1 0 `S323 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES331  1 e 1 @3986 ]
+"3626
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
+[s S351 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"3876
+[s S358 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+[u S365 . 1 `S351 1 . 1 0 `S358 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES365  1 e 1 @3988 ]
+"4002
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+[s S44 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"4034
+[u S62 . 1 `S44 1 . 1 0 `S53 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES62  1 e 1 @3989 ]
+[s S808 . 1 `uc 1 TRISE0 1 0 :1:0 
+`uc 1 TRISE1 1 0 :1:1 
+`uc 1 TRISE2 1 0 :1:2 
+]
+"4246
+[s S812 . 1 `uc 1 RE0 1 0 :1:0 
+`uc 1 RE1 1 0 :1:1 
+`uc 1 RE2 1 0 :1:2 
+]
+[u S816 . 1 `S808 1 . 1 0 `S812 1 . 1 0 ]
+[v _TRISEbits TRISEbits `VES816  1 e 1 @3990 ]
+"6511
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @4032 ]
+"6582
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+[s S516 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_NOT_DONE 1 0 :1:1 
+]
+"6711
+[s S519 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :4:2 
+]
+[s S523 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+]
+[s S530 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 DONE 1 0 :1:1 
+]
+[s S533 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[s S536 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_DONE 1 0 :1:1 
+]
+[s S539 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S542 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GODONE 1 0 :1:1 
+]
+[u S545 . 1 `S516 1 . 1 0 `S519 1 . 1 0 `S523 1 . 1 0 `S530 1 . 1 0 `S533 1 . 1 0 `S536 1 . 1 0 `S539 1 . 1 0 `S542 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES545  1 e 1 @4034 ]
+"6793
+[v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
+"6800
+[v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
+[s S388 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+]
+"7589
+[s S390 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_POR 1 0 :1:1 
+]
+[s S393 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_PD 1 0 :1:2 
+]
+[s S396 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_TO 1 0 :1:3 
+]
+[s S399 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 NOT_RI 1 0 :1:4 
+]
+[s S402 . 1 `uc 1 nBOR 1 0 :1:0 
+`uc 1 nPOR 1 0 :1:1 
+`uc 1 nPD 1 0 :1:2 
+`uc 1 nTO 1 0 :1:3 
+`uc 1 nRI 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 SBOREN 1 0 :1:6 
+`uc 1 IPEN 1 0 :1:7 
+]
+[s S411 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 NOT_IPEN 1 0 :1:7 
+]
+[s S414 . 1 `uc 1 BOR 1 0 :1:0 
+`uc 1 POR 1 0 :1:1 
+`uc 1 PD 1 0 :1:2 
+`uc 1 TO 1 0 :1:3 
+`uc 1 RI 1 0 :1:4 
+`uc 1 . 1 0 :2:5 
+`uc 1 nIPEN 1 0 :1:7 
+]
+[u S422 . 1 `S388 1 . 1 0 `S390 1 . 1 0 `S393 1 . 1 0 `S396 1 . 1 0 `S399 1 . 1 0 `S402 1 . 1 0 `S411 1 . 1 0 `S414 1 . 1 0 ]
+[v _RCONbits RCONbits `VES422  1 e 1 @4048 ]
+"8070
+[v _T0CON T0CON `VEuc  1 e 1 @4053 ]
+"8147
+[v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
+[s S466 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 NOT_RBPU 1 0 :1:7 
+]
+"8533
+[s S469 . 1 `uc 1 RBIP 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 TMR0IP 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INTEDG2 1 0 :1:4 
+`uc 1 INTEDG1 1 0 :1:5 
+`uc 1 INTEDG0 1 0 :1:6 
+`uc 1 nRBPU 1 0 :1:7 
+]
+[s S478 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IP 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 RBPU 1 0 :1:7 
+]
+[u S483 . 1 `S466 1 . 1 0 `S469 1 . 1 0 `S478 1 . 1 0 ]
+[v _INTCON2bits INTCON2bits `VES483  1 e 1 @4081 ]
+[s S264 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"8615
+[s S273 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S282 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S286 . 1 `S264 1 . 1 0 `S273 1 . 1 0 `S282 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES286  1 e 1 @4082 ]
+"90 C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+[v _keymap keymap `C[4][4]uc  1 e 16 0 ]
+"98
+[v _milliseconds milliseconds `VEul  1 e 4 0 ]
+"99
+[v _keyPressed keyPressed `VEuc  1 e 1 0 ]
+"100
+[v _tak tak `VEi  1 e 2 0 ]
+"101
+[v _Tlim Tlim `i  1 e 2 0 ]
+"102
+[v _Hlim Hlim `i  1 e 2 0 ]
+"103
+[v _Glim Glim `i  1 e 2 0 ]
+[s S506 . 11 `uc 1 lastKey 1 0 `uc 1 currentKey 1 1 `uc 1 keyPressCount 1 2 `ul 1 lastKeyPressTime 4 3 `ul 1 lastRepeatTime 4 7 ]
+"512
+[v _keyState keyState `S506  1 e 11 0 ]
+"126
+[v _main main `(v  1 e 1 0 ]
+{
+"183
+[v main@gasLimit gasLimit `i  1 a 2 80 ]
+"173
+[v main@humLimit humLimit `i  1 a 2 78 ]
+"163
+[v main@tempLimit tempLimit `i  1 a 2 82 ]
+"204
+[v main@currentGas currentGas `f  1 a 4 74 ]
+"203
+[v main@currentHumid currentHumid `f  1 a 4 70 ]
+"202
+[v main@currentTemp currentTemp `f  1 a 4 66 ]
+"144
+[v main@currentTime currentTime `ul  1 a 4 62 ]
+"143
+[v main@pressed_key pressed_key `uc  1 a 1 87 ]
+"140
+[v main@lastDisplayUpdate lastDisplayUpdate `ul  1 a 4 58 ]
+"139
+[v main@menuIndex menuIndex `i  1 a 2 84 ]
+"138
+[v main@lastKey lastKey `uc  1 a 1 86 ]
+"234
+} 0
+"368
+[v _readTwoDigitValue readTwoDigitValue `(i  1 e 2 0 ]
+{
+"369
+[v readTwoDigitValue@input input `[3]uc  1 a 3 44 ]
+"370
+[v readTwoDigitValue@digitCount digitCount `i  1 a 2 47 ]
+"371
+[v readTwoDigitValue@key key `uc  1 a 1 49 ]
+"368
+[v readTwoDigitValue@prompt prompt `*.25uc  1 p 2 40 ]
+"401
+} 0
+"514
+[v _readKey readKey `(uc  1 e 1 0 ]
+{
+"524
+[v readKey@pressedKey pressedKey `uc  1 a 1 39 ]
+"522
+[v readKey@row row `i  1 a 2 33 ]
+"518
+[v readKey@col col `i  1 a 2 31 ]
+"515
+[v readKey@InvCol InvCol `C[4]i  1 a 8 23 ]
+"516
+[v readKey@currentTime currentTime `ul  1 a 4 35 ]
+"514
+[v readKey@F3297 F3297 `C[4]i  1 s 8 F3297 ]
+"560
+} 0
+"238
+[v _displayMenu displayMenu `(v  1 e 1 0 ]
+{
+"239
+[v displayMenu@valueStr valueStr `[10]uc  1 a 10 28 ]
+"256
+[v displayMenu@currentGas currentGas `f  1 a 4 50 ]
+"255
+[v displayMenu@currentHumid currentHumid `f  1 a 4 46 ]
+"254
+[v displayMenu@currentTemp currentTemp `f  1 a 4 42 ]
+"241
+[v displayMenu@currentTime currentTime `ul  1 a 4 38 ]
+"238
+[v displayMenu@menuIndex menuIndex `i  1 p 2 73 ]
+"240
+[v displayMenu@lastUpdateTime lastUpdateTime `ul  1 s 4 lastUpdateTime ]
+"305
+[v displayMenu@errorCycle errorCycle `i  1 s 2 errorCycle ]
+"336
+[v displayMenu@systemCycle systemCycle `i  1 s 2 systemCycle ]
+"366
+} 0
+"593
+[v _tempRead tempRead `(f  1 e 4 0 ]
+{
+"595
+[v tempRead@TempC TempC `f  1 a 4 4 ]
+"594
+[v tempRead@rawAnalog rawAnalog `ui  1 a 2 12 ]
+"597
+} 0
+"431
+[v _millis millis `(ul  1 e 4 0 ]
+{
+"436
+[v millis@ms ms `ul  1 a 4 13 ]
+"442
+} 0
+"642
+[v _itoa itoa `(i  1 e 2 0 ]
+{
+"644
+[v itoa@temp temp `i  1 a 2 23 ]
+[v itoa@count count `i  1 a 2 21 ]
+"642
+[v itoa@value value `i  1 p 2 17 ]
+[v itoa@ptr ptr `*.39uc  1 p 2 19 ]
+"686
+} 0
+"598
+[v _humidade humidade `(f  1 e 4 0 ]
+{
+"600
+[v humidade@Humid Humid `f  1 a 4 4 ]
+"599
+[v humidade@rawAnalog rawAnalog `ui  1 a 2 12 ]
+"602
+} 0
+"603
+[v _gasRead gasRead `(f  1 e 4 0 ]
+{
+"605
+[v gasRead@gas gas `f  1 a 4 4 ]
+"604
+[v gasRead@rawAnalog rawAnalog `ui  1 a 2 12 ]
+"607
+} 0
+"569
+[v _readAnalog readAnalog `(ui  1 e 2 0 ]
+{
+[v readAnalog@pin pin `uc  1 a 1 wreg ]
+"587
+[v readAnalog@result result `ui  1 a 2 13 ]
+"569
+[v readAnalog@pin pin `uc  1 a 1 wreg ]
+[v readAnalog@pin pin `uc  1 a 1 15 ]
+"590
+} 0
+"11 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 67 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 60 ]
+"20
+[v ___fldiv@new_exp new_exp `s  1 a 2 65 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 72 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 71 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 64 ]
+"11
+[v ___fldiv@b b `d  1 p 4 48 ]
+[v ___fldiv@a a `d  1 p 4 52 ]
+"185
+} 0
+"688 C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+[v _floatToString floatToString `(v  1 e 1 0 ]
+{
+"720
+[v floatToString@digit digit `i  1 a 2 16 ]
+"718
+[v floatToString@i_802 i `i  1 a 2 12 ]
+"709
+[v floatToString@i i `i  1 a 2 20 ]
+"701
+[v floatToString@intStr intStr `[12]uc  1 a 12 0 ]
+"702
+[v floatToString@index index `i  1 a 2 22 ]
+"700
+[v floatToString@temp temp `i  1 a 2 18 ]
+"696
+[v floatToString@intPart intPart `i  1 a 2 14 ]
+"688
+[v floatToString@value value `f  1 p 4 48 ]
+[v floatToString@buffer buffer `*.39uc  1 p 2 52 ]
+[v floatToString@precision precision `i  1 p 2 54 ]
+"727
+} 0
+"10 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 19 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 18 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 9 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 17 ]
+"44
+} 0
+"43 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 18 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 17 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 9 ]
+"70
+} 0
+"245 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\sprcadd.c
+[v ___flsub __flsub `(d  1 e 4 0 ]
+{
+[v ___flsub@b b `d  1 p 4 25 ]
+[v ___flsub@a a `d  1 p 4 29 ]
+"250
+} 0
+"10
+[v ___fladd __fladd `(d  1 e 4 0 ]
+{
+"17
+[v ___fladd@grs grs `uc  1 a 1 24 ]
+"15
+[v ___fladd@bexp bexp `uc  1 a 1 23 ]
+"16
+[v ___fladd@aexp aexp `uc  1 a 1 22 ]
+"13
+[v ___fladd@signs signs `uc  1 a 1 21 ]
+"10
+[v ___fladd@b b `d  1 p 4 9 ]
+[v ___fladd@a a `d  1 p 4 13 ]
+"237
+} 0
+"15 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\flneg.c
+[v ___flneg __flneg `(d  1 e 4 0 ]
+{
+[v ___flneg@f1 f1 `d  1 p 4 9 ]
+"20
+} 0
+"8 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S1191 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S1196 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1199 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1191 1 fAsBytes 4 0 `S1196 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1199  1 a 4 42 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 37 ]
+[s S1267 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S1270 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1267 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1270  1 a 2 46 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 41 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 36 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 35 ]
+"8
+[v ___flmul@b b `d  1 p 4 23 ]
+[v ___flmul@a a `d  1 p 4 27 ]
+"205
+} 0
+"7 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 14 ]
+[v ___awmod@counter counter `uc  1 a 1 13 ]
+"7
+[v ___awmod@dividend dividend `i  1 p 2 9 ]
+[v ___awmod@divisor divisor `i  1 p 2 11 ]
+"34
+} 0
+"7 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+{
+"10
+[v ___awdiv@quotient quotient `i  1 a 2 15 ]
+"11
+[v ___awdiv@sign sign `uc  1 a 1 14 ]
+[v ___awdiv@counter counter `uc  1 a 1 13 ]
+"7
+[v ___awdiv@dividend dividend `i  1 p 2 9 ]
+[v ___awdiv@divisor divisor `i  1 p 2 11 ]
+"41
+} 0
+"610 C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+[v _displayStuff displayStuff `(v  1 e 1 0 ]
+{
+"612
+[v displayStuff@LCDWritePosition LCDWritePosition `i  1 a 2 16 ]
+"610
+[v displayStuff@row row `i  1 p 2 10 ]
+[v displayStuff@column column `i  1 p 2 12 ]
+[v displayStuff@stuff stuff `*.35uc  1 p 2 14 ]
+"621
+} 0
+"449 C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\nxlcd.c
+[v _WriteDataXLCD WriteDataXLCD `(v  1 e 1 0 ]
+{
+[v WriteDataXLCD@data data `uc  1 a 1 wreg ]
+[v WriteDataXLCD@data data `uc  1 a 1 wreg ]
+"464
+[v WriteDataXLCD@data data `uc  1 a 1 9 ]
+"496
+} 0
+"4 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
+{
+[v ___flge@ff1 ff1 `d  1 p 4 23 ]
+[v ___flge@ff2 ff2 `d  1 p 4 27 ]
+"19
+} 0
+"489 C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+[v _configureTimer configureTimer `(v  1 e 1 0 ]
+{
+"499
+} 0
+"457
+[v _configureLCD configureLCD `(v  1 e 1 0 ]
+{
+"468
+} 0
+"41 C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\nxlcd.c
+[v _OpenXLCD OpenXLCD `(v  1 e 1 0 ]
+{
+[v OpenXLCD@lcdtype lcdtype `uc  1 a 1 wreg ]
+[v OpenXLCD@lcdtype lcdtype `uc  1 a 1 wreg ]
+"50
+[v OpenXLCD@lcdtype lcdtype `uc  1 a 1 10 ]
+"101
+} 0
+"388
+[v _WriteCmdXLCD WriteCmdXLCD `(v  1 e 1 0 ]
+{
+[v WriteCmdXLCD@cmd cmd `uc  1 a 1 wreg ]
+[v WriteCmdXLCD@cmd cmd `uc  1 a 1 wreg ]
+"403
+[v WriteCmdXLCD@cmd cmd `uc  1 a 1 9 ]
+"435
+} 0
+"171
+[v _SetDDRamAddr SetDDRamAddr `(v  1 e 1 0 ]
+{
+[v SetDDRamAddr@DDaddr DDaddr `uc  1 a 1 wreg ]
+[v SetDDRamAddr@DDaddr DDaddr `uc  1 a 1 wreg ]
+"186
+[v SetDDRamAddr@DDaddr DDaddr `uc  1 a 1 9 ]
+"218
+} 0
+"22
+[v _DelayXLCD DelayXLCD `(v  1 e 1 0 ]
+{
+"25
+} 0
+"17
+[v _DelayPORXLCD DelayPORXLCD `(v  1 e 1 0 ]
+{
+"20
+} 0
+"227
+[v _BusyXLCD BusyXLCD `(uc  1 e 1 0 ]
+{
+"273
+} 0
+"12
+[v _DelayFor18TCY DelayFor18TCY `(v  1 e 1 0 ]
+{
+"15
+} 0
+"471 C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+[v _configureInterrupt configureInterrupt `(v  1 e 1 0 ]
+{
+"486
+} 0
+"445
+[v _configureIO configureIO `(v  1 e 1 0 ]
+{
+"454
+} 0
+"563
+[v _configureADC configureADC `(v  1 e 1 0 ]
+{
+"567
+} 0
+"634
+[v _buzzer buzzer `(v  1 e 1 0 ]
+{
+[v buzzer@buzzerStatus buzzerStatus `i  1 p 2 9 ]
+"640
+} 0
+"403
+[v _ISR ISR `IIH(v  1 e 1 0 ]
+{
+"428
+} 0
+"7 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+{
+"10
+[v ___llmod@counter counter `uc  1 a 1 8 ]
+"7
+[v ___llmod@dividend dividend `ul  1 p 4 0 ]
+[v ___llmod@divisor divisor `ul  1 p 4 4 ]
+"25
+} 0

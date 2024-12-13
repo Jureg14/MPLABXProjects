@@ -1,0 +1,4 @@
+C:/Users/JeeJ/MPLABXProjects/_build/ProjetoF_micro/default/CMakeFiles/ProjetoF_micro_default_compile.dir
+C:/Users/JeeJ/MPLABXProjects/_build/ProjetoF_micro/default/CMakeFiles/ProjetoF_micro_default_default.elf.dir
+C:/Users/JeeJ/MPLABXProjects/_build/ProjetoF_micro/default/CMakeFiles/edit_cache.dir
+C:/Users/JeeJ/MPLABXProjects/_build/ProjetoF_micro/default/CMakeFiles/rebuild_cache.dir
