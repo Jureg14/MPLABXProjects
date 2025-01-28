@@ -1068,11 +1068,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 167:                 _delay((unsigned long)((10)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
 "168
-[; ;main.c: 168:             }else if (tempLimit = -1){menuIndex = 0;displayMenu(menuIndex);}
+[; ;main.c: 168:             }else if (tempLimit == -1){menuIndex = 0;displayMenu(menuIndex);}
 }
 [e $U 376  ]
 [e :U 375 ]
-[e $ ! != = _tempLimit -U -> 1 `i -> 0 `i 377  ]
+[e $ ! == _tempLimit -U -> 1 `i 377  ]
 {
 [e = _menuIndex -> 0 `i ]
 [e ( _displayMenu (1 _menuIndex ]

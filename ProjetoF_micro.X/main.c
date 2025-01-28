@@ -86,6 +86,7 @@
 #define DEBOUNCE_DELAY 50  // Debounce time in milliseconds
 #define REPEAT_DELAY 500   // Delay before key repeat starts
 #define REPEAT_RATE 100    // Interval between key repeats
+#define KEY_WAIT_PERIOD 300  // Wait period after a key press in milliseconds
 
 const char keymap[ROWS][COLS] = {
     {'1', '2', '3', 'A'},
@@ -513,6 +514,9 @@ KeyState keyState = {0};
 
 char readKey() {
     const int InvCol[COLS] = {3, 2, 1, 0};
+    static unsigned long lastDebounceTime = 0;
+    static unsigned long lastKeyPressTime = 0;
+    static char lastStableKey = 0;
     unsigned long currentTime = millis(); 
     
     for (int col = 0; col < COLS; col++) {
@@ -523,29 +527,42 @@ char readKey() {
             if (!(PORTB & (1 << (row + 4)))) { // Key pressed
                 char pressedKey = keymap[row][InvCol[col]];
                 
-                // First key press or new key
-                if (pressedKey != keyState.lastKey) {
-                    keyState.currentKey = pressedKey;
-                    keyState.lastKey = pressedKey;
-                    keyState.keyPressCount = 0;
-                    keyState.lastKeyPressTime = currentTime;
-                    return pressedKey;
+                // Check if the key state is stable
+                if (pressedKey != lastStableKey) {
+                    lastDebounceTime = currentTime;
+                    lastStableKey = pressedKey;
                 }
                 
-                // Handle key repeat
-                if (keyState.keyPressCount == 0 && 
-                    (currentTime - keyState.lastKeyPressTime) > REPEAT_DELAY) {
-                    // Start key repeat
-                    keyState.keyPressCount++;
-                    keyState.lastRepeatTime = currentTime;
-                    return pressedKey;
-                }
-                
-                // Continue key repeat at specified rate
-                if (keyState.keyPressCount > 0 && 
-                    (currentTime - keyState.lastRepeatTime) > REPEAT_RATE) {
-                    keyState.lastRepeatTime = currentTime;
-                    return pressedKey;
+                if ((currentTime - lastDebounceTime) > DEBOUNCE_DELAY) {
+                    // Check if enough time has passed since the last key press
+                    if ((currentTime - lastKeyPressTime) > KEY_WAIT_PERIOD) {
+                        lastKeyPressTime = currentTime;
+                        
+                        // First key press or new key
+                        if (pressedKey != keyState.lastKey) {
+                            keyState.currentKey = pressedKey;
+                            keyState.lastKey = pressedKey;
+                            keyState.keyPressCount = 0;
+                            keyState.lastKeyPressTime = currentTime;
+                            return pressedKey;
+                        }
+                        
+                        // Handle key repeat
+                        if (keyState.keyPressCount == 0 && 
+                            (currentTime - keyState.lastKeyPressTime) > REPEAT_DELAY) {
+                            // Start key repeat
+                            keyState.keyPressCount++;
+                            keyState.lastRepeatTime = currentTime;
+                            return pressedKey;
+                        }
+                        
+                        // Continue key repeat at specified rate
+                        if (keyState.keyPressCount > 0 && 
+                            (currentTime - keyState.lastRepeatTime) > REPEAT_RATE) {
+                            keyState.lastRepeatTime = currentTime;
+                            return pressedKey;
+                        }
+                    }
                 }
                 
                 return 0;  // No new key event
@@ -556,9 +573,9 @@ char readKey() {
     // Reset state when no key is pressed
     keyState.lastKey = 0;
     keyState.keyPressCount = 0;
+    lastStableKey = 0;
     return 0;
 }
-
 
 void configureADC() {
     ADCON1 = 0b00001011; // Configure AN0 to AN3 as analog, others as digital

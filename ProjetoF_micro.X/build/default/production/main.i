@@ -5909,7 +5909,7 @@ void main(void) {
                 Tlim = tempLimit;
                 displayStuff(1, 0, "Temp Salva!");
                 _delay((unsigned long)((10)*(20000000/4000.0)));
-            }else if (tempLimit = -1){menuIndex = 0;displayMenu(menuIndex);}
+            }else if (tempLimit == -1){menuIndex = 0;displayMenu(menuIndex);}
         }
 
 
