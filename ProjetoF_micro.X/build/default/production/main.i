@@ -5830,7 +5830,7 @@ void putsXLCD( char *);
 
 void putrsXLCD(const char *);
 # 80 "main.c" 2
-# 90 "main.c"
+# 91 "main.c"
 const char keymap[4][4] = {
     {'1', '2', '3', 'A'},
     {'4', '5', '6', 'B'},
@@ -6159,7 +6159,7 @@ void __attribute__((picinterrupt(("")))) ISR() {
         }
         INTCONbits.TMR0IF = 0;
     }
-# 428 "main.c"
+# 429 "main.c"
 }
 
 
@@ -6248,6 +6248,9 @@ KeyState keyState = {0};
 
 char readKey() {
     const int InvCol[4] = {3, 2, 1, 0};
+    static unsigned long lastDebounceTime = 0;
+    static unsigned long lastKeyPressTime = 0;
+    static char lastStableKey = 0;
     unsigned long currentTime = millis();
 
     for (int col = 0; col < 4; col++) {
@@ -6259,28 +6262,41 @@ char readKey() {
                 char pressedKey = keymap[row][InvCol[col]];
 
 
-                if (pressedKey != keyState.lastKey) {
-                    keyState.currentKey = pressedKey;
-                    keyState.lastKey = pressedKey;
-                    keyState.keyPressCount = 0;
-                    keyState.lastKeyPressTime = currentTime;
-                    return pressedKey;
+                if (pressedKey != lastStableKey) {
+                    lastDebounceTime = currentTime;
+                    lastStableKey = pressedKey;
                 }
 
+                if ((currentTime - lastDebounceTime) > 50) {
 
-                if (keyState.keyPressCount == 0 &&
-                    (currentTime - keyState.lastKeyPressTime) > 500) {
-
-                    keyState.keyPressCount++;
-                    keyState.lastRepeatTime = currentTime;
-                    return pressedKey;
-                }
+                    if ((currentTime - lastKeyPressTime) > 300) {
+                        lastKeyPressTime = currentTime;
 
 
-                if (keyState.keyPressCount > 0 &&
-                    (currentTime - keyState.lastRepeatTime) > 100) {
-                    keyState.lastRepeatTime = currentTime;
-                    return pressedKey;
+                        if (pressedKey != keyState.lastKey) {
+                            keyState.currentKey = pressedKey;
+                            keyState.lastKey = pressedKey;
+                            keyState.keyPressCount = 0;
+                            keyState.lastKeyPressTime = currentTime;
+                            return pressedKey;
+                        }
+
+
+                        if (keyState.keyPressCount == 0 &&
+                            (currentTime - keyState.lastKeyPressTime) > 500) {
+
+                            keyState.keyPressCount++;
+                            keyState.lastRepeatTime = currentTime;
+                            return pressedKey;
+                        }
+
+
+                        if (keyState.keyPressCount > 0 &&
+                            (currentTime - keyState.lastRepeatTime) > 100) {
+                            keyState.lastRepeatTime = currentTime;
+                            return pressedKey;
+                        }
+                    }
                 }
 
                 return 0;
@@ -6291,9 +6307,9 @@ char readKey() {
 
     keyState.lastKey = 0;
     keyState.keyPressCount = 0;
+    lastStableKey = 0;
     return 0;
 }
-
 
 void configureADC() {
     ADCON1 = 0b00001011;
