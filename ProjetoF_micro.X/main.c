@@ -77,6 +77,8 @@
 // Use project enums instead of #define for ON and OFF.
 
 #include <xc.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include "nxlcd.h"
 
 #define _XTAL_FREQ 20000000    // Frequ�ncia do cristal (20MHz)
@@ -84,8 +86,6 @@
 #define ROWS 4
 #define COLS 4
 #define DEBOUNCE_DELAY 50  // Debounce time in milliseconds
-#define REPEAT_DELAY 500   // Delay before key repeat starts
-#define REPEAT_RATE 100    // Interval between key repeats
 #define KEY_WAIT_PERIOD 300  // Wait period after a key press in milliseconds
 
 const char keymap[ROWS][COLS] = {
@@ -538,30 +538,10 @@ char readKey() {
                     if ((currentTime - lastKeyPressTime) > KEY_WAIT_PERIOD) {
                         lastKeyPressTime = currentTime;
                         
-                        // First key press or new key
-                        if (pressedKey != keyState.lastKey) {
-                            keyState.currentKey = pressedKey;
-                            keyState.lastKey = pressedKey;
-                            keyState.keyPressCount = 0;
-                            keyState.lastKeyPressTime = currentTime;
-                            return pressedKey;
-                        }
-                        
-                        // Handle key repeat
-                        if (keyState.keyPressCount == 0 && 
-                            (currentTime - keyState.lastKeyPressTime) > REPEAT_DELAY) {
-                            // Start key repeat
-                            keyState.keyPressCount++;
-                            keyState.lastRepeatTime = currentTime;
-                            return pressedKey;
-                        }
-                        
-                        // Continue key repeat at specified rate
-                        if (keyState.keyPressCount > 0 && 
-                            (currentTime - keyState.lastRepeatTime) > REPEAT_RATE) {
-                            keyState.lastRepeatTime = currentTime;
-                            return pressedKey;
-                        }
+                        // Register the key press
+                        keyState.currentKey = pressedKey;
+                        keyState.lastKey = pressedKey;
+                        return pressedKey;
                     }
                 }
                 
@@ -572,7 +552,6 @@ char readKey() {
     
     // Reset state when no key is pressed
     keyState.lastKey = 0;
-    keyState.keyPressCount = 0;
     lastStableKey = 0;
     return 0;
 }

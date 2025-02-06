@@ -41,43 +41,43 @@
 [v ___omul __omul `(uo  1 e 8 0 ]
 "10 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-"126 C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+"129 C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"238
+"241
 [v _displayMenu displayMenu `(v  1 e 1 0 ]
-"368
+"371
 [v _readTwoDigitValue readTwoDigitValue `(i  1 e 2 0 ]
-"403
+"406
 [v _ISR ISR `IIH(v  1 e 1 0 ]
-"431
+"434
 [v _millis millis `(ul  1 e 4 0 ]
-"445
+"448
 [v _configureIO configureIO `(v  1 e 1 0 ]
-"457
+"460
 [v _configureLCD configureLCD `(v  1 e 1 0 ]
-"471
+"474
 [v _configureInterrupt configureInterrupt `(v  1 e 1 0 ]
-"489
+"492
 [v _configureTimer configureTimer `(v  1 e 1 0 ]
-"514
+"517
 [v _readKey readKey `(uc  1 e 1 0 ]
-"563
+"582
 [v _configureADC configureADC `(v  1 e 1 0 ]
-"569
+"588
 [v _readAnalog readAnalog `(ui  1 e 2 0 ]
-"593
+"612
 [v _tempRead tempRead `(f  1 e 4 0 ]
-"598
+"617
 [v _humidade humidade `(f  1 e 4 0 ]
-"603
+"622
 [v _gasRead gasRead `(f  1 e 4 0 ]
-"610
+"629
 [v _displayStuff displayStuff `(v  1 e 1 0 ]
-"634
+"653
 [v _buzzer buzzer `(v  1 e 1 0 ]
-"642
+"661
 [v _itoa itoa `(i  1 e 2 0 ]
-"688
+"707
 [v _floatToString floatToString `(v  1 e 1 0 ]
 "12 C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\nxlcd.c
 [v _DelayFor18TCY DelayFor18TCY `(v  1 e 1 0 ]
@@ -158,17 +158,17 @@
 [v _PORTDbits PORTDbits `VES153  1 e 1 @3971 ]
 "3074
 [v _LATB LATB `VEuc  1 e 1 @3978 ]
-[s S828 . 1 `uc 1 LATE0 1 0 :1:0 
+[s S831 . 1 `uc 1 LATE0 1 0 :1:0 
 `uc 1 LATE1 1 0 :1:1 
 `uc 1 LATE2 1 0 :1:2 
 ]
 "3393
-[s S832 . 1 `uc 1 LE0 1 0 :1:0 
+[s S835 . 1 `uc 1 LE0 1 0 :1:0 
 `uc 1 LE1 1 0 :1:1 
 `uc 1 LE2 1 0 :1:2 
 ]
-[u S836 . 1 `S828 1 . 1 0 `S832 1 . 1 0 ]
-[v _LATEbits LATEbits `VES836  1 e 1 @3981 ]
+[u S839 . 1 `S831 1 . 1 0 `S835 1 . 1 0 ]
+[v _LATEbits LATEbits `VES839  1 e 1 @3981 ]
 [s S315 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
@@ -221,17 +221,17 @@
 "4034
 [u S62 . 1 `S44 1 . 1 0 `S53 1 . 1 0 ]
 [v _TRISDbits TRISDbits `VES62  1 e 1 @3989 ]
-[s S808 . 1 `uc 1 TRISE0 1 0 :1:0 
+[s S811 . 1 `uc 1 TRISE0 1 0 :1:0 
 `uc 1 TRISE1 1 0 :1:1 
 `uc 1 TRISE2 1 0 :1:2 
 ]
 "4246
-[s S812 . 1 `uc 1 RE0 1 0 :1:0 
+[s S815 . 1 `uc 1 RE0 1 0 :1:0 
 `uc 1 RE1 1 0 :1:1 
 `uc 1 RE2 1 0 :1:2 
 ]
-[u S816 . 1 `S808 1 . 1 0 `S812 1 . 1 0 ]
-[v _TRISEbits TRISEbits `VES816  1 e 1 @3990 ]
+[u S819 . 1 `S811 1 . 1 0 `S815 1 . 1 0 ]
+[v _TRISEbits TRISEbits `VES819  1 e 1 @3990 ]
 "6511
 [v _ADCON2 ADCON2 `VEuc  1 e 1 @4032 ]
 "6582
@@ -358,158 +358,164 @@
 ]
 [u S286 . 1 `S264 1 . 1 0 `S273 1 . 1 0 `S282 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES286  1 e 1 @4082 ]
-"90 C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+"93 C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
 [v _keymap keymap `C[4][4]uc  1 e 16 0 ]
-"98
-[v _milliseconds milliseconds `VEul  1 e 4 0 ]
-"99
-[v _keyPressed keyPressed `VEuc  1 e 1 0 ]
-"100
-[v _tak tak `VEi  1 e 2 0 ]
 "101
-[v _Tlim Tlim `i  1 e 2 0 ]
+[v _milliseconds milliseconds `VEul  1 e 4 0 ]
 "102
-[v _Hlim Hlim `i  1 e 2 0 ]
+[v _keyPressed keyPressed `VEuc  1 e 1 0 ]
 "103
+[v _tak tak `VEi  1 e 2 0 ]
+"104
+[v _Tlim Tlim `i  1 e 2 0 ]
+"105
+[v _Hlim Hlim `i  1 e 2 0 ]
+"106
 [v _Glim Glim `i  1 e 2 0 ]
 [s S506 . 11 `uc 1 lastKey 1 0 `uc 1 currentKey 1 1 `uc 1 keyPressCount 1 2 `ul 1 lastKeyPressTime 4 3 `ul 1 lastRepeatTime 4 7 ]
-"512
+"515
 [v _keyState keyState `S506  1 e 11 0 ]
-"126
+"129
 [v _main main `(v  1 e 1 0 ]
 {
-"183
+"186
 [v main@gasLimit gasLimit `i  1 a 2 80 ]
-"173
+"176
 [v main@humLimit humLimit `i  1 a 2 78 ]
-"163
+"166
 [v main@tempLimit tempLimit `i  1 a 2 82 ]
-"204
+"207
 [v main@currentGas currentGas `f  1 a 4 74 ]
-"203
+"206
 [v main@currentHumid currentHumid `f  1 a 4 70 ]
-"202
+"205
 [v main@currentTemp currentTemp `f  1 a 4 66 ]
-"144
+"147
 [v main@currentTime currentTime `ul  1 a 4 62 ]
-"143
+"146
 [v main@pressed_key pressed_key `uc  1 a 1 87 ]
-"140
+"143
 [v main@lastDisplayUpdate lastDisplayUpdate `ul  1 a 4 58 ]
-"139
+"142
 [v main@menuIndex menuIndex `i  1 a 2 84 ]
-"138
+"141
 [v main@lastKey lastKey `uc  1 a 1 86 ]
-"234
+"237
 } 0
-"368
+"371
 [v _readTwoDigitValue readTwoDigitValue `(i  1 e 2 0 ]
 {
-"369
+"372
 [v readTwoDigitValue@input input `[3]uc  1 a 3 44 ]
-"370
+"373
 [v readTwoDigitValue@digitCount digitCount `i  1 a 2 47 ]
-"371
+"374
 [v readTwoDigitValue@key key `uc  1 a 1 49 ]
-"368
+"371
 [v readTwoDigitValue@prompt prompt `*.25uc  1 p 2 40 ]
-"401
+"404
 } 0
-"514
+"517
 [v _readKey readKey `(uc  1 e 1 0 ]
 {
-"524
-[v readKey@pressedKey pressedKey `uc  1 a 1 39 ]
-"522
+"530
+[v readKey@pressedKey pressedKey `uc  1 a 1 35 ]
+"528
 [v readKey@row row `i  1 a 2 33 ]
-"518
+"524
 [v readKey@col col `i  1 a 2 31 ]
-"515
+"518
 [v readKey@InvCol InvCol `C[4]i  1 a 8 23 ]
-"516
-[v readKey@currentTime currentTime `ul  1 a 4 35 ]
-"514
-[v readKey@F3297 F3297 `C[4]i  1 s 8 F3297 ]
-"560
+"522
+[v readKey@currentTime currentTime `ul  1 a 4 36 ]
+"517
+[v readKey@F3615 F3615 `C[4]i  1 s 8 F3615 ]
+"519
+[v readKey@lastDebounceTime lastDebounceTime `ul  1 s 4 lastDebounceTime ]
+"520
+[v readKey@lastKeyPressTime lastKeyPressTime `ul  1 s 4 lastKeyPressTime ]
+"521
+[v readKey@lastStableKey lastStableKey `uc  1 s 1 lastStableKey ]
+"580
 } 0
-"238
+"241
 [v _displayMenu displayMenu `(v  1 e 1 0 ]
 {
-"239
+"242
 [v displayMenu@valueStr valueStr `[10]uc  1 a 10 28 ]
-"256
+"259
 [v displayMenu@currentGas currentGas `f  1 a 4 50 ]
-"255
+"258
 [v displayMenu@currentHumid currentHumid `f  1 a 4 46 ]
-"254
+"257
 [v displayMenu@currentTemp currentTemp `f  1 a 4 42 ]
-"241
+"244
 [v displayMenu@currentTime currentTime `ul  1 a 4 38 ]
-"238
+"241
 [v displayMenu@menuIndex menuIndex `i  1 p 2 73 ]
-"240
+"243
 [v displayMenu@lastUpdateTime lastUpdateTime `ul  1 s 4 lastUpdateTime ]
-"305
+"308
 [v displayMenu@errorCycle errorCycle `i  1 s 2 errorCycle ]
-"336
+"339
 [v displayMenu@systemCycle systemCycle `i  1 s 2 systemCycle ]
-"366
+"369
 } 0
-"593
+"612
 [v _tempRead tempRead `(f  1 e 4 0 ]
 {
-"595
+"614
 [v tempRead@TempC TempC `f  1 a 4 4 ]
-"594
+"613
 [v tempRead@rawAnalog rawAnalog `ui  1 a 2 12 ]
-"597
+"616
 } 0
-"431
+"434
 [v _millis millis `(ul  1 e 4 0 ]
 {
-"436
+"439
 [v millis@ms ms `ul  1 a 4 13 ]
-"442
+"445
 } 0
-"642
+"661
 [v _itoa itoa `(i  1 e 2 0 ]
 {
-"644
+"663
 [v itoa@temp temp `i  1 a 2 23 ]
 [v itoa@count count `i  1 a 2 21 ]
-"642
+"661
 [v itoa@value value `i  1 p 2 17 ]
 [v itoa@ptr ptr `*.39uc  1 p 2 19 ]
-"686
+"705
 } 0
-"598
+"617
 [v _humidade humidade `(f  1 e 4 0 ]
 {
-"600
+"619
 [v humidade@Humid Humid `f  1 a 4 4 ]
-"599
+"618
 [v humidade@rawAnalog rawAnalog `ui  1 a 2 12 ]
-"602
+"621
 } 0
-"603
+"622
 [v _gasRead gasRead `(f  1 e 4 0 ]
 {
-"605
+"624
 [v gasRead@gas gas `f  1 a 4 4 ]
-"604
+"623
 [v gasRead@rawAnalog rawAnalog `ui  1 a 2 12 ]
-"607
+"626
 } 0
-"569
+"588
 [v _readAnalog readAnalog `(ui  1 e 2 0 ]
 {
 [v readAnalog@pin pin `uc  1 a 1 wreg ]
-"587
+"606
 [v readAnalog@result result `ui  1 a 2 13 ]
-"569
+"588
 [v readAnalog@pin pin `uc  1 a 1 wreg ]
 [v readAnalog@pin pin `uc  1 a 1 15 ]
-"590
+"609
 } 0
 "11 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\sprcdiv.c
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
@@ -531,28 +537,28 @@
 [v ___fldiv@a a `d  1 p 4 52 ]
 "185
 } 0
-"688 C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+"707 C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
 [v _floatToString floatToString `(v  1 e 1 0 ]
 {
-"720
+"739
 [v floatToString@digit digit `i  1 a 2 16 ]
-"718
-[v floatToString@i_802 i `i  1 a 2 12 ]
-"709
+"737
+[v floatToString@i_805 i `i  1 a 2 12 ]
+"728
 [v floatToString@i i `i  1 a 2 20 ]
-"701
+"720
 [v floatToString@intStr intStr `[12]uc  1 a 12 0 ]
-"702
+"721
 [v floatToString@index index `i  1 a 2 22 ]
-"700
+"719
 [v floatToString@temp temp `i  1 a 2 18 ]
-"696
+"715
 [v floatToString@intPart intPart `i  1 a 2 14 ]
-"688
+"707
 [v floatToString@value value `f  1 p 4 48 ]
 [v floatToString@buffer buffer `*.39uc  1 p 2 52 ]
 [v floatToString@precision precision `i  1 p 2 54 ]
-"727
+"746
 } 0
 "10 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
@@ -611,17 +617,17 @@
 "8 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S1191 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S1194 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S1196 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S1199 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1191 1 fAsBytes 4 0 `S1196 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1199  1 a 4 42 ]
+[s S1199 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S1202 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1194 1 fAsBytes 4 0 `S1199 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1202  1 a 4 42 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 37 ]
-[s S1267 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S1270 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S1270 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1267 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S1270  1 a 2 46 ]
+[u S1273 . 2 `s 1 i 2 0 `us 1 n 2 0 `S1270 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1273  1 a 2 46 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 41 ]
 "11
@@ -657,16 +663,16 @@
 [v ___awdiv@divisor divisor `i  1 p 2 11 ]
 "41
 } 0
-"610 C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+"629 C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
 [v _displayStuff displayStuff `(v  1 e 1 0 ]
 {
-"612
+"631
 [v displayStuff@LCDWritePosition LCDWritePosition `i  1 a 2 16 ]
-"610
+"629
 [v displayStuff@row row `i  1 p 2 10 ]
 [v displayStuff@column column `i  1 p 2 12 ]
 [v displayStuff@stuff stuff `*.35uc  1 p 2 14 ]
-"621
+"640
 } 0
 "449 C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\nxlcd.c
 [v _WriteDataXLCD WriteDataXLCD `(v  1 e 1 0 ]
@@ -684,15 +690,15 @@
 [v ___flge@ff2 ff2 `d  1 p 4 27 ]
 "19
 } 0
-"489 C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+"492 C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
 [v _configureTimer configureTimer `(v  1 e 1 0 ]
 {
-"499
+"502
 } 0
-"457
+"460
 [v _configureLCD configureLCD `(v  1 e 1 0 ]
 {
-"468
+"471
 } 0
 "41 C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\nxlcd.c
 [v _OpenXLCD OpenXLCD `(v  1 e 1 0 ]
@@ -741,31 +747,31 @@
 {
 "15
 } 0
-"471 C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+"474 C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
 [v _configureInterrupt configureInterrupt `(v  1 e 1 0 ]
 {
-"486
+"489
 } 0
-"445
+"448
 [v _configureIO configureIO `(v  1 e 1 0 ]
 {
-"454
+"457
 } 0
-"563
+"582
 [v _configureADC configureADC `(v  1 e 1 0 ]
 {
-"567
+"586
 } 0
-"634
+"653
 [v _buzzer buzzer `(v  1 e 1 0 ]
 {
 [v buzzer@buzzerStatus buzzerStatus `i  1 p 2 9 ]
-"640
+"659
 } 0
-"403
+"406
 [v _ISR ISR `IIH(v  1 e 1 0 ]
 {
-"428
+"431
 } 0
 "7 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\sources\c99\common\llmod.c
 [v ___llmod __llmod `(ul  1 e 4 0 ]
