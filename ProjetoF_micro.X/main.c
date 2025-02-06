@@ -178,6 +178,13 @@ void main(void) {
             }
             displayMenu(menuIndex);                  // Update display immediately after menu change
         }
+        if (pressed_key == 'F' && lastKey != 'F'){
+            menuIndex--;                             // Increment menu index to move to previous menu
+            if (menuIndex < 0) {                      // Wrap around menu index if it falls behind the first menu page (0-4, so 5 pages)
+                menuIndex = 4;                         // Reset to the last menu page
+            }
+            displayMenu(menuIndex);                  // Update display immediately after menu change
+        }
 
 
         // --- Limit Configuration ---

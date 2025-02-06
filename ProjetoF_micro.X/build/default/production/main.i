@@ -6056,6 +6056,13 @@ void main(void) {
             }
             displayMenu(menuIndex);
         }
+        if (pressed_key == 'F' && lastKey != 'F'){
+            menuIndex--;
+            if (menuIndex < 0) {
+                menuIndex = 4;
+            }
+            displayMenu(menuIndex);
+        }
 
 
 
