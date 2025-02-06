@@ -62,7 +62,7 @@ dataBANK0 BANK0 1 D4 D4 6 1
 bssCOMRAM COMRAM 1 4C 4C A 1
 mediumconst MEDIUMCONST 0 7EF8 7EF8 108 1
 config CONFIG 4 300000 300000 E 1
-$C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.o
+$C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.o
 idloc IDLOC 5 200000 200000 8 1
 init CODE 0 E E 4 1
 reset_vec CODE 0 0 0 4 1
@@ -108,7 +108,7 @@ MEDIUMCONST 2EB0-7EF7 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\ProjetoF_micro.X.production.o
-8 intcode CODE >11993:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
+8 intcode CODE >11993:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
 8 intcode CODE >404:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
 2B16 text37 CODE >7:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\llmod.c
 2B16 text37 CODE >12:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\llmod.c
@@ -981,42 +981,42 @@ E1C text0 CODE >227:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
 E20 text0 CODE >228:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
 E22 text0 CODE >229:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
 E22 text0 CODE >233:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2C0C cinit CODE >1307:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C0C cinit CODE >1309:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C0C cinit CODE >1312:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C0C cinit CODE >1372:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C0E cinit CODE >1373:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C10 cinit CODE >1374:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C12 cinit CODE >1375:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C14 cinit CODE >1376:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C16 cinit CODE >1377:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C18 cinit CODE >1378:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C1C cinit CODE >1379:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C20 cinit CODE >1380:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C20 cinit CODE >1381:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C22 cinit CODE >1382:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C26 cinit CODE >1383:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C28 cinit CODE >1384:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C2A cinit CODE >1385:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C2C cinit CODE >1389:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C30 cinit CODE >1390:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C32 cinit CODE >1391:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C32 cinit CODE >1392:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C34 cinit CODE >1393:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C36 cinit CODE >1394:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C38 cinit CODE >1397:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C3C cinit CODE >1398:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C3E cinit CODE >1399:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C3E cinit CODE >1400:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C40 cinit CODE >1401:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C42 cinit CODE >1402:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C44 cinit CODE >1408:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C44 cinit CODE >1410:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C46 cinit CODE >1411:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C48 cinit CODE >1413:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C4A cinit CODE >1414:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C4C cinit CODE >1415:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
-2C4E cinit CODE >1416:C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
+2C0C cinit CODE >1307:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C0C cinit CODE >1309:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C0C cinit CODE >1312:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C0C cinit CODE >1372:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C0E cinit CODE >1373:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C10 cinit CODE >1374:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C12 cinit CODE >1375:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C14 cinit CODE >1376:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C16 cinit CODE >1377:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C18 cinit CODE >1378:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C1C cinit CODE >1379:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C20 cinit CODE >1380:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C20 cinit CODE >1381:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C22 cinit CODE >1382:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C26 cinit CODE >1383:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C28 cinit CODE >1384:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C2A cinit CODE >1385:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C2C cinit CODE >1389:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C30 cinit CODE >1390:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C32 cinit CODE >1391:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C32 cinit CODE >1392:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C34 cinit CODE >1393:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C36 cinit CODE >1394:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C38 cinit CODE >1397:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C3C cinit CODE >1398:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C3E cinit CODE >1399:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C3E cinit CODE >1400:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C40 cinit CODE >1401:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C42 cinit CODE >1402:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C44 cinit CODE >1408:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C44 cinit CODE >1410:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C46 cinit CODE >1411:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C48 cinit CODE >1413:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C4A cinit CODE >1414:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C4C cinit CODE >1415:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
+2C4E cinit CODE >1416:C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1041,7 +1041,7 @@ __HidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\ProjetoF_micro.X.prod
 __size_of_displayMenu 0 0 ABS 0 - dist/default/production\ProjetoF_micro.X.production.o
 __end_of_readKey 1F32 0 CODE 0 text2 dist/default/production\ProjetoF_micro.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\ProjetoF_micro.X.production.o
-__mediumconst 7EF8 0 MEDIUMCONST 0 mediumconst C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.o
+__mediumconst 7EF8 0 MEDIUMCONST 0 mediumconst C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\ProjetoF_micro.X.production.o
 _configureInterrupt 2E3E 0 CODE 0 text32 dist/default/production\ProjetoF_micro.X.production.o
 displayMenu@systemCycle D2 0 BANK0 1 bssBANK0 dist/default/production\ProjetoF_micro.X.production.o
@@ -1052,11 +1052,11 @@ _Glim D4 0 BANK0 1 dataBANK0 dist/default/production\ProjetoF_micro.X.production
 _Hlim D6 0 BANK0 1 dataBANK0 dist/default/production\ProjetoF_micro.X.production.o
 _LATB F8A 0 ABS 0 - dist/default/production\ProjetoF_micro.X.production.o
 _Tlim D8 0 BANK0 1 dataBANK0 dist/default/production\ProjetoF_micro.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.o
+___sp 0 0 STACK 2 stack C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.o
 _itoa 20E6 0 CODE 0 text6 dist/default/production\ProjetoF_micro.X.production.o
 _main 8C8 0 CODE 0 text0 dist/default/production\ProjetoF_micro.X.production.o
 btemp 56 0 COMRAM 1 temp dist/default/production\ProjetoF_micro.X.production.o
-start E 0 CODE 0 init C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.o
+start E 0 CODE 0 init C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.o
 ___flmul@aexp 25 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
 ___flmul@bexp 2A 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
 ___flmul@prod 2B 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
@@ -1083,11 +1083,11 @@ ttemp5 57 0 COMRAM 1 temp dist/default/production\ProjetoF_micro.X.production.o
 ttemp6 5A 0 COMRAM 1 temp dist/default/production\ProjetoF_micro.X.production.o
 ttemp7 5E 0 COMRAM 1 temp dist/default/production\ProjetoF_micro.X.production.o
 _readTwoDigitValue 2226 0 CODE 0 text1 dist/default/production\ProjetoF_micro.X.production.o
-__accesstop 60 0 ABS 0 - C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.o
-intlevel0 0 0 CODE 0 text C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.o
-intlevel1 0 0 CODE 0 text C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.o
-intlevel2 0 0 CODE 0 text C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.o
-intlevel3 0 0 CODE 0 text C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.o
+__accesstop 60 0 ABS 0 - C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.o
+intlevel0 0 0 CODE 0 text C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.o
+intlevel1 0 0 CODE 0 text C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.o
+intlevel2 0 0 CODE 0 text C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.o
+intlevel3 0 0 CODE 0 text C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\ProjetoF_micro.X.production.o
 _floatToString 1AB2 0 CODE 0 text11 dist/default/production\ProjetoF_micro.X.production.o
 humidade@rawAnalog 6C 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoF_micro.X.production.o
@@ -1106,8 +1106,8 @@ _ADRESH FC4 0 ABS 0 - dist/default/production\ProjetoF_micro.X.production.o
 _ADRESL FC3 0 ABS 0 - dist/default/production\ProjetoF_micro.X.production.o
 __end_of_DelayXLCD 2E64 0 CODE 0 text28 dist/default/production\ProjetoF_micro.X.production.o
 ___awdiv@dividend A 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.o
 __size_of_DelayXLCD 0 0 ABS 0 - dist/default/production\ProjetoF_micro.X.production.o
 ?_millis A 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
 main@pressed_key B7 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoF_micro.X.production.o
@@ -1175,7 +1175,7 @@ displayMenu@currentTemp 8A 0 BANK0 1 cstackBANK0 dist/default/production\Projeto
 displayMenu@currentTime 86 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoF_micro.X.production.o
 __end_of_BusyXLCD 2D24 0 CODE 0 text30 dist/default/production\ProjetoF_micro.X.production.o
 _readAnalog 2B9E 0 CODE 0 text9 dist/default/production\ProjetoF_micro.X.production.o
-isa$xinst 0 0 ABS 0 - C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.o
+isa$xinst 0 0 ABS 0 - C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.o
 _readKey 1D3A 0 CODE 0 text2 dist/default/production\ProjetoF_micro.X.production.o
 __end_of_humidade 2882 0 CODE 0 text7 dist/default/production\ProjetoF_micro.X.production.o
 gasRead@gas 64 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoF_micro.X.production.o
@@ -1215,7 +1215,7 @@ _keyState B8 0 BANK0 1 bssBANK0 dist/default/production\ProjetoF_micro.X.product
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\ProjetoF_micro.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\ProjetoF_micro.X.production.o
 readTwoDigitValue@key 32 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.o
 ___xxtofl@arg 14 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
 ___xxtofl@exp 13 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
 ___xxtofl@val A 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
@@ -1413,11 +1413,11 @@ __end_of_tempRead 27C4 0 CODE 0 text4 dist/default/production\ProjetoF_micro.X.p
 readTwoDigitValue@digitCount 30 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\ProjetoF_micro.X.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\ProjetoF_micro.X.production.o
-isa$std 1 0 ABS 0 - C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.o
+isa$std 1 0 ABS 0 - C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.o
 ___fldiv@new_exp 42 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
 __end_ofreadKey@F3615 7F11 0 MEDIUMCONST 0 mediumconst dist/default/production\ProjetoF_micro.X.production.o
-stackhi 7FF 0 ABS 0 - C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.o
-stacklo DA 0 ABS 0 - C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.o
+stackhi 7FF 0 ABS 0 - C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.o
+stacklo DA 0 ABS 0 - C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.o
 displayStuff@LCDWritePosition 11 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
 __end_of_gasRead 2940 0 CODE 0 text8 dist/default/production\ProjetoF_micro.X.production.o
 readKey@lastDebounceTime C7 0 BANK0 1 bssBANK0 dist/default/production\ProjetoF_micro.X.production.o
@@ -1508,7 +1508,7 @@ __Ltext33 0 0 ABS 0 text33 dist/default/production\ProjetoF_micro.X.production.o
 __Ltext34 0 0 ABS 0 text34 dist/default/production\ProjetoF_micro.X.production.o
 __Ltext35 0 0 ABS 0 text35 dist/default/production\ProjetoF_micro.X.production.o
 __Ltext37 0 0 ABS 0 text37 dist/default/production\ProjetoF_micro.X.production.o
-__ramtop 800 0 RAM 0 ramtop C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.o
+__ramtop 800 0 RAM 0 ramtop C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.o
 __Lpowerup E 0 CODE 0 powerup dist/default/production\ProjetoF_micro.X.production.o
 ?___xxtofl A 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\ProjetoF_micro.X.production.o

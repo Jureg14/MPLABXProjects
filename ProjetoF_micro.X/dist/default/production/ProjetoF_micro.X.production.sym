@@ -568,7 +568,7 @@ cstackBANK0 60 D9 BANK0 60 1
 %locals
 dist/default/production\ProjetoF_micro.X.production.o
 C:\Program Files\Microchip\xc8\v2.32\pic\include\proc\pic18f4550.h
-C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
+C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
 1307 2C0C 0 CODE 0
 1309 2C0C 0 CODE 0
 1312 2C0C 0 CODE 0
@@ -1487,7 +1487,7 @@ main.c
 630 2EAE 0 CODE 0
 631 2EAE 0 CODE 0
 636 2EAE 0 CODE 0
-C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.s
+C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.s
 11993 8 0 CODE 0
 main.c
 404 8 0 CODE 0

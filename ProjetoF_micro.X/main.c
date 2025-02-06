@@ -81,7 +81,7 @@
 #include <stdlib.h>
 #include "nxlcd.h"
 
-#define _XTAL_FREQ 20000000    // Frequ�ncia do cristal (20MHz)
+#define _XTAL_FREQ 20000000    // Frequ?ncia do cristal (20MHz)
 
 #define ROWS 4
 #define COLS 4
@@ -234,7 +234,7 @@ void main(void) {
     }
 }
 
-// Certas partes do codigo foram separadas em fun��es para facilidar a leitura
+// Certas partes do codigo foram separadas em fun??es para facilidar a leitura
 
 void displayMenu(int menuIndex) {
     char valueStr[10];
@@ -442,19 +442,19 @@ unsigned long millis() {
     return ms;
 }
 
-// Configura todos os pinos de uma s� vez
+// Configura todos os pinos de uma s? vez
 void configureIO() {
-    TRISB = 0xF0;  // RB4-RB7 como entrada, RB0-RB3 como sa�da
-    TRISAbits.RA3 = 1;  // AN3 como entrada anal�gica
-    TRISDbits.TRISD0 = 0; // RD0 como sa�da
-    TRISDbits.TRISD1 = 0; // RD1 como sa�da
-    TRISCbits.TRISC2 = 0; // RD1 como sa�da
+    TRISB = 0xF0;  // RB4-RB7 como entrada, RB0-RB3 como sa?da
+    TRISAbits.RA3 = 1;  // AN3 como entrada anal?gica
+    TRISDbits.TRISD0 = 0; // RD0 como sa?da
+    TRISDbits.TRISD1 = 0; // RD1 como sa?da
+    TRISCbits.TRISC2 = 0; // RD1 como sa?da
     PORTDbits.RD0 = 0;    // LED inicialmente apagado
     PORTDbits.RD1 = 0;    // LED inicialmente apagado
     
 }
 
-// Fun��o para configurar o LCD
+// Fun??o para configurar o LCD
 void configureLCD() {
     OpenXLCD(FOUR_BIT & LINES_5X7);
     WriteCmdXLCD(0x01);  // Clear LCD
@@ -481,8 +481,8 @@ void configureInterrupt()
     INTCONbits.TMR0IF = 0;  // Clear interrupt flag
     //pinos
     INTCON2bits.RBIP = 0;    // Low priority for PORTB
-    INTCONbits.RBIE = 1;    // Habilita interrup��o no PORTB
-    INTCONbits.RBIF = 0;    // Limpa a flag de interrup��o do PORTB
+    INTCONbits.RBIE = 1;    // Habilita interrup??o no PORTB
+    INTCONbits.RBIF = 0;    // Limpa a flag de interrup??o do PORTB
     
 }
 
@@ -499,7 +499,7 @@ void configureTimer() {
     INTCONbits.TMR0IF = 0; // Clear the Timer 0 interrupt flag
 }
 
-// Fun��o para ler o teclado matricial
+// Fun??o para ler o teclado matricial
 // Debounce state structure
 typedef struct {
     char lastKey;
@@ -587,17 +587,17 @@ unsigned int readAnalog(unsigned char pin) {
 
 
 float tempRead(){
-    unsigned int rawAnalog=readAnalog(0);//lm35 est� no pino RA0/AN0
+    unsigned int rawAnalog=readAnalog(0);//lm35 est? no pino RA0/AN0
     float TempC = ((rawAnalog * 5.0) / 1023.0)/0.01; // Convert to voltage 
  return TempC;   
 }
 float humidade(){
-    unsigned int rawAnalog=readAnalog(3);//POT est� no pino RA3/AN3
+    unsigned int rawAnalog=readAnalog(3);//POT est? no pino RA3/AN3
     float Humid = ((rawAnalog * 5.0) / 1023.0)*20; // leitura de 0 a 5 para uma humidade de 0 a 100
  return Humid;  
 }
 float gasRead(){
-    unsigned int rawAnalog=readAnalog(2);//est� no pino RA2/AN2 //� uma entrada de 0 a 10v, deve ter algum jeito de usar
+    unsigned int rawAnalog=readAnalog(2);//est? no pino RA2/AN2 //? uma entrada de 0 a 10v, deve ter algum jeito de usar
     float gas = ((rawAnalog * 5.0) / 1023.0)*20; // leitura de 0 a 5 para uma humidade de 0 a 100
  return gas;   
 }

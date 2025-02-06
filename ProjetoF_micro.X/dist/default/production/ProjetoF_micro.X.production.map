@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.32\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\ProjetoF_micro.X.production.sym \
   --cmf=dist/default/production\ProjetoF_micro.X.production.cmf -z \
-  -Q18F4550 -oC:\Users\JeeJ\AppData\Local\Temp\xcAsek4.4 \
+  -Q18F4550 -oC:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.4 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/ProjetoF_micro.X.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=0DAh-07FFh -pstack=STACK \
@@ -23,7 +23,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.o \
+  C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.o \
   dist/default/production\ProjetoF_micro.X.production.o 
 
 Object code version is 3.11
@@ -33,7 +33,7 @@ Machine type is 18F4550
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\JeeJ\AppData\Local\Temp\xcAsek4.o
+C:\Users\JeeJ\AppData\Local\Temp\xcAsk7o.o
                 idloc                            200000   200000        8        0       5
                 config                           300000   300000        E        0       4
                 init                                  E        E        4        4       0
