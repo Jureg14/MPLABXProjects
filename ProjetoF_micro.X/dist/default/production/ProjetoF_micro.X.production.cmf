@@ -62,9 +62,9 @@ intcode CODE 0 8 8 6 1
 idataBANK0 CODE 0 2FF2 2FF2 6 1
 dataBANK0 BANK0 1 D2 D2 6 1
 bssCOMRAM COMRAM 1 4A 4A C 1
-mediumconst MEDIUMCONST 0 7EF8 7EF8 108 1
+mediumconst MEDIUMCONST 0 7EF6 7EF6 10A 1
 config CONFIG 4 300000 300000 E 1
-$C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.o
+$C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.o
 idloc IDLOC 5 200000 200000 8 1
 init CODE 0 E E 4 1
 reset_vec CODE 0 0 0 4 1
@@ -86,16 +86,16 @@ BANK5 500-5FF 1
 BANK6 600-6FF 1
 BANK7 700-7FF 1
 CONST 4-7 1
-CONST 2FFE-7EF7 1
+CONST 2FFE-7EF5 1
 STACK D8-7FF 1
-SMALLCONST 2FFE-7EF7 1
+SMALLCONST 2FFE-7EF5 1
 CODE 4-7 1
-CODE 2FFE-7EF7 1
+CODE 2FFE-7EF5 1
 BIGRAM 57-5F 1
 BIGRAM D8-7FF 1
 COMRAM 57-5F 1
 EEDATA F00000-F000FF 1
-MEDIUMCONST 2FFE-7EF7 1
+MEDIUMCONST 2FFE-7EF5 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -110,8 +110,8 @@ MEDIUMCONST 2FFE-7EF7 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\ProjetoF_micro.X.production.o
-8 intcode CODE >12381:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-8 intcode CODE >460:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+8 intcode CODE >12382:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+8 intcode CODE >428:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
 2C5A text39 CODE >7:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\llmod.c
 2C5A text39 CODE >12:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\llmod.c
 2C70 text39 CODE >13:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\llmod.c
@@ -126,48 +126,48 @@ $dist/default/production\ProjetoF_micro.X.production.o
 2CD0 text39 CODE >23:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\llmod.c
 2CD0 text39 CODE >24:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\llmod.c
 2CE0 text39 CODE >25:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\llmod.c
-2BCA intcode_body CODE >460:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2BCC intcode_body CODE >461:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2BDA intcode_body CODE >462:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2BDE intcode_body CODE >463:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2BEA intcode_body CODE >464:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2C24 intcode_body CODE >465:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2C40 intcode_body CODE >466:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2C48 intcode_body CODE >467:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2C4C intcode_body CODE >468:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2C54 intcode_body CODE >471:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2C56 intcode_body CODE >473:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2FFC text37 CODE >711:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2FFC text37 CODE >712:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2FFC text37 CODE >717:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2FDC text36 CODE >613:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2FDC text36 CODE >614:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2FE0 text36 CODE >617:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2FE4 text36 CODE >622:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2FE6 text36 CODE >623:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2F82 text35 CODE >491:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2F82 text35 CODE >492:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2F86 text35 CODE >493:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2F88 text35 CODE >494:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2F8A text35 CODE >495:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2F8C text35 CODE >496:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2F8E text35 CODE >497:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2F90 text35 CODE >498:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2F92 text35 CODE >499:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2F94 text35 CODE >500:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2F96 text35 CODE >501:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2F98 text35 CODE >502:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2F9A text34 CODE >520:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2F9A text34 CODE >521:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2F9C text34 CODE >522:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2F9E text34 CODE >523:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2FA0 text34 CODE >526:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2FA2 text34 CODE >527:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2FA4 text34 CODE >528:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2FA6 text34 CODE >531:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2FA8 text34 CODE >532:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2FAA text34 CODE >533:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2FAC text34 CODE >534:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2BCA intcode_body CODE >428:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2BCC intcode_body CODE >429:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2BDA intcode_body CODE >430:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2BDE intcode_body CODE >431:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2BEA intcode_body CODE >432:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2C24 intcode_body CODE >433:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2C40 intcode_body CODE >434:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2C48 intcode_body CODE >435:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2C4C intcode_body CODE >436:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2C54 intcode_body CODE >439:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2C56 intcode_body CODE >441:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2FFC text37 CODE >642:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2FFC text37 CODE >643:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2FFC text37 CODE >648:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2FDC text36 CODE >560:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2FDC text36 CODE >561:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2FE0 text36 CODE >564:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2FE4 text36 CODE >569:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2FE6 text36 CODE >570:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2F82 text35 CODE >455:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2F82 text35 CODE >456:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2F86 text35 CODE >457:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2F88 text35 CODE >458:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2F8A text35 CODE >459:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2F8C text35 CODE >460:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2F8E text35 CODE >461:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2F90 text35 CODE >462:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2F92 text35 CODE >463:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2F94 text35 CODE >464:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2F96 text35 CODE >465:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2F98 text35 CODE >466:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2F9A text34 CODE >480:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2F9A text34 CODE >481:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2F9C text34 CODE >482:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2F9E text34 CODE >483:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2FA0 text34 CODE >486:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2FA2 text34 CODE >487:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2FA4 text34 CODE >488:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2FA6 text34 CODE >491:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2FA8 text34 CODE >492:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2FAA text34 CODE >493:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2FAC text34 CODE >494:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
 2FE8 text33 CODE >12:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\nxlcd.c
 2FE8 text33 CODE >14:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\nxlcd.c
 2FF0 text33 CODE >15:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\nxlcd.c
@@ -267,20 +267,20 @@ $dist/default/production\ProjetoF_micro.X.production.o
 276A text27 CODE >97:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\nxlcd.c
 277E text27 CODE >98:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\nxlcd.c
 2784 text27 CODE >101:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\nxlcd.c
-2DDC text26 CODE >507:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2DDC text26 CODE >508:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2DE2 text26 CODE >509:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2DE8 text26 CODE >510:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2DF8 text26 CODE >511:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2DFE text26 CODE >512:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2E0C text26 CODE >513:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2E12 text26 CODE >514:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2E20 text26 CODE >515:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2FD0 text25 CODE >539:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2FD0 text25 CODE >540:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2FD4 text25 CODE >544:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2FD8 text25 CODE >545:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2FDA text25 CODE >546:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2DDC text26 CODE >469:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2DDC text26 CODE >470:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2DE2 text26 CODE >471:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2DE8 text26 CODE >472:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2DF8 text26 CODE >473:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2DFE text26 CODE >474:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2E0C text26 CODE >475:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2E12 text26 CODE >476:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2E20 text26 CODE >477:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2FD0 text25 CODE >497:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2FD0 text25 CODE >498:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2FD4 text25 CODE >502:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2FD8 text25 CODE >503:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2FDA text25 CODE >504:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
 2594 text24 CODE >4:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\flge.c
 2594 text24 CODE >7:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\flge.c
 25C2 text24 CODE >8:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\flge.c
@@ -312,14 +312,14 @@ $dist/default/production\ProjetoF_micro.X.production.o
 2EDE text23 CODE >488:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\nxlcd.c
 2EE0 text23 CODE >490:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\nxlcd.c
 2EE4 text23 CODE >496:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\nxlcd.c
-2B34 text22 CODE >678:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2B34 text22 CODE >679:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2B66 text22 CODE >682:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2B6C text22 CODE >683:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2B70 text22 CODE >684:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2B94 text22 CODE >685:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2B98 text22 CODE >683:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2BC8 text22 CODE >687:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2B34 text22 CODE >615:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2B34 text22 CODE >616:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2B66 text22 CODE >619:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2B6C text22 CODE >620:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2B70 text22 CODE >621:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2B94 text22 CODE >622:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2B98 text22 CODE >620:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2BC8 text22 CODE >624:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
 2786 text21 CODE >7:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\awdiv.c
 2786 text21 CODE >13:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\awdiv.c
 278A text21 CODE >14:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\awdiv.c
@@ -630,34 +630,34 @@ FF0 text17 CODE >57:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\
 2216 text14 CODE >42:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\xxtofl.c
 2218 text14 CODE >43:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\xxtofl.c
 2228 text14 CODE >44:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\xxtofl.c
-1BCE text13 CODE >762:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1BCE text13 CODE >764:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1BD8 text13 CODE >768:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1BE6 text13 CODE >769:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1BF6 text13 CODE >770:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1C1A text13 CODE >773:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1C36 text13 CODE >774:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1C82 text13 CODE >777:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1C96 text13 CODE >778:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1C9E text13 CODE >779:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1CA2 text13 CODE >780:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1CAA text13 CODE >781:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1CB2 text13 CODE >783:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1CDE text13 CODE >784:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1CFA text13 CODE >785:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1D16 text13 CODE >789:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1D22 text13 CODE >790:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1D56 text13 CODE >791:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1D78 text13 CODE >792:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1D80 text13 CODE >794:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1D90 text13 CODE >797:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1D9C text13 CODE >798:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1DD0 text13 CODE >799:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1DEC text13 CODE >800:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1E00 text13 CODE >801:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1E4C text13 CODE >802:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1E70 text13 CODE >804:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1E7C text13 CODE >805:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1BCE text13 CODE >689:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1BCE text13 CODE >691:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1BD8 text13 CODE >694:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1BE6 text13 CODE >695:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1BF6 text13 CODE >696:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1C1A text13 CODE >699:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1C36 text13 CODE >700:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1C82 text13 CODE >702:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1C96 text13 CODE >703:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1C9E text13 CODE >704:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1CA2 text13 CODE >705:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1CAA text13 CODE >706:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1CB2 text13 CODE >708:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1CDE text13 CODE >709:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1CFA text13 CODE >710:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1D16 text13 CODE >713:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1D22 text13 CODE >714:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1D56 text13 CODE >715:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1D78 text13 CODE >716:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1D80 text13 CODE >718:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1D90 text13 CODE >720:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1D9C text13 CODE >721:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1DD0 text13 CODE >722:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1DEC text13 CODE >723:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1E00 text13 CODE >724:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1E4C text13 CODE >725:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1E70 text13 CODE >727:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1E7C text13 CODE >728:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
 1834 text12 CODE >11:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcdiv.c
 1834 text12 CODE >26:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcdiv.c
 183A text12 CODE >27:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcdiv.c
@@ -744,313 +744,313 @@ FF0 text17 CODE >57:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\
 1BC0 text12 CODE >180:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcdiv.c
 1BC2 text12 CODE >182:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcdiv.c
 1BCC text12 CODE >185:C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\sprcdiv.c
-2CE2 text11 CODE >628:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2CE4 text11 CODE >629:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2CE4 text11 CODE >630:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2CF4 text11 CODE >631:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2D00 text11 CODE >634:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2D12 text11 CODE >635:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2D20 text11 CODE >636:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2D22 text11 CODE >638:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2D30 text11 CODE >640:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2D46 text11 CODE >641:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2D4E text11 CODE >642:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-29C6 text10 CODE >668:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-29C6 text10 CODE >669:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-29D4 text10 CODE >670:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2A72 text10 CODE >672:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2A82 text10 CODE >673:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2908 text9 CODE >657:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2908 text9 CODE >658:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2916 text9 CODE >659:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-29B4 text9 CODE >662:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-29C4 text9 CODE >663:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-222A text8 CODE >722:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-222A text8 CODE >723:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2232 text8 CODE >724:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2232 text8 CODE >726:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2248 text8 CODE >729:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-225A text8 CODE >730:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2266 text8 CODE >731:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-227A text8 CODE >735:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2288 text8 CODE >736:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2290 text8 CODE >737:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-22A0 text8 CODE >738:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-22A4 text8 CODE >739:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-22A4 text8 CODE >742:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-22AC text8 CODE >743:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-22B0 text8 CODE >744:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-22CC text8 CODE >745:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-22D0 text8 CODE >743:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-22EA text8 CODE >748:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-22FA text8 CODE >750:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2302 text8 CODE >751:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2306 text8 CODE >752:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2332 text8 CODE >753:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-234E text8 CODE >751:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2368 text8 CODE >757:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2F5C text7 CODE >478:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2F5C text7 CODE >481:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2F5E text7 CODE >482:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2F6E text7 CODE >483:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2F70 text7 CODE >485:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2F80 text7 CODE >486:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-284A text6 CODE >647:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-284A text6 CODE >648:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2858 text6 CODE >649:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-28F6 text6 CODE >651:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2906 text6 CODE >652:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-12 text5 CODE >296:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-12 text5 CODE >299:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-26 text5 CODE >304:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-60 text5 CODE >305:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-64 text5 CODE >306:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-64 text5 CODE >307:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-74 text5 CODE >310:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-7A text5 CODE >311:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-8C text5 CODE >315:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-A0 text5 CODE >316:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-B4 text5 CODE >317:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-C8 text5 CODE >321:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-CC text5 CODE >323:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-E8 text5 CODE >324:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-10C text5 CODE >325:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-128 text5 CODE >326:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-144 text5 CODE >327:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-160 text5 CODE >328:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-174 text5 CODE >329:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-190 text5 CODE >330:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-194 text5 CODE >334:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1B0 text5 CODE >335:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1D4 text5 CODE >336:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1F0 text5 CODE >337:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-20C text5 CODE >338:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-228 text5 CODE >339:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-240 text5 CODE >345:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-25C text5 CODE >346:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-280 text5 CODE >347:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-29C text5 CODE >348:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2B8 text5 CODE >349:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2D4 text5 CODE >350:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2EC text5 CODE >356:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-308 text5 CODE >357:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-3E6 text5 CODE >358:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-402 text5 CODE >359:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-406 text5 CODE >361:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-40A text5 CODE >363:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-432 text5 CODE >367:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-47C text5 CODE >368:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-49C text5 CODE >372:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-4E6 text5 CODE >373:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-506 text5 CODE >377:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-550 text5 CODE >378:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-570 text5 CODE >381:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-57E text5 CODE >381:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-58C text5 CODE >381:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-594 text5 CODE >381:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-59C text5 CODE >381:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-5A6 text5 CODE >387:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-5C2 text5 CODE >388:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-6A0 text5 CODE >389:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-6BC text5 CODE >390:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-6C0 text5 CODE >392:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-6C4 text5 CODE >394:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-6EC text5 CODE >398:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-736 text5 CODE >399:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-756 text5 CODE >403:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-7A0 text5 CODE >404:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-7C0 text5 CODE >408:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-80A text5 CODE >409:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-82A text5 CODE >412:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-838 text5 CODE >412:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-846 text5 CODE >412:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-84E text5 CODE >412:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-856 text5 CODE >412:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-860 text5 CODE >418:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-87C text5 CODE >419:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-880 text5 CODE >420:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-88E text5 CODE >420:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-89C text5 CODE >420:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-8A4 text5 CODE >420:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-8AC text5 CODE >420:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-8B4 text5 CODE >420:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-8BC text5 CODE >420:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-8C6 text5 CODE >421:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1E7E text4 CODE >565:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1E7E text4 CODE >566:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1E96 text4 CODE >570:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1EAA text4 CODE >574:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1ED2 text4 CODE >575:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1EF0 text4 CODE >576:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1F00 text4 CODE >579:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1F08 text4 CODE >580:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1F38 text4 CODE >582:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1F8C text4 CODE >585:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1F9E text4 CODE >586:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1FAE text4 CODE >587:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1FB2 text4 CODE >591:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-1FE6 text4 CODE >592:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-201A text4 CODE >593:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-202A text4 CODE >594:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-202E text4 CODE >595:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2032 text4 CODE >596:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2038 text4 CODE >599:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-203E text4 CODE >601:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-205E text4 CODE >602:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2066 text4 CODE >605:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-206C text4 CODE >606:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2074 text4 CODE >608:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-236A text3 CODE >426:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-236A text3 CODE >427:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2376 text3 CODE >428:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-237E text3 CODE >431:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2384 text3 CODE >432:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2392 text3 CODE >433:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2398 text3 CODE >434:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-23A6 text3 CODE >436:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-23C2 text3 CODE >438:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-23C6 text3 CODE >439:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-23CC text3 CODE >441:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-23EC text3 CODE >442:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-23FC text3 CODE >443:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-241C text3 CODE >444:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2420 text3 CODE >445:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2436 text3 CODE >448:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2448 text3 CODE >449:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2450 text3 CODE >438:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-246C text3 CODE >454:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-248C text3 CODE >455:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2FFA text2 CODE >692:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2FFA text2 CODE >695:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2FF8 text1 CODE >700:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2FF8 text1 CODE >701:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2FF8 text1 CODE >706:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-8C8 text0 CODE >135:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-8C8 text0 CODE >136:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-8CE text0 CODE >137:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-8D6 text0 CODE >138:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-8E6 text0 CODE >147:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-8EA text0 CODE >148:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-8EE text0 CODE >149:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-8F2 text0 CODE >150:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-8F6 text0 CODE >151:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-8FA text0 CODE >155:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-8FC text0 CODE >156:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-8FE text0 CODE >157:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-900 text0 CODE >162:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-908 text0 CODE >163:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-91C text0 CODE >167:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-952 text0 CODE >168:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-95E text0 CODE >169:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-96E text0 CODE >174:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-994 text0 CODE >175:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-998 text0 CODE >176:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-9B4 text0 CODE >177:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-9BC text0 CODE >179:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-9C8 text0 CODE >181:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-9EE text0 CODE >182:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-9F4 text0 CODE >183:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-A02 text0 CODE >184:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-A0A text0 CODE >186:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-A16 text0 CODE >191:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-A3C text0 CODE >192:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-A50 text0 CODE >193:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-A66 text0 CODE >194:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-A6E text0 CODE >195:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-A8A text0 CODE >196:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-AA4 text0 CODE >197:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-AAE text0 CODE >198:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-ABA text0 CODE >199:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-AD6 text0 CODE >206:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-AFC text0 CODE >207:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-B10 text0 CODE >208:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-B26 text0 CODE >209:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-B2E text0 CODE >210:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-B4A text0 CODE >211:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-B64 text0 CODE >212:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-B6E text0 CODE >213:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-B7A text0 CODE >214:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-B96 text0 CODE >221:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-BBC text0 CODE >222:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-BD0 text0 CODE >223:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-BE6 text0 CODE >224:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-BEE text0 CODE >225:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-C0A text0 CODE >226:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-C24 text0 CODE >227:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-C2E text0 CODE >228:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-C3A text0 CODE >229:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-C56 text0 CODE >236:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-C7C text0 CODE >237:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-C84 text0 CODE >238:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-C8C text0 CODE >239:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-C94 text0 CODE >240:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-CB0 text0 CODE >241:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-CCA text0 CODE >242:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-CD4 text0 CODE >243:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-CE0 text0 CODE >248:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-CF4 text0 CODE >249:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-D08 text0 CODE >250:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-D1C text0 CODE >254:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-DFA text0 CODE >255:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-E06 text0 CODE >256:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-E0A text0 CODE >257:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-E16 text0 CODE >258:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-E16 text0 CODE >261:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-E60 text0 CODE >262:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-E62 text0 CODE >263:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-E64 text0 CODE >264:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-E68 text0 CODE >265:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-E6A text0 CODE >266:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-E6C text0 CODE >270:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-EB6 text0 CODE >271:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-EB8 text0 CODE >272:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-EC4 text0 CODE >273:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-EC8 text0 CODE >274:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-ECA text0 CODE >275:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-ED6 text0 CODE >276:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-ED6 text0 CODE >279:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-F20 text0 CODE >280:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-F22 text0 CODE >281:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-F2C text0 CODE >282:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-F30 text0 CODE >283:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-F32 text0 CODE >284:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-F3E text0 CODE >288:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-2D50 cinit CODE >1309:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D50 cinit CODE >1311:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D50 cinit CODE >1314:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D50 cinit CODE >1374:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D52 cinit CODE >1375:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D54 cinit CODE >1376:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D56 cinit CODE >1377:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D58 cinit CODE >1378:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D5A cinit CODE >1379:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D5C cinit CODE >1380:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D60 cinit CODE >1381:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D64 cinit CODE >1382:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D64 cinit CODE >1383:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D66 cinit CODE >1384:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D6A cinit CODE >1385:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D6C cinit CODE >1386:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D6E cinit CODE >1387:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D70 cinit CODE >1391:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D74 cinit CODE >1392:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D76 cinit CODE >1393:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D76 cinit CODE >1394:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D78 cinit CODE >1395:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D7A cinit CODE >1396:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D7C cinit CODE >1399:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D80 cinit CODE >1400:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D82 cinit CODE >1401:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D82 cinit CODE >1402:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D84 cinit CODE >1403:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D86 cinit CODE >1404:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D88 cinit CODE >1410:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D88 cinit CODE >1412:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D8A cinit CODE >1413:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D8C cinit CODE >1415:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D8E cinit CODE >1416:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D90 cinit CODE >1417:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
-2D92 cinit CODE >1418:C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.s
+2CE2 text11 CODE >573:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2CE4 text11 CODE >574:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2CE4 text11 CODE >575:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2CF4 text11 CODE >576:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2D00 text11 CODE >579:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2D12 text11 CODE >580:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2D20 text11 CODE >581:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2D22 text11 CODE >583:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2D30 text11 CODE >585:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2D46 text11 CODE >586:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2D4E text11 CODE >587:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+29C6 text10 CODE >607:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+29C6 text10 CODE >608:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+29D4 text10 CODE >609:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2A72 text10 CODE >611:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2A82 text10 CODE >612:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2908 text9 CODE >598:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2908 text9 CODE >599:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2916 text9 CODE >600:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+29B4 text9 CODE >603:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+29C4 text9 CODE >604:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+222A text8 CODE >651:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+222A text8 CODE >652:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2232 text8 CODE >653:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2232 text8 CODE >655:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2248 text8 CODE >658:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+225A text8 CODE >659:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2266 text8 CODE >660:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+227A text8 CODE >664:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2288 text8 CODE >665:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2290 text8 CODE >666:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+22A0 text8 CODE >667:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+22A4 text8 CODE >668:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+22A4 text8 CODE >671:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+22AC text8 CODE >672:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+22B0 text8 CODE >673:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+22CC text8 CODE >674:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+22D0 text8 CODE >672:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+22EA text8 CODE >677:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+22FA text8 CODE >679:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2302 text8 CODE >680:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2306 text8 CODE >681:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2332 text8 CODE >682:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+234E text8 CODE >680:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2368 text8 CODE >686:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2F5C text7 CODE >444:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2F5C text7 CODE >447:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2F5E text7 CODE >448:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2F6E text7 CODE >449:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2F70 text7 CODE >451:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2F80 text7 CODE >452:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+284A text6 CODE >590:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+284A text6 CODE >591:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2858 text6 CODE >592:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+28F6 text6 CODE >594:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2906 text6 CODE >595:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+12 text5 CODE >277:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+12 text5 CODE >280:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+26 text5 CODE >284:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+60 text5 CODE >285:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+64 text5 CODE >286:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+64 text5 CODE >287:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+74 text5 CODE >289:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+7A text5 CODE >290:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+8C text5 CODE >293:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+A0 text5 CODE >294:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+B4 text5 CODE >295:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+C8 text5 CODE >298:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+CC text5 CODE >300:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+E8 text5 CODE >301:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+10C text5 CODE >302:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+128 text5 CODE >303:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+144 text5 CODE >304:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+160 text5 CODE >305:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+174 text5 CODE >306:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+190 text5 CODE >307:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+194 text5 CODE >310:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1B0 text5 CODE >311:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1D4 text5 CODE >312:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1F0 text5 CODE >313:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+20C text5 CODE >314:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+228 text5 CODE >315:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+240 text5 CODE >320:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+25C text5 CODE >321:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+280 text5 CODE >322:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+29C text5 CODE >323:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2B8 text5 CODE >324:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2D4 text5 CODE >325:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2EC text5 CODE >330:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+308 text5 CODE >331:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+3E6 text5 CODE >332:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+402 text5 CODE >333:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+406 text5 CODE >335:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+40A text5 CODE >337:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+432 text5 CODE >341:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+47C text5 CODE >342:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+49C text5 CODE >346:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+4E6 text5 CODE >347:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+506 text5 CODE >351:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+550 text5 CODE >352:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+570 text5 CODE >355:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+57E text5 CODE >355:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+58C text5 CODE >355:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+594 text5 CODE >355:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+59C text5 CODE >355:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+5A6 text5 CODE >360:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+5C2 text5 CODE >361:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+6A0 text5 CODE >362:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+6BC text5 CODE >363:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+6C0 text5 CODE >365:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+6C4 text5 CODE >367:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+6EC text5 CODE >371:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+736 text5 CODE >372:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+756 text5 CODE >376:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+7A0 text5 CODE >377:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+7C0 text5 CODE >381:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+80A text5 CODE >382:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+82A text5 CODE >385:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+838 text5 CODE >385:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+846 text5 CODE >385:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+84E text5 CODE >385:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+856 text5 CODE >385:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+860 text5 CODE >390:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+87C text5 CODE >391:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+880 text5 CODE >392:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+88E text5 CODE >392:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+89C text5 CODE >392:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+8A4 text5 CODE >392:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+8AC text5 CODE >392:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+8B4 text5 CODE >392:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+8BC text5 CODE >392:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+8C6 text5 CODE >393:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1E7E text4 CODE >519:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1E7E text4 CODE >520:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1E96 text4 CODE >524:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1EAA text4 CODE >527:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1ED2 text4 CODE >528:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1EF0 text4 CODE >529:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1F00 text4 CODE >531:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1F08 text4 CODE >532:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1F38 text4 CODE >534:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1F8C text4 CODE >536:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1F9E text4 CODE >537:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1FAE text4 CODE >538:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1FB2 text4 CODE >541:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+1FE6 text4 CODE >542:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+201A text4 CODE >543:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+202A text4 CODE >544:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+202E text4 CODE >545:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2032 text4 CODE >546:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2038 text4 CODE >549:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+203E text4 CODE >551:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+205E text4 CODE >552:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2066 text4 CODE >554:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+206C text4 CODE >555:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2074 text4 CODE >557:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+236A text3 CODE >396:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+236A text3 CODE >397:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2376 text3 CODE >398:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+237E text3 CODE >401:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2384 text3 CODE >402:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2392 text3 CODE >403:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2398 text3 CODE >404:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+23A6 text3 CODE >406:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+23C2 text3 CODE >408:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+23C6 text3 CODE >409:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+23CC text3 CODE >411:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+23EC text3 CODE >412:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+23FC text3 CODE >413:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+241C text3 CODE >414:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2420 text3 CODE >415:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2436 text3 CODE >418:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2448 text3 CODE >419:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2450 text3 CODE >408:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+246C text3 CODE >424:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+248C text3 CODE >425:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2FFA text2 CODE >627:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2FFA text2 CODE >630:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2FF8 text1 CODE >633:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2FF8 text1 CODE >634:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2FF8 text1 CODE >639:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+8C8 text0 CODE >132:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+8C8 text0 CODE >133:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+8CE text0 CODE >134:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+8D6 text0 CODE >135:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+8E6 text0 CODE >143:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+8EA text0 CODE >144:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+8EE text0 CODE >145:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+8F2 text0 CODE >146:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+8F6 text0 CODE >147:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+8FA text0 CODE >150:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+8FC text0 CODE >151:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+8FE text0 CODE >152:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+900 text0 CODE >156:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+908 text0 CODE >157:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+91C text0 CODE >160:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+952 text0 CODE >161:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+95E text0 CODE >162:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+96E text0 CODE >166:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+994 text0 CODE >167:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+998 text0 CODE >168:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+9B4 text0 CODE >169:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+9BC text0 CODE >171:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+9C8 text0 CODE >173:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+9EE text0 CODE >174:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+9F4 text0 CODE >175:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+A02 text0 CODE >176:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+A0A text0 CODE >178:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+A16 text0 CODE >182:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+A3C text0 CODE >183:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+A50 text0 CODE >184:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+A66 text0 CODE >185:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+A6E text0 CODE >186:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+A8A text0 CODE >187:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+AA4 text0 CODE >188:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+AAE text0 CODE >189:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+ABA text0 CODE >190:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+AD6 text0 CODE >196:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+AFC text0 CODE >197:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+B10 text0 CODE >198:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+B26 text0 CODE >199:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+B2E text0 CODE >200:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+B4A text0 CODE >201:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+B64 text0 CODE >202:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+B6E text0 CODE >203:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+B7A text0 CODE >204:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+B96 text0 CODE >210:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+BBC text0 CODE >211:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+BD0 text0 CODE >212:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+BE6 text0 CODE >213:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+BEE text0 CODE >214:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+C0A text0 CODE >215:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+C24 text0 CODE >216:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+C2E text0 CODE >217:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+C3A text0 CODE >218:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+C56 text0 CODE >224:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+C7C text0 CODE >225:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+C84 text0 CODE >226:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+C8C text0 CODE >227:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+C94 text0 CODE >228:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+CB0 text0 CODE >229:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+CCA text0 CODE >230:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+CD4 text0 CODE >231:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+CE0 text0 CODE >235:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+CF4 text0 CODE >236:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+D08 text0 CODE >237:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+D1C text0 CODE >240:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+DFA text0 CODE >241:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+E06 text0 CODE >242:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+E0A text0 CODE >243:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+E16 text0 CODE >244:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+E16 text0 CODE >246:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+E60 text0 CODE >247:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+E62 text0 CODE >248:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+E64 text0 CODE >249:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+E68 text0 CODE >250:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+E6A text0 CODE >251:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+E6C text0 CODE >254:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+EB6 text0 CODE >255:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+EB8 text0 CODE >256:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+EC4 text0 CODE >257:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+EC8 text0 CODE >258:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+ECA text0 CODE >259:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+ED6 text0 CODE >260:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+ED6 text0 CODE >262:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+F20 text0 CODE >263:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+F22 text0 CODE >264:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+F2C text0 CODE >265:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+F30 text0 CODE >266:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+F32 text0 CODE >267:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+F3E text0 CODE >270:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+2D50 cinit CODE >1310:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D50 cinit CODE >1312:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D50 cinit CODE >1315:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D50 cinit CODE >1375:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D52 cinit CODE >1376:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D54 cinit CODE >1377:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D56 cinit CODE >1378:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D58 cinit CODE >1379:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D5A cinit CODE >1380:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D5C cinit CODE >1381:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D60 cinit CODE >1382:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D64 cinit CODE >1383:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D64 cinit CODE >1384:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D66 cinit CODE >1385:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D6A cinit CODE >1386:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D6C cinit CODE >1387:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D6E cinit CODE >1388:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D70 cinit CODE >1392:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D74 cinit CODE >1393:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D76 cinit CODE >1394:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D76 cinit CODE >1395:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D78 cinit CODE >1396:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D7A cinit CODE >1397:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D7C cinit CODE >1400:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D80 cinit CODE >1401:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D82 cinit CODE >1402:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D82 cinit CODE >1403:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D84 cinit CODE >1404:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D86 cinit CODE >1405:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D88 cinit CODE >1411:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D88 cinit CODE >1413:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D8A cinit CODE >1414:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D8C cinit CODE >1416:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D8E cinit CODE >1417:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D90 cinit CODE >1418:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
+2D92 cinit CODE >1419:C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1066,7 +1066,7 @@ F3E text0 CODE >288:C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
 ___awdiv@counter E 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
 WriteCmdXLCD@cmd A 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
 __LdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production\ProjetoF_micro.X.production.o
-__Lmediumconst 7EF8 0 MEDIUMCONST 0 mediumconst dist/default/production\ProjetoF_micro.X.production.o
+__Lmediumconst 7EF6 0 MEDIUMCONST 0 mediumconst dist/default/production\ProjetoF_micro.X.production.o
 __Hspace_0 8000 0 ABS 0 - dist/default/production\ProjetoF_micro.X.production.o
 __Hspace_1 D8 0 ABS 0 - dist/default/production\ProjetoF_micro.X.production.o
 __Hspace_2 0 0 ABS 0 - dist/default/production\ProjetoF_micro.X.production.o
@@ -1075,7 +1075,7 @@ __HidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\ProjetoF_micro.X.prod
 __size_of_displayMenu 0 0 ABS 0 - dist/default/production\ProjetoF_micro.X.production.o
 __end_of_readKey 2076 0 CODE 0 text4 dist/default/production\ProjetoF_micro.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\ProjetoF_micro.X.production.o
-__mediumconst 7EF8 0 MEDIUMCONST 0 mediumconst C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.o
+__mediumconst 7EF6 0 MEDIUMCONST 0 mediumconst C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\ProjetoF_micro.X.production.o
 _configureInterrupt 2F9A 0 CODE 0 text34 dist/default/production\ProjetoF_micro.X.production.o
 displayMenu@systemCycle 4E 0 COMRAM 1 bssCOMRAM dist/default/production\ProjetoF_micro.X.production.o
@@ -1086,11 +1086,11 @@ _Glim D2 0 BANK0 1 dataBANK0 dist/default/production\ProjetoF_micro.X.production
 _Hlim D4 0 BANK0 1 dataBANK0 dist/default/production\ProjetoF_micro.X.production.o
 _LATB F8A 0 ABS 0 - dist/default/production\ProjetoF_micro.X.production.o
 _Tlim D6 0 BANK0 1 dataBANK0 dist/default/production\ProjetoF_micro.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.o
+___sp 0 0 STACK 2 stack C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.o
 _itoa 222A 0 CODE 0 text8 dist/default/production\ProjetoF_micro.X.production.o
 _main 8C8 0 CODE 0 text0 dist/default/production\ProjetoF_micro.X.production.o
 btemp 56 0 COMRAM 1 temp dist/default/production\ProjetoF_micro.X.production.o
-start E 0 CODE 0 init C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.o
+start E 0 CODE 0 init C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.o
 ___flmul@aexp 25 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
 ___flmul@bexp 2A 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
 ___flmul@prod 2B 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
@@ -1118,11 +1118,11 @@ ttemp5 57 0 COMRAM 1 temp dist/default/production\ProjetoF_micro.X.production.o
 ttemp6 5A 0 COMRAM 1 temp dist/default/production\ProjetoF_micro.X.production.o
 ttemp7 5E 0 COMRAM 1 temp dist/default/production\ProjetoF_micro.X.production.o
 _readTwoDigitValue 236A 0 CODE 0 text3 dist/default/production\ProjetoF_micro.X.production.o
-__accesstop 60 0 ABS 0 - C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.o
-intlevel0 0 0 CODE 0 text C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.o
-intlevel1 0 0 CODE 0 text C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.o
-intlevel2 0 0 CODE 0 text C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.o
-intlevel3 0 0 CODE 0 text C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.o
+__accesstop 60 0 ABS 0 - C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.o
+intlevel0 0 0 CODE 0 text C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.o
+intlevel1 0 0 CODE 0 text C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.o
+intlevel2 0 0 CODE 0 text C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.o
+intlevel3 0 0 CODE 0 text C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\ProjetoF_micro.X.production.o
 _floatToString 1BCE 0 CODE 0 text13 dist/default/production\ProjetoF_micro.X.production.o
 humidade@rawAnalog 6C 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoF_micro.X.production.o
@@ -1141,8 +1141,8 @@ _ADRESH FC4 0 ABS 0 - dist/default/production\ProjetoF_micro.X.production.o
 _ADRESL FC3 0 ABS 0 - dist/default/production\ProjetoF_micro.X.production.o
 __end_of_DelayXLCD 2FC0 0 CODE 0 text30 dist/default/production\ProjetoF_micro.X.production.o
 ___awdiv@dividend A 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.o
 __size_of_DelayXLCD 0 0 ABS 0 - dist/default/production\ProjetoF_micro.X.production.o
 ?_millis A 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
 main@pressed_key B5 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoF_micro.X.production.o
@@ -1190,7 +1190,7 @@ OpenXLCD@lcdtype B 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micr
 _DelayFor18TCY 2FE8 0 CODE 0 text33 dist/default/production\ProjetoF_micro.X.production.o
 start_initialization 2D50 0 CODE 0 cinit dist/default/production\ProjetoF_micro.X.production.o
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\ProjetoF_micro.X.production.o
-__end_of_keymap 7F09 0 MEDIUMCONST 0 mediumconst dist/default/production\ProjetoF_micro.X.production.o
+__end_of_keymap 7F07 0 MEDIUMCONST 0 mediumconst dist/default/production\ProjetoF_micro.X.production.o
 _TRISAbits F92 0 ABS 0 - dist/default/production\ProjetoF_micro.X.production.o
 _TRISCbits F94 0 ABS 0 - dist/default/production\ProjetoF_micro.X.production.o
 _TRISDbits F95 0 ABS 0 - dist/default/production\ProjetoF_micro.X.production.o
@@ -1210,7 +1210,7 @@ displayMenu@currentTime 86 0 BANK0 1 cstackBANK0 dist/default/production\Projeto
 setMoist@moistSet A 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
 __end_of_BusyXLCD 2E68 0 CODE 0 text32 dist/default/production\ProjetoF_micro.X.production.o
 _readAnalog 2CE2 0 CODE 0 text11 dist/default/production\ProjetoF_micro.X.production.o
-isa$xinst 0 0 ABS 0 - C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.o
+isa$xinst 0 0 ABS 0 - C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.o
 _readKey 1E7E 0 CODE 0 text4 dist/default/production\ProjetoF_micro.X.production.o
 __end_of_humidade 29C6 0 CODE 0 text9 dist/default/production\ProjetoF_micro.X.production.o
 gasRead@gas 64 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoF_micro.X.production.o
@@ -1251,7 +1251,7 @@ _keyState B8 0 BANK0 1 bssBANK0 dist/default/production\ProjetoF_micro.X.product
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\ProjetoF_micro.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\ProjetoF_micro.X.production.o
 readTwoDigitValue@key 32 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.o
 ___xxtofl@arg 14 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
 ___xxtofl@exp 13 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
 ___xxtofl@val A 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
@@ -1332,7 +1332,7 @@ _buzzer 2FFC 0 CODE 0 text37 dist/default/production\ProjetoF_micro.X.production
 __end_of_readAnalog 2D50 0 CODE 0 text11 dist/default/production\ProjetoF_micro.X.production.o
 __size_of_DelayFor18TCY 0 0 ABS 0 - dist/default/production\ProjetoF_micro.X.production.o
 floatToString@buffer 35 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
-readKey@F3616 7F09 0 MEDIUMCONST 0 mediumconst dist/default/production\ProjetoF_micro.X.production.o
+readKey@F3616 7F07 0 MEDIUMCONST 0 mediumconst dist/default/production\ProjetoF_micro.X.production.o
 __Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\ProjetoF_micro.X.production.o
 __end_of_configureTimer 2FDC 0 CODE 0 text25 dist/default/production\ProjetoF_micro.X.production.o
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\ProjetoF_micro.X.production.o
@@ -1390,7 +1390,7 @@ __Htext35 0 0 ABS 0 text35 dist/default/production\ProjetoF_micro.X.production.o
 __Htext36 0 0 ABS 0 text36 dist/default/production\ProjetoF_micro.X.production.o
 __Htext37 0 0 ABS 0 text37 dist/default/production\ProjetoF_micro.X.production.o
 __Htext39 0 0 ABS 0 text39 dist/default/production\ProjetoF_micro.X.production.o
-_keymap 7EF9 0 MEDIUMCONST 0 mediumconst dist/default/production\ProjetoF_micro.X.production.o
+_keymap 7EF7 0 MEDIUMCONST 0 mediumconst dist/default/production\ProjetoF_micro.X.production.o
 __size_of_OpenXLCD 0 0 ABS 0 - dist/default/production\ProjetoF_micro.X.production.o
 __end_of_DelayFor18TCY 2FF2 0 CODE 0 text33 dist/default/production\ProjetoF_micro.X.production.o
 ___awmod@counter E 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
@@ -1455,11 +1455,11 @@ __end_of_tempRead 2908 0 CODE 0 text6 dist/default/production\ProjetoF_micro.X.p
 readTwoDigitValue@digitCount 30 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\ProjetoF_micro.X.production.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\ProjetoF_micro.X.production.o
-isa$std 1 0 ABS 0 - C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.o
+isa$std 1 0 ABS 0 - C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.o
 ___fldiv@new_exp 42 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
-__end_ofreadKey@F3616 7F11 0 MEDIUMCONST 0 mediumconst dist/default/production\ProjetoF_micro.X.production.o
-stackhi 7FF 0 ABS 0 - C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.o
-stacklo D8 0 ABS 0 - C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.o
+__end_ofreadKey@F3616 7F0F 0 MEDIUMCONST 0 mediumconst dist/default/production\ProjetoF_micro.X.production.o
+stackhi 7FF 0 ABS 0 - C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.o
+stacklo D8 0 ABS 0 - C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.o
 displayStuff@LCDWritePosition 11 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
 __end_of_gasRead 2A84 0 CODE 0 text10 dist/default/production\ProjetoF_micro.X.production.o
 readKey@lastDebounceTime C7 0 BANK0 1 bssBANK0 dist/default/production\ProjetoF_micro.X.production.o
@@ -1555,7 +1555,7 @@ __Ltext35 0 0 ABS 0 text35 dist/default/production\ProjetoF_micro.X.production.o
 __Ltext36 0 0 ABS 0 text36 dist/default/production\ProjetoF_micro.X.production.o
 __Ltext37 0 0 ABS 0 text37 dist/default/production\ProjetoF_micro.X.production.o
 __Ltext39 0 0 ABS 0 text39 dist/default/production\ProjetoF_micro.X.production.o
-__ramtop 800 0 RAM 0 ramtop C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.o
+__ramtop 800 0 RAM 0 ramtop C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.o
 __Lpowerup E 0 CODE 0 powerup dist/default/production\ProjetoF_micro.X.production.o
 ?___xxtofl A 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\ProjetoF_micro.X.production.o
@@ -1592,7 +1592,7 @@ displayStuff@row B 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micr
 __pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
 __end_of_WriteCmdXLCD 2F24 0 CODE 0 text28 dist/default/production\ProjetoF_micro.X.production.o
 main@lastKey B4 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoF_micro.X.production.o
-__pmediumconst 7EF8 0 MEDIUMCONST 0 mediumconst dist/default/production\ProjetoF_micro.X.production.o
+__pmediumconst 7EF6 0 MEDIUMCONST 0 mediumconst dist/default/production\ProjetoF_micro.X.production.o
 ___llmod@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
 ___llmod@counter 9 0 COMRAM 1 cstackCOMRAM dist/default/production\ProjetoF_micro.X.production.o
 __size_of_DelayPORXLCD 0 0 ABS 0 - dist/default/production\ProjetoF_micro.X.production.o
@@ -1665,7 +1665,7 @@ cstackCOMRAM 1 1 1 56 1
 cstackBANK0 1 60 60 78 1
 reset_vec 0 0 0 4 1
 intcode 0 8 8 2FF6 1
-mediumconst 0 7EF8 7EF8 108 1
+mediumconst 0 7EF6 7EF6 10A 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.32\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\ProjetoF_micro.X.production.sym \
   --cmf=dist/default/production\ProjetoF_micro.X.production.cmf -z \
-  -Q18F4550 -oC:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.4 \
+  -Q18F4550 -oC:\Users\JeeJ\AppData\Local\Temp\xcAs21c.4 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/ProjetoF_micro.X.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=0D8h-07FFh -pstack=STACK \
@@ -23,7 +23,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.o \
+  C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.o \
   dist/default/production\ProjetoF_micro.X.production.o 
 
 Object code version is 3.11
@@ -33,7 +33,7 @@ Machine type is 18F4550
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\JeeJ\AppData\Local\Temp\xcAsdt4.o
+C:\Users\JeeJ\AppData\Local\Temp\xcAs21c.o
                 idloc                            200000   200000        8        0       5
                 config                           300000   300000        E        0       4
                 init                                  E        E        4        4       0
@@ -43,7 +43,7 @@ dist/default/production\ProjetoF_micro.X.production.o
                 idloc                            200000   200000        8        0       5
                 config                           300000   300000        E        0       4
                 temp                                 56       56        1        1       1
-                mediumconst                        7EF8     7EF8      108     3F7C       0
+                mediumconst                        7EF6     7EF6      10A     3F7B       0
                 text39                             2C5A     2C5A       88        4       0
                 intcode_body                       2BCA     2BCA       90        4       0
                 text37                             2FFC     2FFC        2        4       0
@@ -147,7 +147,7 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   SMALLCONST     
 
         CLASS   MEDIUMCONST    
-                mediumconst                        7EF8     7EF8      108         0
+                mediumconst                        7EF6     7EF6      10A         0
 
         CLASS   COMRAM         
                 temp                                 56       56        1         1
@@ -199,7 +199,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 cstackCOMRAM                   000001  000056  000057         1       1  COMRAM  
                 intcode                        000008  002FF6  002FFE         4       0  CODE    
                 cstackBANK0                    000060  000078  0000D8        60       1  BANK0   
-                mediumconst                    007EF8  000108  008000      3F7C       0  MEDIUMCO
+                mediumconst                    007EF6  00010A  008000      3F7B       0  MEDIUMCO
 
 
 UNUSED ADDRESS RANGES
@@ -216,15 +216,15 @@ UNUSED ADDRESS RANGES
         BIGRAM           000057-00005F                9
                          0000D8-0007FF              728
         CODE             000004-000007                4
-                         002FFE-007EF7             4EFA
+                         002FFE-007EF5             4EF8
         COMRAM           000057-00005F                9
         CONST            000004-000007                4
-                         002FFE-007EF7             4EFA
+                         002FFE-007EF5             4EF8
         EEDATA           F00000-F000FF              100
-        MEDIUMCONST      002FFE-007EF7             4EFA
+        MEDIUMCONST      002FFE-007EF5             4EF8
         RAM              0000D8-0007FF              100
         SFR              000F60-000FFF               A0
-        SMALLCONST       002FFE-007EF7              100
+        SMALLCONST       002FFE-007EF5              100
         STACK            0000D8-0007FF              728
 
                                   Symbol Table
@@ -427,7 +427,7 @@ __Lintentry                   intentry     000000
 __Lintret                     intret       000000
 __Lintsave_regs               intsave_regs 000000
 __Lirdata                     irdata       000000
-__Lmediumconst                mediumconst  007EF8
+__Lmediumconst                mediumconst  007EF6
 __LnvFARRAM                   nvFARRAM     000000
 __Lnvbit                      nvbit        000000
 __Lnvrram                     nvrram       000000
@@ -591,7 +591,7 @@ __end_of_floatToString        text13       001E7E
 __end_of_gasRead              text10       002A84
 __end_of_humidade             text9        0029C6
 __end_of_itoa                 text8        00236A
-__end_of_keymap               mediumconst  007F09
+__end_of_keymap               mediumconst  007F07
 __end_of_main                 text0        000F4A
 __end_of_millis               text7        002F82
 __end_of_readAnalog           text11       002D50
@@ -600,9 +600,9 @@ __end_of_readTwoDigitValue    text3        00248E
 __end_of_setCoolerSpeed       text2        002FFC
 __end_of_setMoist             text1        002FFA
 __end_of_tempRead             text6        002908
-__end_ofreadKey@F3616         mediumconst  007F11
+__end_ofreadKey@F3616         mediumconst  007F0F
 __initialization              cinit        002D50
-__mediumconst                 mediumconst  007EF8
+__mediumconst                 mediumconst  007EF6
 __pbssBANK0                   bssBANK0     0000B8
 __pbssCOMRAM                  bssCOMRAM    00004A
 __pcinit                      cinit        002D50
@@ -612,7 +612,7 @@ __pdataBANK0                  dataBANK0    0000D2
 __pidataBANK0                 idataBANK0   002FF2
 __pintcode                    intcode      000008
 __pintcode_body               intcode_body 002BCA
-__pmediumconst                mediumconst  007EF8
+__pmediumconst                mediumconst  007EF6
 __ptext0                      text0        0008C8
 __ptext1                      text1        002FF8
 __ptext10                     text10       0029C6
@@ -711,7 +711,7 @@ _humidade$1534                cstackBANK0  000068
 _itoa                         text8        00222A
 _keyPressed                   bssCOMRAM    000055
 _keyState                     bssBANK0     0000B8
-_keymap                       mediumconst  007EF9
+_keymap                       mediumconst  007EF7
 _main                         text0        0008C8
 _millis                       text7        002F5C
 _milliseconds                 bssCOMRAM    00004A
@@ -778,7 +778,7 @@ main@tempLimit                cstackBANK0  0000AE
 millis@ms                     cstackCOMRAM 00000E
 readAnalog@pin                cstackCOMRAM 000010
 readAnalog@result             cstackCOMRAM 00000E
-readKey@F3616                 mediumconst  007F09
+readKey@F3616                 mediumconst  007F07
 readKey@InvCol                cstackCOMRAM 000018
 readKey@col                   cstackCOMRAM 000024
 readKey@currentTime           cstackCOMRAM 000020
@@ -842,8 +842,8 @@ nxlcd.c
 nxlcd.c estimated size: 540
 
 shared
-		readKey@F3616  		MEDIUMCONST    	7F09	0000	8
-		_keymap        		MEDIUMCONST    	7EF9	0000	16
+		readKey@F3616  		MEDIUMCONST    	7F07	0000	8
+		_keymap        		MEDIUMCONST    	7EF7	0000	16
 		__initialization		CODE           	2D50	0000	56
 
 shared estimated size: 80

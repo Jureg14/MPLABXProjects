@@ -1,97 +1,96 @@
-// Revised code for temperature, humidity and CO2 control using PIC18F4550
-// Adhering to C89 Standard and using // comments
+// Código revisado para controle de temperatura, umidade e CO2 usando PIC18F4550
+// Seguindo o padrão C89 e usando comentários //
 
 /*
- * File:   main.c
- * Author: JeeJ (Revised by AI Assistant)
+ * Arquivo:   main.c
+ * Autor: JeeJ (Revisado por Assistente de IA)
  *
- * Created on 16 de Novembro de 2024, 09:55
- * Revised on 17 de Novembro de 2024 by AI Assistant
+ * Criado em 16 de Novembro de 2024, 09:55
+ * Revisado em 17 de Novembro de 2024 por Assistente de IA
  */
 
+// Configurações de bits do PIC18F4550
 
-// PIC18F4550 Configuration Bit Settings
-
-// 'C' source line config statements
+// Declarações de configuração de linha 'C'
 
 // CONFIG1L
-#pragma config PLLDIV = 1       // PLL Prescaler Selection bits (No prescale (4 MHz oscillator input drives PLL directly))
-#pragma config CPUDIV = OSC1_PLL2// System Clock Postscaler Selection bits ([Primary Oscillator Src: /1][96 MHz PLL Src: /2])
-#pragma config USBDIV = 1       // USB Clock Selection bit (used in Full-Speed USB mode only; UCFG:FSEN = 1) (USB clock source comes directly from the primary oscillator block with no postscale)
+#pragma config PLLDIV = 1       // Bits de seleção do prescaler PLL (Sem prescaler (entrada do oscilador de 4 MHz aciona o PLL diretamente))
+#pragma config CPUDIV = OSC1_PLL2// Bits de seleção do pós-escaler do clock do sistema ([Fonte do oscilador primário: /1][Fonte do PLL de 96 MHz: /2])
+#pragma config USBDIV = 1       // Bit de seleção do clock USB (usado apenas no modo USB Full-Speed; UCFG:FSEN = 1) (A fonte do clock USB vem diretamente do bloco do oscilador primário sem pós-escala)
 
 // CONFIG1H
-#pragma config FOSC = HS        // Oscillator Selection bits (HS oscillator (HS))
-#pragma config FCMEN = OFF      // Fail-Safe Clock Monitor Enable bit (Fail-Safe Clock Monitor disabled)
-#pragma config IESO = OFF       // Internal/External Oscillator Switchover bit (Oscillator Switchover mode disabled)
+#pragma config FOSC = HS        // Bits de seleção do oscilador (Oscilador HS (HS))
+#pragma config FCMEN = OFF      // Bit de habilitação do monitor de clock fail-safe (Monitor de clock fail-safe desabilitado)
+#pragma config IESO = OFF       // Bit de alternância entre oscilador interno/externo (Modo de alternância de oscilador desabilitado)
 
 // CONFIG2L
-#pragma config PWRT = OFF       // Power-up Timer Enable bit (PWRT disabled)
-#pragma config BOR = OFF        // Brown-out Reset Enable bits (Brown-out Reset disabled in hardware and software)
-#pragma config BORV = 3         // Brown-out Reset Voltage bits (Minimum setting 2.05V)
-#pragma config VREGEN = OFF     // USB Voltage Regulator Enable bit (USB voltage regulator disabled)
+#pragma config PWRT = OFF       // Bit de habilitação do timer de power-up (PWRT desabilitado)
+#pragma config BOR = OFF        // Bits de habilitação do reset por brown-out (Reset por brown-out desabilitado em hardware e software)
+#pragma config BORV = 3         // Bits de tensão de reset por brown-out (Configuração mínima de 2.05V)
+#pragma config VREGEN = OFF     // Bit de habilitação do regulador de tensão USB (Regulador de tensão USB desabilitado)
 
 // CONFIG2H
-#pragma config WDT = OFF        // Watchdog Timer Enable bit (WDT disabled (control is placed on the SWDTEN bit))
-#pragma config WDTPS = 32768    // Watchdog Timer Postscale Select bits (1:32768)
+#pragma config WDT = OFF        // Bit de habilitação do timer watchdog (WDT desabilitado (o controle é colocado no bit SWDTEN))
+#pragma config WDTPS = 32768    // Bits de seleção do pós-escaler do timer watchdog (1:32768)
 
 // CONFIG3H
-#pragma config CCP2MX = OFF     // CCP2 MUX bit (CCP2 input/output is multiplexed with RB3)
-#pragma config PBADEN = OFF     // PORTB A/D Enable bit (PORTB<4:0> pins are configured as digital I/O on Reset)
-#pragma config LPT1OSC = OFF    // Low-Power Timer 1 Oscillator Enable bit (Timer1 configured for higher power operation)
-#pragma config MCLRE = ON      // MCLR Pin Enable bit (RE3 input pin enabled; MCLR pin disabled)
+#pragma config CCP2MX = OFF     // Bit de multiplexação do CCP2 (A entrada/saída do CCP2 é multiplexada com RB3)
+#pragma config PBADEN = OFF     // Bit de habilitação do A/D no PORTB (Os pinos PORTB<4:0> são configurados como I/O digital no Reset)
+#pragma config LPT1OSC = OFF    // Bit de habilitação do oscilador do timer 1 de baixa potência (Timer1 configurado para operação de alta potência)
+#pragma config MCLRE = ON      // Bit de habilitação do pino MCLR (Pino de entrada RE3 habilitado; pino MCLR desabilitado)
 
 // CONFIG4L
-#pragma config STVREN = OFF     // Stack Full/Underflow Reset Enable bit (Stack full/underflow will not cause Reset)
-#pragma config LVP = OFF        // Single-Supply ICSP Enable bit (Single-Supply ICSP disabled)
-#pragma config ICPRT = OFF      // Dedicated In-Circuit Debug/Programming Port (ICPORT) Enable bit (ICPORT disabled)
-#pragma config XINST = OFF      // Extended Instruction Set Enable bit (Instruction set extension and Indexed Addressing mode disabled (Legacy mode))
+#pragma config STVREN = OFF     // Bit de habilitação do reset por estouro/underflow da pilha (Estouro/underflow da pilha não causará reset)
+#pragma config LVP = OFF        // Bit de habilitação do ICSP de alimentação única (ICSP de alimentação única desabilitado)
+#pragma config ICPRT = OFF      // Bit de habilitação da porta dedicada de depuração/programação em circuito (ICPORT) (ICPORT desabilitada)
+#pragma config XINST = OFF      // Bit de habilitação do conjunto de instruções estendido (Extensão do conjunto de instruções e modo de endereçamento indexado desabilitados (Modo legado))
 
 // CONFIG5L
-#pragma config CP0 = OFF        // Code Protection bit (Block 0 (000800-001FFFh) is not code-protected)
-#pragma config CP1 = OFF        // Code Protection bit (Block 1 (002000-003FFFh) is not code-protected)
-#pragma config CP2 = OFF        // Code Protection bit (Block 2 (004000-005FFFh) is not code-protected)
-#pragma config CP3 = OFF        // Code Protection bit (Block 3 (006000-007FFFh) is not code-protected)
+#pragma config CP0 = OFF        // Bit de proteção de código (Bloco 0 (000800-001FFFh) não está protegido por código)
+#pragma config CP1 = OFF        // Bit de proteção de código (Bloco 1 (002000-003FFFh) não está protegido por código)
+#pragma config CP2 = OFF        // Bit de proteção de código (Bloco 2 (004000-005FFFh) não está protegido por código)
+#pragma config CP3 = OFF        // Bit de proteção de código (Bloco 3 (006000-007FFFh) não está protegido por código)
 
 // CONFIG5H
-#pragma config CPB = OFF        // Boot Block Code Protection bit (Boot block (000000-0007FFh) is not code-protected)
-#pragma config CPD = OFF        // Data EEPROM Code Protection bit (Data EEPROM is not code-protected)
+#pragma config CPB = OFF        // Bit de proteção de código do bloco de boot (Bloco de boot (000000-0007FFh) não está protegido por código)
+#pragma config CPD = OFF        // Bit de proteção de código da EEPROM de dados (EEPROM de dados não está protegida por código)
 
 // CONFIG6L
-#pragma config WRT0 = OFF       // Write Protection bit (Block 0 (000800-001FFFh) is not write-protected)
-#pragma config WRT1 = OFF       // Write Protection bit (Block 1 (002000-003FFFh) is not write-protected)
-#pragma config WRT2 = OFF       // Write Protection bit (Block 2 (004000-005FFFh) is not write-protected)
-#pragma config WRT3 = OFF       // Write Protection bit (Block 3 (006000-007FFFh) is not write-protected)
+#pragma config WRT0 = OFF       // Bit de proteção de escrita (Bloco 0 (000800-001FFFh) não está protegido contra escrita)
+#pragma config WRT1 = OFF       // Bit de proteção de escrita (Bloco 1 (002000-003FFFh) não está protegido contra escrita)
+#pragma config WRT2 = OFF       // Bit de proteção de escrita (Bloco 2 (004000-005FFFh) não está protegido contra escrita)
+#pragma config WRT3 = OFF       // Bit de proteção de escrita (Bloco 3 (006000-007FFFh) não está protegido contra escrita)
 
 // CONFIG6H
-#pragma config WRTC = OFF       // Configuration Register Write Protection bit (Configuration registers (300000-3000FFh) are not write-protected)
-#pragma config WRTB = OFF       // Boot Block Write Protection bit (Boot block (000000-0007FFh) is not write-protected)
-#pragma config WRTD = OFF       // Data EEPROM Write Protection bit (Data EEPROM is not write-protected)
+#pragma config WRTC = OFF       // Bit de proteção de escrita dos registradores de configuração (Registradores de configuração (300000-3000FFh) não estão protegidos contra escrita)
+#pragma config WRTB = OFF       // Bit de proteção de escrita do bloco de boot (Bloco de boot (000000-0007FFh) não está protegido contra escrita)
+#pragma config WRTD = OFF       // Bit de proteção de escrita da EEPROM de dados (EEPROM de dados não está protegida contra escrita)
 
 // CONFIG7L
-#pragma config EBTR0 = OFF      // Table Read Protection bit (Block 0 (000800-001FFFh) is not protected from table reads executed in other blocks)
-#pragma config EBTR1 = OFF      // Table Read Protection bit (Block 1 (002000-003FFFh) is not protected from table reads executed in other blocks)
-#pragma config EBTR2 = OFF      // Table Read Protection bit (Block 2 (004000-005FFFh) is not protected from table reads executed in other blocks)
-#pragma config EBTR3 = OFF      // Table Read Protection bit (Block 3 (006000-007FFFh) is not protected from table reads executed in other blocks)
+#pragma config EBTR0 = OFF      // Bit de proteção de leitura de tabela (Bloco 0 (000800-001FFFh) não está protegido contra leituras de tabela executadas em outros blocos)
+#pragma config EBTR1 = OFF      // Bit de proteção de leitura de tabela (Bloco 1 (002000-003FFFh) não está protegido contra leituras de tabela executadas em outros blocos)
+#pragma config EBTR2 = OFF      // Bit de proteção de leitura de tabela (Bloco 2 (004000-005FFFh) não está protegido contra leituras de tabela executadas em outros blocos)
+#pragma config EBTR3 = OFF      // Bit de proteção de leitura de tabela (Bloco 3 (006000-007FFFh) não está protegido contra leituras de tabela executadas em outros blocos)
 
 // CONFIG7H
-#pragma config EBTRB = OFF      // Boot Block Table Read Protection bit (Boot block (000000-0007FFh) is not protected from table reads executed in other blocks)
+#pragma config EBTRB = OFF      // Bit de proteção de leitura de tabela do bloco de boot (Bloco de boot (000000-0007FFh) não está protegido contra leituras de tabela executadas em outros blocos)
 
-// Include necessary header files
-#include <xc.h>         // XC8 compiler specific header file
-#include <stdio.h>      // Standard input/output functions
-#include <stdlib.h>     // Standard library functions
-#include "nxlcd.h"      // Header file for LCD library (ensure this is in your project)
+// Incluir arquivos de cabeçalho necessários
+#include <xc.h>         // Arquivo de cabeçalho específico do compilador XC8
+#include <stdio.h>      // Funções padrão de entrada/saída
+#include <stdlib.h>     // Funções padrão da biblioteca
+#include "nxlcd.h"      // Arquivo de cabeçalho para a biblioteca LCD (certifique-se de que está no seu projeto)
 
-// Define crystal frequency for delay functions
-#define _XTAL_FREQ 20000000    // Crystal frequency is 20MHz
+// Definir frequência do cristal para funções de atraso
+#define _XTAL_FREQ 20000000    // Frequência do cristal é 20MHz
 
-// Define keypad dimensions
+// Definir dimensões do teclado
 #define ROWS 4
 #define COLS 4
-#define DEBOUNCE_DELAY 50  // Debounce time in milliseconds
-#define KEY_WAIT_PERIOD 300  // Wait period after a key press in milliseconds
+#define DEBOUNCE_DELAY 50  // Tempo de debounce em milissegundos
+#define KEY_WAIT_PERIOD 300  // Período de espera após uma tecla pressionada em milissegundos
 
-// Keypad mapping for 4x4 matrix keypad
+// Mapeamento do teclado para teclado matricial 4x4
 const char keymap[ROWS][COLS] = {
     {'1', '2', '3', 'A'},
     {'4', '5', '6', 'B'},
@@ -99,16 +98,15 @@ const char keymap[ROWS][COLS] = {
     {'F', '0', 'E', 'D'}
 };
 
-// Global variables
-volatile unsigned long milliseconds = 0; // Millisecond counter, incremented by timer interrupt
-volatile unsigned char keyPressed = 0;     // Flag to indicate a key press (not used in current code, can be removed if not needed)
-volatile int tak;                           // Variable toggled by timer interrupt (purpose unclear from original code, might be for blinking or periodic tasks)
-int Tlim = 30;                              // Default temperature limit
-int Hlim = 50;                              // Default humidity limit
-int Glim = 20;                              // Default gas limit
+// Variáveis globais
+volatile unsigned long milliseconds = 0; // Contador de milissegundos, incrementado pela interrupção do timer
+volatile unsigned char keyPressed = 0;     // Flag para indicar uma tecla pressionada (não usado no código atual, pode ser removido se não for necessário)
+volatile int tak;                           // Variável alternada pela interrupção do timer (propósito não claro no código original, pode ser para piscar ou tarefas periódicas)
+int Tlim = 30;                              // Limite padrão de temperatura
+int Hlim = 50;                              // Limite padrão de umidade
+int Glim = 20;                              // Limite padrão de gás
 
-
-// Function prototypes (declared according to C89 standard at the beginning)
+// Protótipos de funções (declarados de acordo com o padrão C89 no início)
 char readKey(void);
 unsigned int readAnalog(unsigned char pin);
 void displayStuff(int row, int column, char *stuff);
@@ -125,681 +123,606 @@ void floatToString(float value, char *buffer, int precision);
 float tempRead(void);
 float humidade(void);
 float gasRead(void);
-void setCoolerSpeed(int PWMset); // PWM control function for cooler (not implemented)
-void setMoist(int moistSet);     // Function to control humidifier (not implemented)
-void buzzer(int buzzerStatus);     // Function to control buzzer (not implemented)
-void ISR(void);                 // Interrupt Service Routine prototype
+void setCoolerSpeed(int PWMset); // Função de controle PWM para o cooler (não implementada)
+void setMoist(int moistSet);     // Função para controlar o umidificador (não implementada)
+void buzzer(int buzzerStatus);     // Função para controlar o buzzer (não implementada)
+void ISR(void);                 // Protótipo da rotina de serviço de interrupção
 
-
-// Main function - program entry point
+// Função principal - ponto de entrada do programa
 void main(void) {
-    char lastKey = '\0';          // Stores the last key pressed, initialized to null character
-    int menuIndex = 0;             // Current menu index, starts at 0
-    unsigned long lastDisplayUpdate = 0;  // Time of last display update, used for periodic updates
-    char pressed_key;             // Variable to store the key currently pressed
-    unsigned long currentTime;      // Variable to store current time in milliseconds
-    float currentTemp;              // Variable to store current temperature reading
-    float currentHumid;             // Variable to store current humidity reading
-    float currentGas;               // Variable to store current gas concentration reading
+    char lastKey = '\0';          // Armazena a última tecla pressionada, inicializada com caractere nulo
+    int menuIndex = 0;             // Índice do menu atual, começa em 0
+    unsigned long lastDisplayUpdate = 0;  // Tempo da última atualização do display, usado para atualizações periódicas
+    char pressed_key;             // Variável para armazenar a tecla atualmente pressionada
+    unsigned long currentTime;      // Variável para armazenar o tempo atual em milissegundos
+    float currentTemp;              // Variável para armazenar a leitura atual da temperatura
+    float currentHumid;             // Variável para armazenar a leitura atual da umidade
+    float currentGas;               // Variável para armazenar a leitura atual da concentração de gás
 
+    // --- Configuração do Sistema ---
+    configureIO();         // Configurar pinos de entrada/saída
+    configureADC();        // Configurar o conversor analógico-digital
+    configureLCD();        // Configurar o módulo LCD
+    configureTimer();      // Configurar o Timer 0 para contagem de milissegundos
+    configureInterrupt();  // Configurar interrupções (Timer 0 e PORTB)
 
-    // --- System Configuration ---
-    configureIO();         // Configure Input/Output pins
-    configureADC();        // Configure Analog-to-Digital Converter
-    configureLCD();        // Configure LCD module
-    configureTimer();      // Configure Timer 0 for millisecond counting
-    configureInterrupt();  // Configure Interrupts (Timer 0 and PORTB)
+    // --- Configuração dos pinos de saída (LEDs) ---
+    TRISDbits.TRISD0 = 0; // Configurar RD0 como saída (LED para alarme de temperatura)
+    TRISDbits.TRISD1 = 0; // Configurar RD1 como saída (LED para alarme de umidade)
+    TRISDbits.TRISD2 = 0; // Configurar RD2 como saída (LED para alarme de gás)
 
-
-    // --- Output Pin Configuration (LEDs) ---
-    TRISDbits.TRISD0 = 0; // Configure RD0 as output (LED for temperature alarm)
-    TRISDbits.TRISD1 = 0; // Configure RD1 as output (LED for humidity alarm)
-    TRISDbits.TRISD2 = 0; // Configure RD2 as output (LED for gas alarm)
-
-
-    // --- Main Program Loop ---
+    // --- Loop Principal do Programa ---
     while (1) {
-        pressed_key = readKey();         // Read current keypad input
-        currentTime = millis();           // Get current time in milliseconds
+        pressed_key = readKey();         // Ler a entrada atual do teclado
+        currentTime = millis();           // Obter o tempo atual em milissegundos
 
-
-        // --- Periodic Display Update ---
-        if (currentTime - lastDisplayUpdate >= 500) { // Update display every 500 milliseconds
-            displayMenu(menuIndex);                // Update LCD display based on current menu
-            lastDisplayUpdate = currentTime;        // Reset last display update time
+        // --- Atualização Periódica do Display ---
+        if (currentTime - lastDisplayUpdate >= 500) { // Atualizar o display a cada 500 milissegundos
+            displayMenu(menuIndex);                // Atualizar o display LCD com base no menu atual
+            lastDisplayUpdate = currentTime;        // Reiniciar o tempo da última atualização do display
         }
 
-
-        // --- Menu Navigation ---
-        if (pressed_key == 'E' && lastKey != 'E') { // If 'E' is pressed and was not the last key
-            menuIndex++;                             // Increment menu index to move to next menu
-            if (menuIndex > 4) {                      // Wrap around menu index if it exceeds the last menu page (0-4, so 5 pages)
-                menuIndex = 0;                         // Reset to the first menu page
+        // --- Navegação no Menu ---
+        if (pressed_key == 'E' && lastKey != 'E') { // Se 'E' for pressionado e não foi a última tecla
+            menuIndex++;                             // Incrementar o índice do menu para ir para o próximo menu
+            if (menuIndex > 4) {                      // Voltar ao início do menu se exceder a última página do menu (0-4, então 5 páginas)
+                menuIndex = 0;                         // Reiniciar para a primeira página do menu
             }
-            displayMenu(menuIndex);                  // Update display immediately after menu change
+            displayMenu(menuIndex);                  // Atualizar o display imediatamente após a mudança de menu
         }
         if (pressed_key == 'F' && lastKey != 'F'){
-            menuIndex--;                             // Increment menu index to move to previous menu
-            if (menuIndex < 0) {                      // Wrap around menu index if it falls behind the first menu page (0-4, so 5 pages)
-                menuIndex = 4;                         // Reset to the last menu page
+            menuIndex--;                             // Decrementar o índice do menu para ir para o menu anterior
+            if (menuIndex < 0) {                      // Voltar ao final do menu se cair antes da primeira página do menu (0-4, então 5 páginas)
+                menuIndex = 4;                         // Reiniciar para a última página do menu
             }
-            displayMenu(menuIndex);                  // Update display immediately after menu change
+            displayMenu(menuIndex);                  // Atualizar o display imediatamente após a mudança de menu
         }
 
-
-        // --- Limit Configuration ---
-        if (pressed_key == 'A' && lastKey != 'A') { // If 'A' is pressed and was not the last key (Set Temperature Limit)
-            int tempLimit = readTwoDigitValue("Limite Temp:"); // Prompt user to enter temperature limit
-            if (tempLimit != -1) {                      // If a valid limit is entered (not cancelled -1)
-                Tlim = tempLimit;                         // Update temperature limit
-                displayStuff(1, 0, "Temp Salva!");       // Display confirmation message
-                __delay_ms(1000);                        // Display message for 1 second
-                menuIndex = 0;                           // Return to main menu
-                displayMenu(menuIndex);                  // Update display to main menu
-            } else if (tempLimit == -1) {               // If user cancelled input
-                menuIndex = 0;                           // Return to main menu
-                displayMenu(menuIndex);                  // Update display to main menu
-            }
-        }
-
-
-        if (pressed_key == 'B' && lastKey != 'B') { // If 'B' is pressed and was not the last key (Set Humidity Limit)
-            int humLimit = readTwoDigitValue("Limite Hum:"); // Prompt user to enter humidity limit
-            if (humLimit != -1) {                      // If a valid limit is entered
-                Hlim = humLimit;                         // Update humidity limit
-                displayStuff(1, 0, "Humid Salvo!");      // Display confirmation
-                __delay_ms(1000);                        // Display message for 1 second
-                menuIndex = 0;                           // Return to main menu
-                displayMenu(menuIndex);                  // Update display to main menu
-            } else if (humLimit == -1) {               // If user cancelled input
-                menuIndex = 0;                           // Return to main menu
-                displayMenu(menuIndex);                  // Update display to main menu
+        // --- Configuração dos Limites ---
+        if (pressed_key == 'A' && lastKey != 'A') { // Se 'A' for pressionado e não foi a última tecla (Definir Limite de Temperatura)
+            int tempLimit = readTwoDigitValue("Limite Temp:"); // Solicitar ao usuário para inserir o limite de temperatura
+            if (tempLimit != -1) {                      // Se um limite válido for inserido (não cancelado -1)
+                Tlim = tempLimit;                         // Atualizar o limite de temperatura
+                displayStuff(1, 0, "Temp Salva!");       // Exibir mensagem de confirmação
+                __delay_ms(1000);                        // Exibir mensagem por 1 segundo
+                menuIndex = 0;                           // Voltar ao menu principal
+                displayMenu(menuIndex);                  // Atualizar o display para o menu principal
+            } else if (tempLimit == -1) {               // Se o usuário cancelar a entrada
+                menuIndex = 0;                           // Voltar ao menu principal
+                displayMenu(menuIndex);                  // Atualizar o display para o menu principal
             }
         }
 
-
-        if (pressed_key == 'C' && lastKey != 'C') { // If 'C' is pressed and was not the last key (Set Gas Limit)
-            int gasLimit = readTwoDigitValue("Limite Gas"); // Prompt for gas limit
-            if (gasLimit != -1) {                      // If valid limit entered
-                Glim = gasLimit;                         // Update gas limit
-                displayStuff(1, 0, "Gas Salvo!");        // Confirmation message
-                __delay_ms(1000);                        // Display message for 1 second
-                menuIndex = 0;                           // Return to main menu
-                displayMenu(menuIndex);                  // Update display to main menu
-            } else if (gasLimit == -1) {               // If user cancelled input
-                menuIndex = 0;                           // Return to main menu
-                displayMenu(menuIndex);                  // Update display to main menu
+        if (pressed_key == 'B' && lastKey != 'B') { // Se 'B' for pressionado e não foi a última tecla (Definir Limite de Umidade)
+            int humLimit = readTwoDigitValue("Limite Hum:"); // Solicitar ao usuário para inserir o limite de umidade
+            if (humLimit != -1) {                      // Se um limite válido for inserido
+                Hlim = humLimit;                         // Atualizar o limite de umidade
+                displayStuff(1, 0, "Humid Salvo!");      // Exibir confirmação
+                __delay_ms(1000);                        // Exibir mensagem por 1 segundo
+                menuIndex = 0;                           // Voltar ao menu principal
+                displayMenu(menuIndex);                  // Atualizar o display para o menu principal
+            } else if (humLimit == -1) {               // Se o usuário cancelar a entrada
+                menuIndex = 0;                           // Voltar ao menu principal
+                displayMenu(menuIndex);                  // Atualizar o display para o menu principal
             }
         }
 
-
-        if (pressed_key == 'D' && lastKey != 'D') { // If 'D' is pressed and was not the last key (Reset Limits)
-            Tlim = 30;                                 // Reset temperature limit to default
-            Hlim = 50;                                 // Reset humidity limit to default
-            Glim = 20;                                 // Reset gas limit to default
-            displayStuff(0, 0, "Lim resetados!");     // Display reset confirmation
-            __delay_ms(1000);                        // Display message for 1 second
-            menuIndex = 0;                           // Return to main menu
-            displayMenu(menuIndex);                  // Update display to main menu
+        if (pressed_key == 'C' && lastKey != 'C') { // Se 'C' for pressionado e não foi a última tecla (Definir Limite de Gás)
+            int gasLimit = readTwoDigitValue("Limite Gas"); // Solicitar o limite de gás
+            if (gasLimit != -1) {                      // Se um limite válido for inserido
+                Glim = gasLimit;                         // Atualizar o limite de gás
+                displayStuff(1, 0, "Gas Salvo!");        // Mensagem de confirmação
+                __delay_ms(1000);                        // Exibir mensagem por 1 segundo
+                menuIndex = 0;                           // Voltar ao menu principal
+                displayMenu(menuIndex);                  // Atualizar o display para o menu principal
+            } else if (gasLimit == -1) {               // Se o usuário cancelar a entrada
+                menuIndex = 0;                           // Voltar ao menu principal
+                displayMenu(menuIndex);                  // Atualizar o display para o menu principal
+            }
         }
 
+        if (pressed_key == 'D' && lastKey != 'D') { // Se 'D' for pressionado e não foi a última tecla (Resetar Limites)
+            Tlim = 30;                                 // Resetar o limite de temperatura para o padrão
+            Hlim = 50;                                 // Resetar o limite de umidade para o padrão
+            Glim = 20;                                 // Resetar o limite de gás para o padrão
+            displayStuff(0, 0, "Lim resetados!");     // Exibir confirmação de reset
+            __delay_ms(1000);                        // Exibir mensagem por 1 segundo
+            menuIndex = 0;                           // Voltar ao menu principal
+            displayMenu(menuIndex);                  // Atualizar o display para o menu principal
+        }
 
-        // --- Sensor Readings ---
-        currentTemp = tempRead();   // Read current temperature from sensor
-        currentHumid = humidade();   // Read current humidity from sensor
-        currentGas = gasRead();     // Read current gas concentration from sensor
+        // --- Leituras dos Sensores ---
+        currentTemp = tempRead();   // Ler a temperatura atual do sensor
+        currentHumid = humidade();   // Ler a umidade atual do sensor
+        currentGas = gasRead();     // Ler a concentração de gás atual do sensor
 
-
-        // --- Alarm and Actuator Control Logic ---
-        if (currentTemp > Tlim || currentHumid > Hlim || currentGas > Glim) { // Check if any sensor value exceeds its limit
-            buzzer(1);  // Activate buzzer if any limit is exceeded (buzzer function needs to be implemented)
+        // --- Lógica de Controle de Alarme e Atuadores ---
+        if (currentTemp > Tlim || currentHumid > Hlim || currentGas > Glim) { // Verificar se algum valor do sensor excede seu limite
+            buzzer(1);  // Ativar o buzzer se algum limite for excedido (a função buzzer precisa ser implementada)
         } else {
-            buzzer(0);  // Deactivate buzzer if all values are within limits
+            buzzer(0);  // Desativar o buzzer se todos os valores estiverem dentro dos limites
         }
 
-
-        if (currentTemp > Tlim) { // If temperature is above limit
-            PORTDbits.RD0 = 1;    // Turn on temperature alarm LED (RD0)
-            PORTCbits.RC2 = 1;    // Turn on cooler (RC2 - assuming RC2 controls cooler)
+        if (currentTemp > Tlim) { // Se a temperatura estiver acima do limite
+            PORTDbits.RD0 = 1;    // Ligar o LED de alarme de temperatura (RD0)
+            PORTCbits.RC2 = 1;    // Ligar o cooler (RC2 - assumindo que RC2 controla o cooler)
         } else {
-            PORTDbits.RD0 = 0;    // Turn off temperature alarm LED
-            PORTCbits.RC2 = 0;    // Turn off cooler
+            PORTDbits.RD0 = 0;    // Desligar o LED de alarme de temperatura
+            PORTCbits.RC2 = 0;    // Desligar o cooler
         }
 
-
-        if (currentHumid > Hlim) { // If humidity is above limit
-            PORTDbits.RD1 = 1;    // Turn on humidity alarm LED (RD1)
-            setMoist(1);          // Activate humidifier (setMoist function needs implementation)
+        if (currentHumid > Hlim) { // Se a umidade estiver acima do limite
+            PORTDbits.RD1 = 1;    // Ligar o LED de alarme de umidade (RD1)
+            setMoist(1);          // Ativar o umidificador (a função setMoist precisa ser implementada)
         } else {
-            PORTDbits.RD1 = 0;    // Turn off humidity alarm LED
-            setMoist(0);          // Deactivate humidifier
+            PORTDbits.RD1 = 0;    // Desligar o LED de alarme de umidade
+            setMoist(0);          // Desativar o umidificador
         }
 
-
-        if (currentGas > Glim) {   // If gas concentration is above limit
-            PORTDbits.RD2 = 1;    // Turn on gas alarm LED (RD2)
-            setCoolerSpeed(255); // Example: Set cooler to max speed as exhaust (setCoolerSpeed function needs PWM implementation)
+        if (currentGas > Glim) {   // Se a concentração de gás estiver acima do limite
+            PORTDbits.RD2 = 1;    // Ligar o LED de alarme de gás (RD2)
+            setCoolerSpeed(255); // Exemplo: Definir o cooler para velocidade máxima como exaustor (a função setCoolerSpeed precisa de implementação PWM)
         } else {
-            PORTDbits.RD2 = 0;    // Turn off gas alarm LED
-            setCoolerSpeed(0);   // Set cooler speed to 0 when gas is within limit
+            PORTDbits.RD2 = 0;    // Desligar o LED de alarme de gás
+            setCoolerSpeed(0);   // Definir a velocidade do cooler para 0 quando o gás estiver dentro do limite
         }
 
+        lastKey = pressed_key;      // Atualizar a última tecla pressionada para a próxima iteração para detectar eventos de tecla pressionada
+    } // Fim do loop principal
+} // Fim da função principal
 
-        lastKey = pressed_key;      // Update last key pressed for next iteration to detect key press events
-    } // End of main loop
-} // End of main function
+// ------ Definições de Funções ------
 
-
-// ------ Function Definitions ------
-
-// Function to display menu options on LCD based on menu index
+// Função para exibir opções de menu no LCD com base no índice do menu
 void displayMenu(int menuIndex) {
-    char valueStr[10];                   // String buffer to hold integer/float values for display
-    static unsigned long lastUpdateTime = 0; // Static variable to track last display update time for rate limiting
-    unsigned long currentTime = millis();     // Get current time for display update rate limiting
-    float currentTemp, currentHumid, currentGas; // Local variables to store sensor readings
+    char valueStr[10];                   // Buffer de string para armazenar valores inteiros/float para exibição
+    static unsigned long lastUpdateTime = 0; // Variável estática para rastrear o tempo da última atualização do display para limitar a taxa
+    unsigned long currentTime = millis();     // Obter o tempo atual para limitar a taxa de atualização do display
+    float currentTemp, currentHumid, currentGas; // Variáveis locais para armazenar as leituras dos sensores
 
-
-    // --- Rate Limit Display Updates ---
-    if (currentTime - lastUpdateTime < 500) { // Limit display updates to every 500 milliseconds
-        return;                               // Exit function if not enough time has passed since last update
+    // --- Limitar Atualizações do Display ---
+    if (currentTime - lastUpdateTime < 500) { // Limitar as atualizações do display a cada 500 milissegundos
+        return;                               // Sair da função se não tiver passado tempo suficiente desde a última atualização
     }
-    lastUpdateTime = currentTime;               // Update last display update time
+    lastUpdateTime = currentTime;               // Atualizar o tempo da última atualização do display
 
+    WriteCmdXLCD(0x01);                     // Limpar o display LCD
+    __delay_ms(2);                            // Pequeno atraso após o comando do LCD
 
-    WriteCmdXLCD(0x01);                     // Clear LCD display
-    __delay_ms(2);                            // Small delay after LCD command
+    // --- Ler Valores dos Sensores para Exibição ---
+    currentTemp = tempRead();                 // Ler a temperatura atual
+    currentHumid = humidade();                 // Ler a umidade atual
+    currentGas = gasRead();                   // Ler a concentração de gás atual
 
-
-    // --- Read Sensor Values for Display ---
-    currentTemp = tempRead();                 // Read current temperature
-    currentHumid = humidade();                 // Read current humidity
-    currentGas = gasRead();                   // Read current gas concentration
-
-
-    // --- Menu Content based on menuIndex ---
+    // --- Conteúdo do Menu com base no menuIndex ---
     switch (menuIndex) {
-        case 0: // Menu Page 0: Temperature Display
-            displayStuff(0, 0, "Temp:");         // Display "Temp:" on first row, first column
-            floatToString(currentTemp, valueStr, 1); // Convert temperature to string with 1 decimal place
-            displayStuff(0, 6, valueStr);         // Display temperature value
-            displayStuff(0, 11, "C");           // Display "C" for Celsius unit
-            displayStuff(1, 0, "Lim:");          // Display "Lim:" on second row
-            itoa(Tlim, valueStr);                // Convert temperature limit to string
-            displayStuff(1, 4, valueStr);         // Display temperature limit value
+        case 0: // Página do Menu 0: Exibição da Temperatura
+            displayStuff(0, 0, "Temp:");         // Exibir "Temp:" na primeira linha, primeira coluna
+            floatToString(currentTemp, valueStr, 1); // Converter a temperatura para string com 1 casa decimal
+            displayStuff(0, 6, valueStr);         // Exibir o valor da temperatura
+            displayStuff(0, 11, "C");           // Exibir "C" para unidade Celsius
+            displayStuff(1, 0, "Lim:");          // Exibir "Lim:" na segunda linha
+            itoa(Tlim, valueStr);                // Converter o limite de temperatura para string
+            displayStuff(1, 4, valueStr);         // Exibir o valor do limite de temperatura
             break;
 
-
-        case 1: // Menu Page 1: Humidity Display
-            displayStuff(0, 0, "Humid:");        // Display "Humid:"
-            floatToString(currentHumid, valueStr, 1); // Convert humidity to string with 1 decimal
-            displayStuff(0, 7, valueStr);         // Display humidity value
-            displayStuff(0, 12, "%");          // Display "%" for percentage unit
-            displayStuff(1, 0, "Lim:");          // Display "Lim:"
-            itoa(Hlim, valueStr);                // Convert humidity limit to string
-            displayStuff(1, 4, valueStr);         // Display humidity limit value
+        case 1: // Página do Menu 1: Exibição da Umidade
+            displayStuff(0, 0, "Humid:");        // Exibir "Humid:"
+            floatToString(currentHumid, valueStr, 1); // Converter a umidade para string com 1 casa decimal
+            displayStuff(0, 7, valueStr);         // Exibir o valor da umidade
+            displayStuff(0, 12, "%");          // Exibir "%" para unidade de porcentagem
+            displayStuff(1, 0, "Lim:");          // Exibir "Lim:"
+            itoa(Hlim, valueStr);                // Converter o limite de umidade para string
+            displayStuff(1, 4, valueStr);         // Exibir o valor do limite de umidade
             break;
 
-
-        case 2: // Menu Page 2: Gas Concentration Display
-            displayStuff(0, 0, "Gas:");          // Display "Gas:"
-            floatToString(currentGas, valueStr, 1); // Convert gas to string with 1 decimal
-            displayStuff(0, 5, valueStr);         // Display gas value
-            displayStuff(0, 11, "ppm");          // Display "ppm" for parts per million unit
-            displayStuff(1, 0, "Lim:");          // Display "Lim:"
-            itoa(Glim, valueStr);                // Convert gas limit to string
-            displayStuff(1, 4, valueStr);         // Display gas limit value
+        case 2: // Página do Menu 2: Exibição da Concentração de Gás
+            displayStuff(0, 0, "Gas:");          // Exibir "Gas:"
+            floatToString(currentGas, valueStr, 1); // Converter a concentração de gás para string com 1 casa decimal
+            displayStuff(0, 5, valueStr);         // Exibir o valor da concentração de gás
+            displayStuff(0, 11, "ppm");          // Exibir "ppm" para unidade de partes por milhão
+            displayStuff(1, 0, "Lim:");          // Exibir "Lim:"
+            itoa(Glim, valueStr);                // Converter o limite de gás para string
+            displayStuff(1, 4, valueStr);         // Exibir o valor do limite de gás
             break;
 
+        case 3: // Página do Menu 3: Status das Leituras dos Sensores
+            displayStuff(0, 0, "Leituras");      // Exibir "Leituras" (Readings em português)
+            if (currentTemp <= Tlim && currentHumid <= Hlim && currentGas <= Glim) { // Verificar se todas as leituras estão dentro dos limites
+                displayStuff(1, 0, "OK");        // Exibir "OK" se todas estiverem dentro dos limites
+            } else { // Se alguma leitura exceder o limite, alternar entre mensagens de erro
+                static int errorCycle = 0;        // Variável estática para alternar entre mensagens de erro
+                errorCycle++;                      // Incrementar o contador de ciclo de erro
 
-        case 3: // Menu Page 3: Sensor Readings Status
-            displayStuff(0, 0, "Leituras");      // Display "Leituras" (Readings in Portuguese)
-            if (currentTemp <= Tlim && currentHumid <= Hlim && currentGas <= Glim) { // Check if all readings are within limits
-                displayStuff(1, 0, "OK");        // Display "OK" if all within limits
-            } else { // If any reading exceeds limit, cycle through error messages
-                static int errorCycle = 0;        // Static variable to cycle through error messages
-                errorCycle++;                      // Increment error cycle counter
+                if (errorCycle > 3) errorCycle = 0; // Reiniciar o ciclo de erro após exibir todos os tipos de erro
 
-                if (errorCycle > 3) errorCycle = 0; // Reset error cycle after displaying all error types
-
-                switch (errorCycle) {              // Display different error messages in cycle
+                switch (errorCycle) {              // Exibir diferentes mensagens de erro no ciclo
                     case 0:
-                        if (currentTemp > Tlim) { // If temperature limit exceeded
-                            displayStuff(1, 0, "T_lim excedida!"); // Display "T_lim excedida!" (Temp limit exceeded)
+                        if (currentTemp > Tlim) { // Se o limite de temperatura for excedido
+                            displayStuff(1, 0, "T_lim excedida!"); // Exibir "T_lim excedida!" (Limite de temperatura excedido)
                         }
                         break;
                     case 1:
-                        if (currentHumid > Hlim) { // If humidity limit exceeded
-                            displayStuff(1, 0, "H_lim excedida!"); // Display "H_lim excedida!" (Humidity limit exceeded)
+                        if (currentHumid > Hlim) { // Se o limite de umidade for excedido
+                            displayStuff(1, 0, "H_lim excedida!"); // Exibir "H_lim excedida!" (Limite de umidade excedido)
                         }
                         break;
                     case 2:
-                        if (currentGas > Glim) {   // If gas limit exceeded
-                            displayStuff(1, 0, "G_lim excedido!"); // Display "G_lim excedido!" (Gas limit exceeded)
+                        if (currentGas > Glim) {   // Se o limite de gás for excedido
+                            displayStuff(1, 0, "G_lim excedido!"); // Exibir "G_lim excedido!" (Limite de gás excedido)
                         }
                         break;
                 }
             }
             break;
 
+        case 4: // Página do Menu 4: Status do Sistema (Atuadores LIGADO/DESLIGADO)
+            displayStuff(0, 0, "Sistemas:");      // Exibir "Sistemas:" (Systems em português)
+            if (currentTemp <= Tlim && currentHumid <= Hlim && currentGas <= Glim) { // Verificar se todas as leituras estão dentro dos limites
+                displayStuff(1, 0, "OK");        // Exibir "OK" se todos os sistemas estiverem nominais
+            } else { // Se algum limite for excedido, alternar entre mensagens de status do sistema (atuadores LIGADO)
+                static int systemCycle = 0;       // Variável estática para o ciclo do sistema
+                systemCycle++;                     // Incrementar o contador de ciclo do sistema
 
-        case 4: // Menu Page 4: System Status (Actuators ON/OFF)
-            displayStuff(0, 0, "Sistemas:");      // Display "Sistemas:" (Systems in Portuguese)
-            if (currentTemp <= Tlim && currentHumid <= Hlim && currentGas <= Glim) { // Check if all readings are within limits
-                displayStuff(1, 0, "OK");        // Display "OK" if all systems are nominal
-            } else { // If any limit exceeded, cycle through system status messages (actuators ON)
-                static int systemCycle = 0;       // Static variable for system cycle
-                systemCycle++;                     // Increment system cycle counter
+                if (systemCycle > 3) systemCycle = 0; // Reiniciar o ciclo do sistema após exibir todos os status do sistema
 
-                if (systemCycle > 3) systemCycle = 0; // Reset system cycle after all system statuses displayed
-
-                switch (systemCycle) {             // Cycle through different system statuses
+                switch (systemCycle) {             // Alternar entre diferentes status do sistema
                     case 0:
-                        if (currentTemp > Tlim) { // If temperature limit exceeded
-                            displayStuff(1, 0, "Resfriador ON"); // Display "Resfriador ON" (Cooler ON)
+                        if (currentTemp > Tlim) { // Se o limite de temperatura for excedido
+                            displayStuff(1, 0, "Resfriador ON"); // Exibir "Resfriador ON" (Cooler LIGADO)
                         }
                         break;
                     case 1:
-                        if (currentHumid > Hlim) { // If humidity limit exceeded
-                            displayStuff(1, 0, "Humidificador ON"); // Display "Humidificador ON" (Humidifier ON)
+                        if (currentHumid > Hlim) { // Se o limite de umidade for excedido
+                            displayStuff(1, 0, "Humidificador ON"); // Exibir "Humidificador ON" (Umidificador LIGADO)
                         }
                         break;
                     case 2:
-                        if (currentGas > Glim) {   // If gas limit exceeded
-                            displayStuff(1, 0, "Exaustor ON");     // Display "Exaustor ON" (Exhaust fan ON)
+                        if (currentGas > Glim) {   // Se o limite de gás for excedido
+                            displayStuff(1, 0, "Exaustor ON");     // Exibir "Exaustor ON" (Exaustor LIGADO)
                         }
                         break;
                 }
             }
             break;
 
-
-        default: // Default case for invalid menu index
-            displayStuff(0, 0, "Invalid Menu");  // Display "Invalid Menu" for error case
+        default: // Caso padrão para índice de menu inválido
+            displayStuff(0, 0, "Menu Inválido");  // Exibir "Menu Inválido" para caso de erro
             break;
     }
-} // End of displayMenu function
+} // Fim da função displayMenu
 
-
-
-// Function to read a two-digit value from keypad, with a prompt on LCD
+// Função para ler um valor de dois dígitos do teclado, com um prompt no LCD
 int readTwoDigitValue(char* prompt) {
-    char input[3] = {0};        // Character array to store input digits, null-terminated
-    int digitCount = 0;         // Counter for number of digits entered
-    char key;                   // Variable to store keypad input
+    char input[3] = {0};        // Array de caracteres para armazenar dígitos de entrada, terminado em nulo
+    int digitCount = 0;         // Contador para o número de dígitos inseridos
+    char key;                   // Variável para armazenar a entrada do teclado
 
-    WriteCmdXLCD(0x01);        // Clear LCD display
-    __delay_ms(2);              // Delay after LCD command
-    WriteCmdXLCD(0x02);        // Return cursor to home position
-    __delay_ms(2);              // Delay after LCD command
+    WriteCmdXLCD(0x01);        // Limpar o display LCD
+    __delay_ms(2);              // Atraso após o comando do LCD
+    WriteCmdXLCD(0x02);        // Retornar o cursor para a posição inicial
+    __delay_ms(2);              // Atraso após o comando do LCD
 
-    displayStuff(0, 0, prompt); // Display the prompt message on the first line of LCD
+    displayStuff(0, 0, prompt); // Exibir a mensagem de prompt na primeira linha do LCD
 
-    while (digitCount < 2) {    // Loop to read two digits
-        key = readKey();         // Read a key from keypad
+    while (digitCount < 2) {    // Loop para ler dois dígitos
+        key = readKey();         // Ler uma tecla do teclado
 
-        if (key >= '0' && key <= '9') { // If the key is a numeric digit
-            input[digitCount] = key;     // Store the digit in input array
-            displayStuff(1, digitCount, &input[digitCount]); // Display digit on the second line of LCD
-            digitCount++;                // Increment digit count
-            __delay_ms(200);             // Short delay for visual feedback
+        if (key >= '0' && key <= '9') { // Se a tecla for um dígito numérico
+            input[digitCount] = key;     // Armazenar o dígito no array de entrada
+            displayStuff(1, digitCount, &input[digitCount]); // Exibir o dígito na segunda linha do LCD
+            digitCount++;                // Incrementar o contador de dígitos
+            __delay_ms(200);             // Pequeno atraso para feedback visual
         }
 
-        if (key == 'F') {             // If 'F' key is pressed (Cancel)
-            return -1;                 // Return -1 to indicate cancellation
+        if (key == 'F') {             // Se a tecla 'F' for pressionada (Cancelar)
+            return -1;                 // Retornar -1 para indicar cancelamento
         }
     }
 
-    // Convert the two-digit string to an integer
-    return (input[0] - '0') * 10 + (input[1] - '0'); // Convert ASCII digits to integer value
-} // End of readTwoDigitValue function
+    // Converter a string de dois dígitos para um inteiro
+    return (input[0] - '0') * 10 + (input[1] - '0'); // Converter dígitos ASCII para valor inteiro
+} // Fim da função readTwoDigitValue
 
-
-
-// Interrupt Service Routine (ISR) - handles Timer 0 interrupts
+// Rotina de Serviço de Interrupção (ISR) - lida com interrupções do Timer 0
 void __interrupt() ISR() {
-    if (INTCONbits.TMR0IF) { // Check if Timer 0 interrupt flag is set (Timer 0 overflow occurred)
-        TMR0L = 100;          // Reload Timer 0 low byte to create 1ms overflow (adjust based on prescaler and clock)
-        milliseconds++;       // Increment millisecond counter
-        if (milliseconds % 1000 == 0) { // Check if a second has passed
-            if (tak > 1) {      // Toggle 'tak' variable every second (purpose unclear, might be for blinking)
+    if (INTCONbits.TMR0IF) { // Verificar se a flag de interrupção do Timer 0 está definida (ocorreu overflow do Timer 0)
+        TMR0L = 100;          // Recarregar o byte baixo do Timer 0 para criar overflow de 1ms (ajustar com base no prescaler e clock)
+        milliseconds++;       // Incrementar o contador de milissegundos
+        if (milliseconds % 1000 == 0) { // Verificar se passou um segundo
+            if (tak > 1) {      // Alternar a variável 'tak' a cada segundo (propósito não claro, pode ser para piscar)
                 tak = 0;
             } else {
                 tak = 1;
             }
         }
-        INTCONbits.TMR0IF = 0;  // Clear Timer 0 interrupt flag to allow next interrupt
+        INTCONbits.TMR0IF = 0;  // Limpar a flag de interrupção do Timer 0 para permitir a próxima interrupção
     }
-} // End of ISR function
+} // Fim da função ISR
 
-
-
-// Function to get the current millisecond count
+// Função para obter a contagem atual de milissegundos
 unsigned long millis(void) {
-    unsigned long ms;         // Local variable to hold millisecond value
+    unsigned long ms;         // Variável local para armazenar o valor de milissegundos
 
-    INTCONbits.GIE = 0;      // Disable global interrupts to ensure atomic read of milliseconds
-    ms = milliseconds;       // Read the millisecond counter value
-    INTCONbits.GIE = 1;      // Re-enable global interrupts
+    INTCONbits.GIE = 0;      // Desabilitar interrupções globais para garantir leitura atômica de milissegundos
+    ms = milliseconds;       // Ler o valor do contador de milissegundos
+    INTCONbits.GIE = 1;      // Reabilitar interrupções globais
 
-    return ms;                // Return the millisecond value
-} // End of millis function
+    return ms;                // Retornar o valor de milissegundos
+} // Fim da função millis
 
-
-
-// Function to configure Input/Output pins
+// Função para configurar os pinos de entrada/saída
 void configureIO(void) {
-    TRISB = 0xF0;           // Configure PORTB: RB4-RB7 as inputs (keypad rows), RB0-RB3 as outputs (keypad columns)
-    TRISAbits.RA3 = 1;      // Configure RA3/AN3 as analog input (humidity sensor)
-    TRISAbits.RA0 = 1;      // Configure RA0/AN0 as analog input (temperature sensor)
-    TRISAbits.RA2 = 1;      // Configure RA2/AN2 as analog input (gas sensor)
-    TRISDbits.TRISD0 = 0;   // Configure RD0 as output (Temperature alarm LED)
-    TRISDbits.TRISD1 = 0;   // Configure RD1 as output (Humidity alarm LED)
-    TRISCbits.TRISC2 = 0;   // Configure RC2 as output (Cooler control - assuming RC2 controls the cooler)
-    PORTDbits.RD0 = 0;        // Initialize RD0 LED to off
-    PORTDbits.RD1 = 0;        // Initialize RD1 LED to off
-    PORTCbits.RC2 = 0;        // Initialize cooler control pin to off
-} // End of configureIO function
+    TRISB = 0xF0;           // Configurar PORTB: RB4-RB7 como entradas (linhas do teclado), RB0-RB3 como saídas (colunas do teclado)
+    TRISAbits.RA3 = 1;      // Configurar RA3/AN3 como entrada analógica (sensor de umidade)
+    TRISAbits.RA0 = 1;      // Configurar RA0/AN0 como entrada analógica (sensor de temperatura)
+    TRISAbits.RA2 = 1;      // Configurar RA2/AN2 como entrada analógica (sensor de gás)
+    TRISDbits.TRISD0 = 0;   // Configurar RD0 como saída (LED de alarme de temperatura)
+    TRISDbits.TRISD1 = 0;   // Configurar RD1 como saída (LED de alarme de umidade)
+    TRISCbits.TRISC2 = 0;   // Configurar RC2 como saída (Controle do cooler - assumindo que RC2 controla o cooler)
+    PORTDbits.RD0 = 0;        // Inicializar o LED RD0 como desligado
+    PORTDbits.RD1 = 0;        // Inicializar o LED RD1 como desligado
+    PORTCbits.RC2 = 0;        // Inicializar o pino de controle do cooler como desligado
+} // Fim da função configureIO
 
-
-
-// Function to configure LCD module
+// Função para configurar o módulo LCD
 void configureLCD(void) {
-    OpenXLCD(FOUR_BIT & LINES_5X7); // Initialize LCD in 4-bit mode, 5x7 font, and 2 lines
-    WriteCmdXLCD(0x01);             // Clear LCD display
-    __delay_ms(10);                 // Delay after clear command
-    WriteCmdXLCD(0x02);             // Return cursor to home position
-    __delay_ms(2);                  // Delay after home command
-    WriteCmdXLCD(0x0C);             // Turn display on, cursor off, no blink
-    __delay_ms(2);                  // Delay after display command
-} // End of configureLCD function
+    OpenXLCD(FOUR_BIT & LINES_5X7); // Inicializar o LCD no modo de 4 bits, fonte 5x7 e 2 linhas
+    WriteCmdXLCD(0x01);             // Limpar o display LCD
+    __delay_ms(10);                 // Atraso após o comando de limpeza
+    WriteCmdXLCD(0x02);             // Retornar o cursor para a posição inicial
+    __delay_ms(2);                  // Atraso após o comando de retorno
+    WriteCmdXLCD(0x0C);             // Ligar o display, cursor desligado, sem piscar
+    __delay_ms(2);                  // Atraso após o comando de display
+} // Fim da função configureLCD
 
-
-
-// Function to configure interrupts
+// Função para configurar interrupções
 void configureInterrupt(void) {
-    RCONbits.IPEN = 1;          // Enable interrupt priority levels
-    INTCONbits.GIE = 1;         // Enable global interrupts (high priority and low priority)
-    INTCONbits.PEIE = 1;        // Enable peripheral interrupts (for Timer 0)
+    RCONbits.IPEN = 1;          // Habilitar níveis de prioridade de interrupção
+    INTCONbits.GIE = 1;         // Habilitar interrupções globais (alta e baixa prioridade)
+    INTCONbits.PEIE = 1;        // Habilitar interrupções periféricas (para o Timer 0)
 
-    // Timer 0 interrupt configuration
-    INTCON2bits.TMR0IP = 1;     // Set Timer 0 interrupt to high priority
-    INTCONbits.TMR0IE = 1;      // Enable Timer 0 interrupt
-    INTCONbits.TMR0IF = 0;      // Clear Timer 0 interrupt flag
+    // Configuração da interrupção do Timer 0
+    INTCON2bits.TMR0IP = 1;     // Definir a interrupção do Timer 0 como alta prioridade
+    INTCONbits.TMR0IE = 1;      // Habilitar a interrupção do Timer 0
+    INTCONbits.TMR0IF = 0;      // Limpar a flag de interrupção do Timer 0
 
-    // PORTB interrupt configuration (not used in current code effectively for keypad, polling is used instead)
-    INTCON2bits.RBIP = 0;       // Set PORTB change interrupt to low priority (not actively used in current keypad implementation)
-    INTCONbits.RBIE = 0;       // Disable PORTB change interrupt (polling is used for keypad)
-    INTCONbits.RBIF = 0;       // Clear PORTB change interrupt flag
-} // End of configureInterrupt function
+    // Configuração da interrupção do PORTB (não usada efetivamente no código atual para o teclado, a sondagem é usada em vez disso)
+    INTCON2bits.RBIP = 0;       // Definir a interrupção de mudança do PORTB como baixa prioridade (não usada ativamente na implementação atual do teclado)
+    INTCONbits.RBIE = 0;       // Desabilitar a interrupção de mudança do PORTB (a sondagem é usada para o teclado)
+    INTCONbits.RBIF = 0;       // Limpar a flag de interrupção de mudança do PORTB
+} // Fim da função configureInterrupt
 
-
-
-// Function to configure Timer 0 for millisecond timer
+// Função para configurar o Timer 0 para contagem de milissegundos
 void configureTimer(void) {
-    T0CON = 0b11000100;         // Timer 0 configuration:
-                                // 11 - Internal instruction cycle clock (FOSC/4)
-                                // 00 - 8-bit timer/counter
-                                // 0100 - Prescaler 1:32 (adjust prescaler for 1ms overflow with 20MHz clock)
-    TMR0L = 100;              // Initial Timer 0 low byte value (for 1ms overflow - adjust this value based on prescaler)
-    INTCONbits.TMR0IF = 0;      // Clear Timer 0 interrupt flag
-} // End of configureTimer function
+    T0CON = 0b11000100;         // Configuração do Timer 0:
+                                // 11 - Clock interno do ciclo de instrução (FOSC/4)
+                                // 00 - Timer/contador de 8 bits
+                                // 0100 - Prescaler 1:32 (ajustar o prescaler para overflow de 1ms com clock de 20MHz)
+    TMR0L = 100;              // Valor inicial do byte baixo do Timer 0 (para overflow de 1ms - ajustar este valor com base no prescaler)
+    INTCONbits.TMR0IF = 0;      // Limpar a flag de interrupção do Timer 0
+} // Fim da função configureTimer
 
-
-
-// Debounce state structure for keypad handling
+// Estrutura de estado de debounce para manipulação do teclado
 typedef struct {
-    char lastKey;               // Last registered stable key
-    char currentKey;            // Currently pressed key (during debounce)
-    unsigned char keyPressCount; // Count of key presses (not used in debounce logic directly here)
-    unsigned long lastKeyPressTime; // Time of the last key press event
-    unsigned long lastRepeatTime;   // Time of last key repeat (not implemented in this simple debounce)
+    char lastKey;               // Última tecla estável registrada
+    char currentKey;            // Tecla atualmente pressionada (durante o debounce)
+    unsigned char keyPressCount; // Contagem de teclas pressionadas (não usada diretamente na lógica de debounce aqui)
+    unsigned long lastKeyPressTime; // Tempo do último evento de tecla pressionada
+    unsigned long lastRepeatTime;   // Tempo da última repetição de tecla (não implementado neste debounce simples)
 } KeyState;
 
-// Global debounce state variable
+// Variável global de estado de debounce
 KeyState keyState = {0};
 
-
-
-// Function to read a key press from the matrix keypad with debounce and key press interval
+// Função para ler uma tecla pressionada do teclado matricial com debounce e intervalo de pressionamento de tecla
 char readKey(void) {
-    const int InvCol[COLS] = {3, 2, 1, 0}; // Inverse column mapping for PORTB pinout (RB3, RB2, RB1, RB0 for columns)
-    static unsigned long lastDebounceTime = 0;  // Static variable to store last debounce time
-    static unsigned long lastKeyPressTime = 0;  // Static variable to store last valid key press time
-    static char lastStableKey = 0;           // Static variable to store the last stable key detected
-    unsigned long currentTime = millis();      // Get current time in milliseconds
-    int col, row;                            // Loop counters
+    const int InvCol[COLS] = {3, 2, 1, 0}; // Mapeamento inverso das colunas para o pinout do PORTB (RB3, RB2, RB1, RB0 para colunas)
+    static unsigned long lastDebounceTime = 0;  // Variável estática para armazenar o último tempo de debounce
+    static unsigned long lastKeyPressTime = 0;  // Variável estática para armazenar o último tempo de tecla válida pressionada
+    static char lastStableKey = 0;           // Variável estática para armazenar a última tecla estável detectada
+    unsigned long currentTime = millis();      // Obter o tempo atual em milissegundos
+    int col, row;                            // Contadores de loop
 
+    for (col = 0; col < COLS; col++) {       // Iterar através de cada coluna do teclado
+        LATB = ~(1 << col);                 // Ativar a coluna atual definindo o pino RB correspondente como baixo (colunas são ativas em baixo)
+        __delay_ms(5);                      // Pequeno atraso para estabilização do pino da coluna
 
-    for (col = 0; col < COLS; col++) {       // Iterate through each column of the keypad
-        LATB = ~(1 << col);                 // Activate current column by setting corresponding RB pin low (columns are active low)
-        __delay_ms(5);                      // Short delay for column pin stabilization
+        for (row = 0; row < ROWS; row++) {   // Iterar através de cada linha do teclado
+            if (!(PORTB & (1 << (row + 4)))) { // Verificar se a tecla na linha e coluna atual está pressionada (os pinos das linhas estão em RB4-RB7)
+                                                // Tecla pressionada detectada (pino da linha está baixo quando pressionado)
+                char pressedKey = keymap[row][InvCol[col]]; // Obter o caractere associado à tecla pressionada a partir do keymap
 
-
-        for (row = 0; row < ROWS; row++) {   // Iterate through each row of the keypad
-            if (!(PORTB & (1 << (row + 4)))) { // Check if key in current row and column is pressed (rows are on RB4-RB7)
-                                                // Key press detected (row pin is low when pressed)
-                char pressedKey = keymap[row][InvCol[col]]; // Get the character associated with the pressed key from keymap
-
-
-                if (pressedKey != lastStableKey) { // If the currently pressed key is different from the last stable key
-                    lastDebounceTime = currentTime;   // Reset debounce timer as a new key event is detected
-                    lastStableKey = pressedKey;      // Update the last stable key to the currently pressed key
+                if (pressedKey != lastStableKey) { // Se a tecla atualmente pressionada for diferente da última tecla estável
+                    lastDebounceTime = currentTime;   // Reiniciar o timer de debounce, pois um novo evento de tecla foi detectado
+                    lastStableKey = pressedKey;      // Atualizar a última tecla estável para a tecla atualmente pressionada
                 }
 
-
-                if ((currentTime - lastDebounceTime) > DEBOUNCE_DELAY) { // Check if key press is stable for debounce duration
-                    if ((currentTime - lastKeyPressTime) > KEY_WAIT_PERIOD) { // Check for key press interval to avoid rapid repeated inputs
-                        lastKeyPressTime = currentTime;    // Update last key press event time
-                        keyState.currentKey = pressedKey;  // Update current key state
-                        keyState.lastKey = pressedKey;     // Update last key state
-                        return pressedKey;                 // Return the detected and debounced key character
+                if ((currentTime - lastDebounceTime) > DEBOUNCE_DELAY) { // Verificar se a tecla pressionada está estável durante o tempo de debounce
+                    if ((currentTime - lastKeyPressTime) > KEY_WAIT_PERIOD) { // Verificar o intervalo de pressionamento de tecla para evitar entradas repetidas rápidas
+                        lastKeyPressTime = currentTime;    // Atualizar o tempo do último evento de tecla pressionada
+                        keyState.currentKey = pressedKey;  // Atualizar o estado atual da tecla
+                        keyState.lastKey = pressedKey;     // Atualizar o estado da última tecla
+                        return pressedKey;                 // Retornar o caractere da tecla detectada e debounced
                     }
                 }
-                return 0; // Key is being pressed but either debouncing or waiting for key release, return 0 (no new key event)
-            } // End of key press detection
-        } // End of row loop
-    } // End of column loop
+                return 0; // A tecla está sendo pressionada, mas está em debounce ou aguardando a liberação da tecla, retornar 0 (nenhum novo evento de tecla)
+            } // Fim da detecção de tecla pressionada
+        } // Fim do loop das linhas
+    } // Fim do loop das colunas
 
+    keyState.lastKey = 0;         // Reiniciar o estado da última tecla quando nenhuma tecla estiver pressionada
+    lastStableKey = 0;            // Reiniciar a última tecla estável
+    return 0;                     // Nenhuma tecla pressionada detectada ou processada nesta varredura, retornar 0
+} // Fim da função readKey
 
-    keyState.lastKey = 0;         // Reset last key state when no key is pressed
-    lastStableKey = 0;            // Reset last stable key
-    return 0;                     // No key press detected or processed in this scan, return 0
-} // End of readKey function
-
-
-
-// Function to configure ADC module
+// Função para configurar o módulo ADC
 void configureADC(void) {
-    ADCON1 = 0b00001011;        // ADC Configuration Register 1:
-                                // 0000 - VREF+ = VDD, VREF- = VSS (Voltage references are VDD and VSS)
-                                // 1011 - AN0-AN3 are analog inputs, all others are digital I/O
-    ADCON2 = 0b10010101;        // ADC Configuration Register 2:
-                                // 1 - Right justified result (ADRESH:ADRESL)
-                                // 001 - Acquisition time 2 TAD
-                                // 010 - ADC clock FOSC/32 (adjust ADC clock for optimal conversion rate)
-                                // 1 -  TAD = 0.5 us (min) at 20MHz Fosc and Fosc/32 = 625kHz ADC clock, TAD = 1/625kHz = 1.6us > 0.7us (min for PIC18F4550)
-    ADCON0bits.ADON = 1;        // Enable ADC module (turn ADC module ON)
-} // End of configureADC function
+    ADCON1 = 0b00001011;        // Registrador de Configuração 1 do ADC:
+                                // 0000 - VREF+ = VDD, VREF- = VSS (Referências de tensão são VDD e VSS)
+                                // 1011 - AN0-AN3 são entradas analógicas, todas as outras são I/O digital
+    ADCON2 = 0b10010101;        // Registrador de Configuração 2 do ADC:
+                                // 1 - Resultado justificado à direita (ADRESH:ADRESL)
+                                // 001 - Tempo de aquisição 2 TAD
+                                // 010 - Clock do ADC FOSC/32 (ajustar o clock do ADC para taxa de conversão ideal)
+                                // 1 -  TAD = 0.5 us (mín) em Fosc de 20MHz e Fosc/32 = 625kHz de clock do ADC, TAD = 1/625kHz = 1.6us > 0.7us (mín para PIC18F4550)
+    ADCON0bits.ADON = 1;        // Habilitar o módulo ADC (ligar o módulo ADC)
+} // Fim da função configureADC
 
-
-
-// Function to read analog value from specified ADC pin
+// Função para ler o valor analógico de um pino ADC especificado
 unsigned int readAnalog(unsigned char pin) {
-    unsigned int result = 0;      // Variable to store ADC result
-    if (pin > 12) {              // Validate ADC pin number
-        return 0;                 // Return 0 for invalid pin number
+    unsigned int result = 0;      // Variável para armazenar o resultado do ADC
+    if (pin > 12) {              // Validar o número do pino ADC
+        return 0;                 // Retornar 0 para número de pino inválido
     }
 
-    ADCON0bits.CHS = pin;         // Select ADC channel (pin) for conversion (Channel Select bits)
-    __delay_ms(2);              // Allow channel acquisition time (settling time for analog input)
-    ADCON0bits.GO_DONE = 1;       // Start ADC conversion (Go/Done bit - initiates conversion)
+    ADCON0bits.CHS = pin;         // Selecionar o canal ADC (pino) para conversão (Bits de Seleção de Canal)
+    __delay_ms(2);              // Permitir tempo de aquisição do canal (tempo de estabilização para entrada analógica)
+    ADCON0bits.GO_DONE = 1;       // Iniciar a conversão do ADC (Bit Go/Done - inicia a conversão)
 
-    while (ADCON0bits.GO_DONE);    // Wait for ADC conversion to complete (GO_DONE bit will be cleared by hardware when done)
+    while (ADCON0bits.GO_DONE);    // Aguardar a conclusão da conversão do ADC (o bit GO_DONE será limpo pelo hardware quando concluído)
 
-    result = (ADRESH << 8) | ADRESL; // Combine ADRESH and ADRESL to get 10-bit ADC result (Right justified)
-    return result;                 // Return the 10-bit ADC result
-} // End of readAnalog function
+    result = (ADRESH << 8) | ADRESL; // Combinar ADRESH e ADRESL para obter o resultado de 10 bits do ADC (Justificado à direita)
+    return result;                 // Retornar o resultado de 10 bits do ADC
+} // Fim da função readAnalog
 
-
-
-// Function to read temperature from LM35 sensor connected to AN0/RA0
+// Função para ler a temperatura do sensor LM35 conectado ao AN0/RA0
 float tempRead(void) {
-    unsigned int rawAnalog = readAnalog(0); // Read raw analog value from AN0 (temperature sensor)
-    float TempC = ((rawAnalog * 5.0) / 1023.0) / 0.01; // Convert raw ADC value to temperature in Celsius:
-                                                        // (rawAnalog * Vref / 1023) gives voltage, LM35 outputs 10mV/degree C (0.01V/degree C)
-    return TempC;                              // Return temperature in Celsius
-} // End of tempRead function
+    unsigned int rawAnalog = readAnalog(0); // Ler o valor analógico bruto do AN0 (sensor de temperatura)
+    float TempC = ((rawAnalog * 5.0) / 1023.0) / 0.01; // Converter o valor bruto do ADC para temperatura em Celsius:
+                                                        // (rawAnalog * Vref / 1023) fornece a tensão, o LM35 fornece 10mV/grau C (0.01V/grau C)
+    return TempC;                              // Retornar a temperatura em Celsius
+} // Fim da função tempRead
 
-
-
-// Function to read humidity from sensor connected to AN3/RA3 (using a potentiometer simulation for humidity sensor in original code)
+// Função para ler a umidade do sensor conectado ao AN3/RA3 (usando um potenciômetro para simular o sensor de umidade no código original)
 float humidade(void) {
-    unsigned int rawAnalog = readAnalog(3); // Read raw analog value from AN3 (humidity sensor)
-    float Humid = ((rawAnalog * 5.0) / 1023.0) * 20; // Convert raw ADC value to humidity percentage (0-100%):
-                                                        // Assuming sensor output voltage range corresponds to 0-100% humidity linearly in 0-5V range.
-                                                        // This conversion might need to be adjusted based on the actual humidity sensor characteristics.
-    return Humid;                               // Return humidity percentage
-} // End of humidade function
+    unsigned int rawAnalog = readAnalog(3); // Ler o valor analógico bruto do AN3 (sensor de umidade)
+    float Humid = ((rawAnalog * 5.0) / 1023.0) * 20; // Converter o valor bruto do ADC para porcentagem de umidade (0-100%):
+                                                        // Supondo que a faixa de tensão de saída do sensor corresponda a 0-100% de umidade linearmente na faixa de 0-5V.
+                                                        // Esta conversão pode precisar ser ajustada com base nas características reais do sensor de umidade.
+    return Humid;                               // Retornar a porcentagem de umidade
+} // Fim da função humidade
 
-
-
-// Function to read gas concentration from sensor connected to AN2/RA2
+// Função para ler a concentração de gás do sensor conectado ao AN2/RA2
 float gasRead(void) {
-    unsigned int rawAnalog = readAnalog(2); // Read raw analog value from AN2 (gas sensor)
-    float gas = ((rawAnalog * 5.0) / 1023.0) * 20;  // Convert raw ADC value to gas concentration (in 'ppm' unit - unit is assumed and might need calibration):
-                                                        // Similar linear scaling as humidity, might need sensor-specific conversion and calibration.
-    return gas;                                 // Return gas concentration value
-} // End of gasRead function
+    unsigned int rawAnalog = readAnalog(2); // Ler o valor analógico bruto do AN2 (sensor de gás)
+    float gas = ((rawAnalog * 5.0) / 1023.0) * 20;  // Converter o valor bruto do ADC para concentração de gás (em unidade 'ppm' - a unidade é assumida e pode precisar de calibração):
+                                                        // Escalonamento linear semelhante ao da umidade, pode precisar de conversão e calibração específicas do sensor.
+    return gas;                                 // Retornar o valor da concentração de gás
+} // Fim da função gasRead
 
-
-
-// Function to simplify LCD writing at specified row and column
+// Função para simplificar a escrita no LCD na linha e coluna especificadas
 void displayStuff(int row, int column, char *stuff) {
-    int LCDWritePosition = (row == 0 ? 0x80 : 0xC0) + column; // Calculate LCD DDRAM address based on row and column:
-                                                                // Row 0 starts at address 0x80, Row 1 starts at 0xC0
+    int LCDWritePosition = (row == 0 ? 0x80 : 0xC0) + column; // Calcular o endereço DDRAM do LCD com base na linha e coluna:
+                                                                // Linha 0 começa no endereço 0x80, Linha 1 começa em 0xC0
 
-    WriteCmdXLCD(LCDWritePosition);             // Set LCD cursor position
-    while (*stuff) {                             // Loop through each character in the input string
-        WriteDataXLCD(*stuff);                   // Write character to LCD data register
-        stuff++;                                 // Move to the next character in the string
+    WriteCmdXLCD(LCDWritePosition);             // Definir a posição do cursor do LCD
+    while (*stuff) {                             // Loop através de cada caractere na string de entrada
+        WriteDataXLCD(*stuff);                   // Escrever o caractere no registrador de dados do LCD
+        stuff++;                                 // Mover para o próximo caractere na string
     }
-} // End of displayStuff function
+} // Fim da função displayStuff
 
-
-
-// Placeholder function for setting cooler speed using PWM (PWM implementation needed)
+// Função de placeholder para definir a velocidade do cooler usando PWM (implementação de PWM necessária)
 void setCoolerSpeed(int PWMset) {
-    // PWM control implementation for cooler speed control would go here
-    // PWMset parameter would control the duty cycle or PWM value to set the cooler speed
-} // End of setCoolerSpeed function
+    // A implementação do controle PWM para o controle da velocidade do cooler iria aqui
+    // O parâmetro PWMset controlaria o ciclo de trabalho ou o valor PWM para definir a velocidade do cooler
+} // Fim da função setCoolerSpeed
 
-
-
-// Placeholder function to control humidifier (On/Off control - implementation needed)
+// Função de placeholder para controlar o umidificador (Controle LIGADO/DESLIGADO - implementação necessária)
 void setMoist(int moistSet) {
-    if (moistSet == 1) {                        // If moistSet is 1, turn humidifier ON
-        // Code to turn humidifier ON (e.g., set an output pin high) would go here
-    } else {                                    // If moistSet is not 1 (e.g., 0), turn humidifier OFF
-        // Code to turn humidifier OFF (e.g., set an output pin low) would go here
+    if (moistSet == 1) {                        // Se moistSet for 1, ligar o umidificador
+        // Código para ligar o umidificador (por exemplo, definir um pino de saída como alto) iria aqui
+    } else {                                    // Se moistSet não for 1 (por exemplo, 0), desligar o umidificador
+        // Código para desligar o umidificador (por exemplo, definir o pino de controle como baixo) iria aqui
     }
-} // End of setMoist function
+} // Fim da função setMoist
 
-
-
-// Placeholder function to control buzzer (On/Off control - implementation needed)
+// Função de placeholder para controlar o buzzer (Controle LIGADO/DESLIGADO - implementação necessária)
 void buzzer(int buzzerStatus) {
-    if (buzzerStatus == 1) {                      // If buzzerStatus is 1, activate buzzer
-        // Code to activate buzzer (e.g., set an output pin high to drive a buzzer) would go here
-    } else {                                      // If buzzerStatus is not 1, deactivate buzzer
-        // Code to deactivate buzzer (e.g., set buzzer control pin low) would go here
+    if (buzzerStatus == 1) {                      // Se buzzerStatus for 1, ativar o buzzer
+        // Código para ativar o buzzer (por exemplo, definir um pino de saída como alto para acionar um buzzer) iria aqui
+    } else {                                      // Se buzzerStatus não for 1, desativar o buzzer
+        // Código para desativar o buzzer (por exemplo, definir o pino de controle do buzzer como baixo) iria aqui
     }
-} // End of buzzer function
+} // Fim da função buzzer
 
-
-
-// Function to convert integer to string (C89 compatible itoa implementation)
+// Função para converter inteiro para string (implementação compatível com C89 de itoa)
 int itoa(int value, char *ptr) {
-    int count = 0, temp;                         // Initialize variables
-    char *start = ptr;                           // Store starting pointer for return calculation
+    int count = 0, temp;                         // Inicializar variáveis
+    char *start = ptr;                           // Armazenar o ponteiro inicial para cálculo de retorno
 
-    if (ptr == NULL)                             // Check for null pointer input
-        return 0;                                // Return 0 if pointer is NULL
+    if (ptr == NULL)                             // Verificar se o ponteiro de entrada é nulo
+        return 0;                                // Retornar 0 se o ponteiro for NULL
 
-    if (value == 0) {                             // Handle case of value being 0
-        *ptr = '0';                              // Set string to "0"
-        ptr[1] = '\0';                           // Null-terminate string
-        return 1;                                // Return string length 1
+    if (value == 0) {                             // Lidar com o caso de valor ser 0
+        *ptr = '0';                              // Definir a string como "0"
+        ptr[1] = '\0';                           // Terminar a string com nulo
+        return 1;                                // Retornar o comprimento da string 1
     }
 
-    if (value < 0) {                             // Handle negative numbers
-        value = -value;                           // Make value positive for conversion
-        *ptr++ = '-';                             // Add '-' sign to string
-        count++;                                 // Increment count for '-' sign
-        start = ptr;                             // Update start pointer to after '-' sign
+    if (value < 0) {                             // Lidar com números negativos
+        value = -value;                           // Tornar o valor positivo para conversão
+        *ptr++ = '-';                             // Adicionar sinal '-' à string
+        count++;                                 // Incrementar a contagem para o sinal '-'
+        start = ptr;                             // Atualizar o ponteiro inicial para após o sinal '-'
     }
 
-    temp = value;                               // Temporary variable to count digits
-    while (temp > 0) {                           // Count number of digits in value
-        temp /= 10;                             // Integer division to remove last digit
-        count++;                                 // Increment digit count
+    temp = value;                               // Variável temporária para contar dígitos
+    while (temp > 0) {                           // Contar o número de dígitos no valor
+        temp /= 10;                             // Divisão inteira para remover o último dígito
+        count++;                                 // Incrementar a contagem de dígitos
     }
 
-    ptr[count] = '\0';                          // Null-terminate the string
+    ptr[count] = '\0';                          // Terminar a string com nulo
 
-    temp = value;                               // Reset temp to original value for digit conversion
-    while (temp > 0) {                           // Convert integer digits to characters from right to left
-        ptr[--count] = temp % 10 + '0';         // Get last digit, convert to char, and place in string from right
-        temp /= 10;                             // Remove last digit
+    temp = value;                               // Reiniciar temp para o valor original para conversão de dígitos
+    while (temp > 0) {                           // Converter dígitos inteiros para caracteres da direita para a esquerda
+        ptr[--count] = temp % 10 + '0';         // Obter o último dígito, converter para char e colocar na string da direita
+        temp /= 10;                             // Remover o último dígito
     }
 
-    return count + (start != ptr);              // Return length of converted string (including '-' sign if any)
-} // End of itoa function
+    return count + (start != ptr);              // Retornar o comprimento da string convertida (incluindo o sinal '-' se houver)
+} // Fim da função itoa
 
-
-
-// Function to convert float to string with specified precision (C89 compatible float to string)
+// Função para converter float para string com precisão especificada (conversão de float para string compatível com C89)
 void floatToString(float value, char *buffer, int precision) {
-    int intPart;                                 // Integer part of the float
-    int i, index = 0;                            // Loop counters and index variable
-    char intStr[12];                             // Temporary string buffer for integer part
+    int intPart;                                 // Parte inteira do float
+    int i, index = 0;                            // Contadores de loop e variável de índice
+    char intStr[12];                             // Buffer de string temporário para a parte inteira
 
-
-    if (value < 0) {                             // Handle negative values
-        *buffer++ = '-';                           // Add '-' sign to buffer
-        value = -value;                           // Make value positive for conversion
+    if (value < 0) {                             // Lidar com valores negativos
+        *buffer++ = '-';                           // Adicionar sinal '-' ao buffer
+        value = -value;                           // Tornar o valor positivo para conversão
     }
 
-    intPart = (int)value;                       // Extract integer part of float
-    value -= intPart;                           // Get fractional part
+    intPart = (int)value;                       // Extrair a parte inteira do float
+    value -= intPart;                           // Obter a parte fracionária
 
-
-    if(intPart == 0) {                           // Handle case of integer part being 0
-        intStr[index++] = '0';                   // Store '0' for integer part if value is less than 1
-    } else {                                    // Convert integer part to string (similar to itoa for positive ints)
-        int temp = intPart;                       // Temporary variable for conversion
-        index = 0;                               // Reset index for integer string conversion
-        do {                                    // Convert digits of integer part to string
-            intStr[index++] = (temp % 10) + '0';   // Get last digit and convert to character
-            temp /= 10;                         // Remove last digit
+    if(intPart == 0) {                           // Lidar com o caso da parte inteira ser 0
+        intStr[index++] = '0';                   // Armazenar '0' para a parte inteira se o valor for menor que 1
+    } else {                                    // Converter a parte inteira para string (semelhante ao itoa para inteiros positivos)
+        int temp = intPart;                       // Variável temporária para conversão
+        index = 0;                               // Reiniciar o índice para conversão da string inteira
+        do {                                    // Converter dígitos da parte inteira para string
+            intStr[index++] = (temp % 10) + '0';   // Obter o último dígito e converter para caractere
+            temp /= 10;                         // Remover o último dígito
         } while (temp > 0);
     }
 
-
-    for (i = 0; i < index; i++) {               // Reverse the integer string (digits were added in reverse order)
-        buffer[i] = intStr[index - i - 1];         // Copy reversed integer string to output buffer
+    for (i = 0; i < index; i++) {               // Reverter a string inteira (os dígitos foram adicionados em ordem inversa)
+        buffer[i] = intStr[index - i - 1];         // Copiar a string inteira invertida para o buffer de saída
     }
-    buffer += index;                             // Update buffer pointer to end of integer string
+    buffer += index;                             // Atualizar o ponteiro do buffer para o final da string inteira
 
-    *buffer++ = '.';                             // Add decimal point to buffer
+    *buffer++ = '.';                             // Adicionar ponto decimal ao buffer
 
-
-    for (i = 0; i < precision; i++) {           // Convert fractional part to string up to specified precision
-        value *= 10;                             // Multiply fractional part by 10 to get next digit
-        int digit = (int)value;                   // Extract integer part as next digit
-        *buffer++ = digit + '0';                 // Convert digit to character and add to buffer
-        value -= digit;                           // Update fractional part for next digit
+    for (i = 0; i < precision; i++) {           // Converter a parte fracionária para string até a precisão especificada
+        value *= 10;                             // Multiplicar a parte fracionária por 10 para obter o próximo dígito
+        int digit = (int)value;                   // Extrair a parte inteira como próximo dígito
+        *buffer++ = digit + '0';                 // Converter dígito para caractere e adicionar ao buffer
+        value -= digit;                           // Atualizar a parte fracionária para o próximo dígito
     }
 
-    *buffer = '\0';                              // Null-terminate the output string
-} // End of floatToString function
+    *buffer = '\0';                              // Terminar a string de saída com nulo
+} // Fim da função floatToString
