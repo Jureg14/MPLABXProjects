@@ -1,5 +1,4 @@
 # ninja log v6
 30	719	7557987913263664	CMakeFiles/ProjetoF_micro_default_compile.dir/C_/Users/JeeJ/MPLABXProjects/ProjetoF_micro.X/nxlcd.c.p1	34b2e6f0e7e1c6b6
-32	368	7599558693061016	CMakeFiles/ProjetoF_micro_default_compile.dir/C_/Users/JeeJ/MPLABXProjects/ProjetoF_micro.X/main.c.p1	1e3b6200caf9fb4e
-369	2984	7599558696423756	ProjetoF_micro_default_default.elf	b00999b2de21107b
-41	401	7605574817540752	CMakeFiles/ProjetoF_micro_default_compile.dir/C_/Users/JeeJ/MPLABXProjects/ProjetoF_micro.X/main.c.p1	1e3b6200caf9fb4e
+14	373	7605584459013572	CMakeFiles/ProjetoF_micro_default_compile.dir/C_/Users/JeeJ/MPLABXProjects/ProjetoF_micro.X/main.c.p1	1e3b6200caf9fb4e
+374	2985	7605584462623469	ProjetoF_micro_default_default.elf	b00999b2de21107b
