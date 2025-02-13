@@ -7,7 +7,7 @@
 # 1 "c:\\PROGRA~1\\MICROC~1\\xc8\\v2.32\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "C:\\Users\\JeeJ\\MPLABXProjects\\ProjetoF_micro.X\\main.c" 2
-# 18 "C:\\Users\\JeeJ\\MPLABXProjects\\ProjetoF_micro.X\\main.c"
+# 17 "C:\\Users\\JeeJ\\MPLABXProjects\\ProjetoF_micro.X\\main.c"
 #pragma config PLLDIV = 1
 #pragma config CPUDIV = OSC1_PLL2
 #pragma config USBDIV = 1
@@ -5773,7 +5773,7 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 33 "c:\\PROGRA~1\\MICROC~1\\xc8\\v2.32\\pic\\include\\xc.h" 2 3
-# 80 "C:\\Users\\JeeJ\\MPLABXProjects\\ProjetoF_micro.X\\main.c" 2
+# 79 "C:\\Users\\JeeJ\\MPLABXProjects\\ProjetoF_micro.X\\main.c" 2
 
 # 1 "c:\\PROGRA~1\\MICROC~1\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 1 3
 # 24 "c:\\PROGRA~1\\MICROC~1\\xc8\\v2.32\\pic\\include\\c99\\stdio.h" 3
@@ -5913,7 +5913,7 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 81 "C:\\Users\\JeeJ\\MPLABXProjects\\ProjetoF_micro.X\\main.c" 2
+# 80 "C:\\Users\\JeeJ\\MPLABXProjects\\ProjetoF_micro.X\\main.c" 2
 
 
 # 1 "C:\\Users\\JeeJ\\MPLABXProjects\\ProjetoF_micro.X/nxlcd.h" 1
@@ -5968,8 +5968,8 @@ void putsXLCD( char *);
 
 
 void putrsXLCD(const char *);
-# 83 "C:\\Users\\JeeJ\\MPLABXProjects\\ProjetoF_micro.X\\main.c" 2
-# 95 "C:\\Users\\JeeJ\\MPLABXProjects\\ProjetoF_micro.X\\main.c"
+# 82 "C:\\Users\\JeeJ\\MPLABXProjects\\ProjetoF_micro.X\\main.c" 2
+# 94 "C:\\Users\\JeeJ\\MPLABXProjects\\ProjetoF_micro.X\\main.c"
 const char keymap[4][4] = {
     {'1', '2', '3', 'A'},
     {'4', '5', '6', 'B'},
@@ -5979,12 +5979,10 @@ const char keymap[4][4] = {
 
 
 volatile unsigned long milliseconds = 0;
-volatile unsigned char keyPressed = 0;
 volatile int tak;
 int Tlim = 30;
 int Hlim = 50;
 int Glim = 20;
-
 
 
 char readKey(void);
@@ -6009,7 +6007,6 @@ void buzzer(int buzzerStatus);
 void ISR(void);
 
 
-
 void main(void) {
     char lastKey = '\0';
     int menuIndex = 0;
@@ -6021,7 +6018,6 @@ void main(void) {
     float currentGas;
 
 
-
     configureIO();
     configureADC();
     configureLCD();
@@ -6029,11 +6025,9 @@ void main(void) {
     configureInterrupt();
 
 
-
     TRISDbits.TRISD0 = 0;
     TRISDbits.TRISD1 = 0;
     TRISDbits.TRISD2 = 0;
-
 
 
     while (1) {
@@ -6041,12 +6035,10 @@ void main(void) {
         currentTime = millis();
 
 
-
         if (currentTime - lastDisplayUpdate >= 500) {
             displayMenu(menuIndex);
             lastDisplayUpdate = currentTime;
         }
-
 
 
         if (pressed_key == 'E' && lastKey != 'E') {
@@ -6056,7 +6048,13 @@ void main(void) {
             }
             displayMenu(menuIndex);
         }
-
+        if (pressed_key == 'F' && lastKey != 'F'){
+            menuIndex--;
+            if (menuIndex < 0) {
+                menuIndex = 4;
+            }
+            displayMenu(menuIndex);
+        }
 
 
         if (pressed_key == 'A' && lastKey != 'A') {
@@ -6073,7 +6071,6 @@ void main(void) {
             }
         }
 
-
         if (pressed_key == 'B' && lastKey != 'B') {
             int humLimit = readTwoDigitValue("Limite Hum:");
             if (humLimit != -1) {
@@ -6087,7 +6084,6 @@ void main(void) {
                 displayMenu(menuIndex);
             }
         }
-
 
         if (pressed_key == 'C' && lastKey != 'C') {
             int gasLimit = readTwoDigitValue("Limite Gas");
@@ -6103,7 +6099,6 @@ void main(void) {
             }
         }
 
-
         if (pressed_key == 'D' && lastKey != 'D') {
             Tlim = 30;
             Hlim = 50;
@@ -6115,11 +6110,9 @@ void main(void) {
         }
 
 
-
         currentTemp = tempRead();
         currentHumid = humidade();
         currentGas = gasRead();
-
 
 
         if (currentTemp > Tlim || currentHumid > Hlim || currentGas > Glim) {
@@ -6128,15 +6121,19 @@ void main(void) {
             buzzer(0);
         }
 
-
         if (currentTemp > Tlim) {
             PORTDbits.RD0 = 1;
             PORTCbits.RC2 = 1;
+        } else if (currentTemp < Tlim - 10) {
+            PORTDbits.RD0 = 0;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC1 = 1;
+
         } else {
             PORTDbits.RD0 = 0;
             PORTCbits.RC2 = 0;
+            PORTCbits.RC1 = 0;
         }
-
 
         if (currentHumid > Hlim) {
             PORTDbits.RD1 = 1;
@@ -6146,20 +6143,19 @@ void main(void) {
             setMoist(0);
         }
 
-
         if (currentGas > Glim) {
             PORTDbits.RD2 = 1;
             setCoolerSpeed(255);
+            PORTCbits.RC2 = 1;
         } else {
             PORTDbits.RD2 = 0;
             setCoolerSpeed(0);
+            PORTCbits.RC2 = 0;
         }
-
 
         lastKey = pressed_key;
     }
 }
-
 
 
 
@@ -6171,22 +6167,18 @@ void displayMenu(int menuIndex) {
     float currentTemp, currentHumid, currentGas;
 
 
-
     if (currentTime - lastUpdateTime < 500) {
         return;
     }
     lastUpdateTime = currentTime;
 
-
     WriteCmdXLCD(0x01);
     _delay((unsigned long)((2)*(20000000/4000.0)));
-
 
 
     currentTemp = tempRead();
     currentHumid = humidade();
     currentGas = gasRead();
-
 
 
     switch (menuIndex) {
@@ -6200,7 +6192,6 @@ void displayMenu(int menuIndex) {
             displayStuff(1, 4, valueStr);
             break;
 
-
         case 1:
             displayStuff(0, 0, "Humid:");
             floatToString(currentHumid, valueStr, 1);
@@ -6211,7 +6202,6 @@ void displayMenu(int menuIndex) {
             displayStuff(1, 4, valueStr);
             break;
 
-
         case 2:
             displayStuff(0, 0, "Gas:");
             floatToString(currentGas, valueStr, 1);
@@ -6221,7 +6211,6 @@ void displayMenu(int menuIndex) {
             itoa(Glim, valueStr);
             displayStuff(1, 4, valueStr);
             break;
-
 
         case 3:
             displayStuff(0, 0, "Leituras");
@@ -6253,7 +6242,6 @@ void displayMenu(int menuIndex) {
             }
             break;
 
-
         case 4:
             displayStuff(0, 0, "Sistemas:");
             if (currentTemp <= Tlim && currentHumid <= Hlim && currentGas <= Glim) {
@@ -6284,14 +6272,11 @@ void displayMenu(int menuIndex) {
             }
             break;
 
-
         default:
-            displayStuff(0, 0, "Invalid Menu");
+            displayStuff(0, 0, "Menu Inválido");
             break;
     }
 }
-
-
 
 
 int readTwoDigitValue(char* prompt) {
@@ -6326,8 +6311,6 @@ int readTwoDigitValue(char* prompt) {
 }
 
 
-
-
 void __attribute__((picinterrupt(("")))) ISR() {
     if (INTCONbits.TMR0IF) {
         TMR0L = 100;
@@ -6344,8 +6327,6 @@ void __attribute__((picinterrupt(("")))) ISR() {
 }
 
 
-
-
 unsigned long millis(void) {
     unsigned long ms;
 
@@ -6357,8 +6338,6 @@ unsigned long millis(void) {
 }
 
 
-
-
 void configureIO(void) {
     TRISB = 0xF0;
     TRISAbits.RA3 = 1;
@@ -6366,13 +6345,14 @@ void configureIO(void) {
     TRISAbits.RA2 = 1;
     TRISDbits.TRISD0 = 0;
     TRISDbits.TRISD1 = 0;
+    TRISCbits.TRISC1 = 0;
     TRISCbits.TRISC2 = 0;
     PORTDbits.RD0 = 0;
     PORTDbits.RD1 = 0;
+    PORTDbits.RD2 = 0;
+    PORTCbits.RC1 = 0;
     PORTCbits.RC2 = 0;
 }
-
-
 
 
 void configureLCD(void) {
@@ -6384,8 +6364,6 @@ void configureLCD(void) {
     WriteCmdXLCD(0x0C);
     _delay((unsigned long)((2)*(20000000/4000.0)));
 }
-
-
 
 
 void configureInterrupt(void) {
@@ -6405,8 +6383,6 @@ void configureInterrupt(void) {
 }
 
 
-
-
 void configureTimer(void) {
     T0CON = 0b11000100;
 
@@ -6415,8 +6391,6 @@ void configureTimer(void) {
     TMR0L = 100;
     INTCONbits.TMR0IF = 0;
 }
-
-
 
 
 typedef struct {
@@ -6431,8 +6405,6 @@ typedef struct {
 KeyState keyState = {0};
 
 
-
-
 char readKey(void) {
     const int InvCol[4] = {3, 2, 1, 0};
     static unsigned long lastDebounceTime = 0;
@@ -6441,23 +6413,19 @@ char readKey(void) {
     unsigned long currentTime = millis();
     int col, row;
 
-
     for (col = 0; col < 4; col++) {
         LATB = ~(1 << col);
         _delay((unsigned long)((5)*(20000000/4000.0)));
-
 
         for (row = 0; row < 4; row++) {
             if (!(PORTB & (1 << (row + 4)))) {
 
                 char pressedKey = keymap[row][InvCol[col]];
 
-
                 if (pressedKey != lastStableKey) {
                     lastDebounceTime = currentTime;
                     lastStableKey = pressedKey;
                 }
-
 
                 if ((currentTime - lastDebounceTime) > 50) {
                     if ((currentTime - lastKeyPressTime) > 300) {
@@ -6472,13 +6440,10 @@ char readKey(void) {
         }
     }
 
-
     keyState.lastKey = 0;
     lastStableKey = 0;
     return 0;
 }
-
-
 
 
 void configureADC(void) {
@@ -6492,8 +6457,6 @@ void configureADC(void) {
 
     ADCON0bits.ADON = 1;
 }
-
-
 
 
 unsigned int readAnalog(unsigned char pin) {
@@ -6513,16 +6476,12 @@ unsigned int readAnalog(unsigned char pin) {
 }
 
 
-
-
 float tempRead(void) {
     unsigned int rawAnalog = readAnalog(0);
     float TempC = ((rawAnalog * 5.0) / 1023.0) / 0.01;
 
     return TempC;
 }
-
-
 
 
 float humidade(void) {
@@ -6534,16 +6493,12 @@ float humidade(void) {
 }
 
 
-
-
 float gasRead(void) {
     unsigned int rawAnalog = readAnalog(2);
     float gas = ((rawAnalog * 5.0) / 1023.0) * 20;
 
     return gas;
 }
-
-
 
 
 void displayStuff(int row, int column, char *stuff) {
@@ -6558,14 +6513,10 @@ void displayStuff(int row, int column, char *stuff) {
 }
 
 
-
-
 void setCoolerSpeed(int PWMset) {
 
 
 }
-
-
 
 
 void setMoist(int moistSet) {
@@ -6577,8 +6528,6 @@ void setMoist(int moistSet) {
 }
 
 
-
-
 void buzzer(int buzzerStatus) {
     if (buzzerStatus == 1) {
 
@@ -6586,8 +6535,6 @@ void buzzer(int buzzerStatus) {
 
     }
 }
-
-
 
 
 int itoa(int value, char *ptr) {
@@ -6628,13 +6575,10 @@ int itoa(int value, char *ptr) {
 }
 
 
-
-
 void floatToString(float value, char *buffer, int precision) {
     int intPart;
     int i, index = 0;
     char intStr[12];
-
 
     if (value < 0) {
         *buffer++ = '-';
@@ -6643,7 +6587,6 @@ void floatToString(float value, char *buffer, int precision) {
 
     intPart = (int)value;
     value -= intPart;
-
 
     if(intPart == 0) {
         intStr[index++] = '0';
@@ -6656,14 +6599,12 @@ void floatToString(float value, char *buffer, int precision) {
         } while (temp > 0);
     }
 
-
     for (i = 0; i < index; i++) {
         buffer[i] = intStr[index - i - 1];
     }
     buffer += index;
 
     *buffer++ = '.';
-
 
     for (i = 0; i < precision; i++) {
         value *= 10;

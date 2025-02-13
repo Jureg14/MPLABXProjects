@@ -5979,7 +5979,6 @@ const char keymap[4][4] = {
 
 
 volatile unsigned long milliseconds = 0;
-volatile unsigned char keyPressed = 0;
 volatile int tak;
 int Tlim = 30;
 int Hlim = 50;
@@ -6125,9 +6124,15 @@ void main(void) {
         if (currentTemp > Tlim) {
             PORTDbits.RD0 = 1;
             PORTCbits.RC2 = 1;
+        } else if (currentTemp < Tlim - 10) {
+            PORTDbits.RD0 = 0;
+            PORTCbits.RC2 = 0;
+            PORTCbits.RC1 = 1;
+
         } else {
             PORTDbits.RD0 = 0;
             PORTCbits.RC2 = 0;
+            PORTCbits.RC1 = 0;
         }
 
         if (currentHumid > Hlim) {
@@ -6141,9 +6146,11 @@ void main(void) {
         if (currentGas > Glim) {
             PORTDbits.RD2 = 1;
             setCoolerSpeed(255);
+            PORTCbits.RC2 = 1;
         } else {
             PORTDbits.RD2 = 0;
             setCoolerSpeed(0);
+            PORTCbits.RC2 = 0;
         }
 
         lastKey = pressed_key;
@@ -6266,7 +6273,7 @@ void displayMenu(int menuIndex) {
             break;
 
         default:
-            displayStuff(0, 0, "Menu Inv·lido");
+            displayStuff(0, 0, "Menu Inv√°lido");
             break;
     }
 }
@@ -6338,9 +6345,12 @@ void configureIO(void) {
     TRISAbits.RA2 = 1;
     TRISDbits.TRISD0 = 0;
     TRISDbits.TRISD1 = 0;
+    TRISCbits.TRISC1 = 0;
     TRISCbits.TRISC2 = 0;
     PORTDbits.RD0 = 0;
     PORTDbits.RD1 = 0;
+    PORTDbits.RD2 = 0;
+    PORTCbits.RC1 = 0;
     PORTCbits.RC2 = 0;
 }
 

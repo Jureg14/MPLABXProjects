@@ -100,13 +100,12 @@ const char keymap[ROWS][COLS] = {
 
 // Variáveis globais
 volatile unsigned long milliseconds = 0; // Contador de milissegundos, incrementado pela interrupção do timer
-volatile unsigned char keyPressed = 0;     // Flag para indicar uma tecla pressionada (não usado no código atual, pode ser removido se não for necessário)
-volatile int tak;                           // Variável alternada pela interrupção do timer (propósito não claro no código original, pode ser para piscar ou tarefas periódicas)
+volatile int tak;                           // Variável alternada pela interrupção do timer
 int Tlim = 30;                              // Limite padrão de temperatura
 int Hlim = 50;                              // Limite padrão de umidade
 int Glim = 20;                              // Limite padrão de gás
 
-// Protótipos de funções (declarados de acordo com o padrão C89 no início)
+// Protótipos de funções
 char readKey(void);
 unsigned int readAnalog(unsigned char pin);
 void displayStuff(int row, int column, char *stuff);
@@ -246,9 +245,15 @@ void main(void) {
         if (currentTemp > Tlim) { // Se a temperatura estiver acima do limite
             PORTDbits.RD0 = 1;    // Ligar o LED de alarme de temperatura (RD0)
             PORTCbits.RC2 = 1;    // Ligar o cooler (RC2 - assumindo que RC2 controla o cooler)
+        } else if (currentTemp < Tlim - 10) { // Se a temperatura estiver abaixo do limite (com margem de 2 graus)
+            PORTDbits.RD0 = 0;    // Desligar o LED de alarme de temperatura
+            PORTCbits.RC2 = 0;    // Desligar o cooler
+            PORTCbits.RC1 = 1;    // Ligar o aquecedor
+
         } else {
             PORTDbits.RD0 = 0;    // Desligar o LED de alarme de temperatura
             PORTCbits.RC2 = 0;    // Desligar o cooler
+            PORTCbits.RC1 = 0;   // Desligar o aquecedor
         }
 
         if (currentHumid > Hlim) { // Se a umidade estiver acima do limite
@@ -262,9 +267,11 @@ void main(void) {
         if (currentGas > Glim) {   // Se a concentração de gás estiver acima do limite
             PORTDbits.RD2 = 1;    // Ligar o LED de alarme de gás (RD2)
             setCoolerSpeed(255); // Exemplo: Definir o cooler para velocidade máxima como exaustor (a função setCoolerSpeed precisa de implementação PWM)
+            PORTCbits.RC2 = 1;    // Ligar o exaustor
         } else {
             PORTDbits.RD2 = 0;    // Desligar o LED de alarme de gás
             setCoolerSpeed(0);   // Definir a velocidade do cooler para 0 quando o gás estiver dentro do limite
+            PORTCbits.RC2 = 0;   // Desligar o exaustor
         }
 
         lastKey = pressed_key;      // Atualizar a última tecla pressionada para a próxima iteração para detectar eventos de tecla pressionada
@@ -459,9 +466,12 @@ void configureIO(void) {
     TRISAbits.RA2 = 1;      // Configurar RA2/AN2 como entrada analógica (sensor de gás)
     TRISDbits.TRISD0 = 0;   // Configurar RD0 como saída (LED de alarme de temperatura)
     TRISDbits.TRISD1 = 0;   // Configurar RD1 como saída (LED de alarme de umidade)
-    TRISCbits.TRISC2 = 0;   // Configurar RC2 como saída (Controle do cooler - assumindo que RC2 controla o cooler)
+    TRISCbits.TRISC1 = 0;   // Configurar RC1 como saída (Controle do aquecedor)
+    TRISCbits.TRISC2 = 0;   // Configurar RC2 como saída (Controle do cooler)
     PORTDbits.RD0 = 0;        // Inicializar o LED RD0 como desligado
     PORTDbits.RD1 = 0;        // Inicializar o LED RD1 como desligado
+    PORTDbits.RD2 = 0;        // Inicializar o LED RD2 como desligado
+    PORTCbits.RC1 = 0;          // Inicializar o aquecedor como desligado
     PORTCbits.RC2 = 0;        // Inicializar o pino de controle do cooler como desligado
 } // Fim da função configureIO
 
