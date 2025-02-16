@@ -243,8 +243,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8070
 [; ;c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\include\proc\pic18f4550.h: 8070: extern volatile unsigned char T0CON __attribute__((address(0xFD5)));
 [v _T0CON `Vuc ~T0 @X0 0 e@4053 ]
-"517 C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 517: typedef struct {
+"515 C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 515: typedef struct {
 [s S449 `uc 1 `uc 1 `uc 1 `ul 1 `ul 1 ]
 [n S449 . lastKey currentKey keyPressCount lastKeyPressTime lastRepeatTime ]
 "3074 c:\PROGRA~1\MICROC~1\xc8\v2.32\pic\include\proc\pic18f4550.h
@@ -1312,9 +1312,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "250
 [; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 250:             PORTCbits.RC2 = 0;
 [e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-"251
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 251:             PORTCbits.RC1 = 1;
-[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
 "253
 [; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 253:         } else {
 }
@@ -1327,9 +1324,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "255
 [; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 255:             PORTCbits.RC2 = 0;
 [e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-"256
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 256:             PORTCbits.RC1 = 0;
-[e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
 "257
 [; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 257:         }
 }
@@ -1372,269 +1366,263 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 269:             setCoolerSpeed(255);
 [e ( _setCoolerSpeed (1 -> 255 `i ]
 "270
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 270:             PORTCbits.RC2 = 1;
-[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-"271
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 271:         } else {
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 270:         } else {
 }
 [e $U 400  ]
 [e :U 399 ]
 {
-"272
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 272:             PORTDbits.RD2 = 0;
+"271
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 271:             PORTDbits.RD2 = 0;
 [e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
-"273
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 273:             setCoolerSpeed(0);
+"272
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 272:             setCoolerSpeed(0);
 [e ( _setCoolerSpeed (1 -> 0 `i ]
-"274
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 274:             PORTCbits.RC2 = 0;
-[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-"275
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 275:         }
+"273
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 273:         }
 }
 [e :U 400 ]
-"277
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 277:         lastKey = pressed_key;
+"275
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 275:         lastKey = pressed_key;
 [e = _lastKey _pressed_key ]
-"278
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 278:     }
+"276
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 276:     }
 }
 [e :U 370 ]
 [e $U 371  ]
 [e :U 372 ]
-"279
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 279: }
+"277
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 277: }
 [e :UE 369 ]
 }
-"284
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 284: void displayMenu(int menuIndex) {
+"282
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 282: void displayMenu(int menuIndex) {
 [v _displayMenu `(v ~T0 @X0 1 ef1`i ]
 {
 [e :U _displayMenu ]
 [v _menuIndex `i ~T0 @X0 1 r1 ]
 [f ]
-"285
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 285:     char valueStr[10];
+"283
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 283:     char valueStr[10];
 [v _valueStr `uc ~T0 @X0 -> 10 `i a ]
-"286
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 286:     static unsigned long lastUpdateTime = 0;
+"284
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 284:     static unsigned long lastUpdateTime = 0;
 [v F3586 `ul ~T0 @X0 1 s lastUpdateTime ]
 [i F3586
 -> -> -> 0 `i `l `ul
 ]
-"287
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 287:     unsigned long currentTime = millis();
+"285
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 285:     unsigned long currentTime = millis();
 [v _currentTime `ul ~T0 @X0 1 a ]
 [e = _currentTime ( _millis ..  ]
-"288
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 288:     float currentTemp, currentHumid, currentGas;
+"286
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 286:     float currentTemp, currentHumid, currentGas;
 [v _currentTemp `f ~T0 @X0 1 a ]
 [v _currentHumid `f ~T0 @X0 1 a ]
 [v _currentGas `f ~T0 @X0 1 a ]
-"291
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 291:     if (currentTime - lastUpdateTime < 500) {
+"289
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 289:     if (currentTime - lastUpdateTime < 500) {
 [e $ ! < - _currentTime F3586 -> -> -> 500 `i `l `ul 402  ]
 {
-"292
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 292:         return;
+"290
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 290:         return;
 [e $UE 401  ]
-"293
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 293:     }
+"291
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 291:     }
 }
 [e :U 402 ]
-"294
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 294:     lastUpdateTime = currentTime;
+"292
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 292:     lastUpdateTime = currentTime;
 [e = F3586 _currentTime ]
-"296
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 296:     WriteCmdXLCD(0x01);
+"294
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 294:     WriteCmdXLCD(0x01);
 [e ( _WriteCmdXLCD (1 -> -> 1 `i `uc ]
-"297
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 297:     _delay((unsigned long)((2)*(20000000/4000.0)));
+"295
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 295:     _delay((unsigned long)((2)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 2 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"300
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 300:     currentTemp = tempRead();
+"298
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 298:     currentTemp = tempRead();
 [e = _currentTemp ( _tempRead ..  ]
-"301
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 301:     currentHumid = humidade();
+"299
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 299:     currentHumid = humidade();
 [e = _currentHumid ( _humidade ..  ]
-"302
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 302:     currentGas = gasRead();
+"300
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 300:     currentGas = gasRead();
 [e = _currentGas ( _gasRead ..  ]
-"305
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 305:     switch (menuIndex) {
+"303
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 303:     switch (menuIndex) {
 [e $U 404  ]
 {
-"306
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 306:         case 0:
+"304
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 304:         case 0:
 [e :U 405 ]
-"307
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 307:             displayStuff(0, 0, "Temp:");
+"305
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 305:             displayStuff(0, 0, "Temp:");
 [e ( _displayStuff (3 , , -> 0 `i -> 0 `i :s 8C ]
-"308
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 308:             floatToString(currentTemp, valueStr, 1);
+"306
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 306:             floatToString(currentTemp, valueStr, 1);
 [e ( _floatToString (3 , , _currentTemp &U _valueStr -> 1 `i ]
-"309
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 309:             displayStuff(0, 6, valueStr);
+"307
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 307:             displayStuff(0, 6, valueStr);
 [e ( _displayStuff (3 , , -> 0 `i -> 6 `i &U _valueStr ]
-"310
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 310:             displayStuff(0, 11, "C");
+"308
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 308:             displayStuff(0, 11, "C");
 [e ( _displayStuff (3 , , -> 0 `i -> 11 `i :s 9C ]
-"311
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 311:             displayStuff(1, 0, "Lim:");
+"309
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 309:             displayStuff(1, 0, "Lim:");
 [e ( _displayStuff (3 , , -> 1 `i -> 0 `i :s 10C ]
-"312
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 312:             itoa(Tlim, valueStr);
+"310
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 310:             itoa(Tlim, valueStr);
 [e ( _itoa (2 , _Tlim &U _valueStr ]
-"313
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 313:             displayStuff(1, 4, valueStr);
+"311
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 311:             displayStuff(1, 4, valueStr);
 [e ( _displayStuff (3 , , -> 1 `i -> 4 `i &U _valueStr ]
+"312
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 312:             break;
+[e $U 403  ]
 "314
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 314:             break;
-[e $U 403  ]
-"316
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 316:         case 1:
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 314:         case 1:
 [e :U 406 ]
-"317
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 317:             displayStuff(0, 0, "Humid:");
+"315
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 315:             displayStuff(0, 0, "Humid:");
 [e ( _displayStuff (3 , , -> 0 `i -> 0 `i :s 11C ]
-"318
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 318:             floatToString(currentHumid, valueStr, 1);
+"316
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 316:             floatToString(currentHumid, valueStr, 1);
 [e ( _floatToString (3 , , _currentHumid &U _valueStr -> 1 `i ]
-"319
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 319:             displayStuff(0, 7, valueStr);
+"317
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 317:             displayStuff(0, 7, valueStr);
 [e ( _displayStuff (3 , , -> 0 `i -> 7 `i &U _valueStr ]
-"320
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 320:             displayStuff(0, 12, "%");
+"318
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 318:             displayStuff(0, 12, "%");
 [e ( _displayStuff (3 , , -> 0 `i -> 12 `i :s 12C ]
-"321
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 321:             displayStuff(1, 0, "Lim:");
+"319
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 319:             displayStuff(1, 0, "Lim:");
 [e ( _displayStuff (3 , , -> 1 `i -> 0 `i :s 13C ]
-"322
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 322:             itoa(Hlim, valueStr);
+"320
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 320:             itoa(Hlim, valueStr);
 [e ( _itoa (2 , _Hlim &U _valueStr ]
-"323
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 323:             displayStuff(1, 4, valueStr);
+"321
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 321:             displayStuff(1, 4, valueStr);
 [e ( _displayStuff (3 , , -> 1 `i -> 4 `i &U _valueStr ]
+"322
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 322:             break;
+[e $U 403  ]
 "324
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 324:             break;
-[e $U 403  ]
-"326
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 326:         case 2:
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 324:         case 2:
 [e :U 407 ]
-"327
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 327:             displayStuff(0, 0, "Gas:");
+"325
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 325:             displayStuff(0, 0, "Gas:");
 [e ( _displayStuff (3 , , -> 0 `i -> 0 `i :s 14C ]
-"328
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 328:             floatToString(currentGas, valueStr, 1);
+"326
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 326:             floatToString(currentGas, valueStr, 1);
 [e ( _floatToString (3 , , _currentGas &U _valueStr -> 1 `i ]
-"329
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 329:             displayStuff(0, 5, valueStr);
+"327
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 327:             displayStuff(0, 5, valueStr);
 [e ( _displayStuff (3 , , -> 0 `i -> 5 `i &U _valueStr ]
-"330
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 330:             displayStuff(0, 11, "ppm");
+"328
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 328:             displayStuff(0, 11, "ppm");
 [e ( _displayStuff (3 , , -> 0 `i -> 11 `i :s 15C ]
-"331
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 331:             displayStuff(1, 0, "Lim:");
+"329
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 329:             displayStuff(1, 0, "Lim:");
 [e ( _displayStuff (3 , , -> 1 `i -> 0 `i :s 16C ]
-"332
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 332:             itoa(Glim, valueStr);
+"330
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 330:             itoa(Glim, valueStr);
 [e ( _itoa (2 , _Glim &U _valueStr ]
-"333
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 333:             displayStuff(1, 4, valueStr);
+"331
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 331:             displayStuff(1, 4, valueStr);
 [e ( _displayStuff (3 , , -> 1 `i -> 4 `i &U _valueStr ]
-"334
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 334:             break;
+"332
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 332:             break;
 [e $U 403  ]
-"336
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 336:         case 3:
+"334
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 334:         case 3:
 [e :U 408 ]
-"337
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 337:             displayStuff(0, 0, "Leituras");
+"335
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 335:             displayStuff(0, 0, "Leituras");
 [e ( _displayStuff (3 , , -> 0 `i -> 0 `i :s 17C ]
-"338
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 338:             if (currentTemp <= Tlim && currentHumid <= Hlim && currentGas <= Glim) {
+"336
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 336:             if (currentTemp <= Tlim && currentHumid <= Hlim && currentGas <= Glim) {
 [e $ ! && && <= _currentTemp -> _Tlim `f <= _currentHumid -> _Hlim `f <= _currentGas -> _Glim `f 409  ]
 {
-"339
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 339:                 displayStuff(1, 0, "OK");
+"337
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 337:                 displayStuff(1, 0, "OK");
 [e ( _displayStuff (3 , , -> 1 `i -> 0 `i :s 18C ]
-"340
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 340:             } else {
+"338
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 338:             } else {
 }
 [e $U 410  ]
 [e :U 409 ]
 {
-"341
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 341:                 static int errorCycle = 0;
+"339
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 339:                 static int errorCycle = 0;
 [v F3591 `i ~T0 @X0 1 s errorCycle ]
 [i F3591
 -> 0 `i
 ]
-"342
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 342:                 errorCycle++;
+"340
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 340:                 errorCycle++;
 [e ++ F3591 -> 1 `i ]
-"344
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 344:                 if (errorCycle > 3) errorCycle = 0;
+"342
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 342:                 if (errorCycle > 3) errorCycle = 0;
 [e $ ! > F3591 -> 3 `i 411  ]
 [e = F3591 -> 0 `i ]
 [e :U 411 ]
-"346
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 346:                 switch (errorCycle) {
+"344
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 344:                 switch (errorCycle) {
 [e $U 413  ]
 {
-"347
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 347:                     case 0:
+"345
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 345:                     case 0:
 [e :U 414 ]
-"348
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 348:                         if (currentTemp > Tlim) {
+"346
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 346:                         if (currentTemp > Tlim) {
 [e $ ! > _currentTemp -> _Tlim `f 415  ]
 {
-"349
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 349:                             displayStuff(1, 0, "T_lim excedida!");
+"347
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 347:                             displayStuff(1, 0, "T_lim excedida!");
 [e ( _displayStuff (3 , , -> 1 `i -> 0 `i :s 19C ]
-"350
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 350:                         }
+"348
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 348:                         }
 }
 [e :U 415 ]
-"351
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 351:                         break;
+"349
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 349:                         break;
 [e $U 412  ]
-"352
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 352:                     case 1:
+"350
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 350:                     case 1:
 [e :U 416 ]
-"353
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 353:                         if (currentHumid > Hlim) {
+"351
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 351:                         if (currentHumid > Hlim) {
 [e $ ! > _currentHumid -> _Hlim `f 417  ]
 {
-"354
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 354:                             displayStuff(1, 0, "H_lim excedida!");
+"352
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 352:                             displayStuff(1, 0, "H_lim excedida!");
 [e ( _displayStuff (3 , , -> 1 `i -> 0 `i :s 20C ]
-"355
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 355:                         }
+"353
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 353:                         }
 }
 [e :U 417 ]
-"356
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 356:                         break;
+"354
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 354:                         break;
 [e $U 412  ]
-"357
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 357:                     case 2:
+"355
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 355:                     case 2:
 [e :U 418 ]
-"358
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 358:                         if (currentGas > Glim) {
+"356
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 356:                         if (currentGas > Glim) {
 [e $ ! > _currentGas -> _Glim `f 419  ]
 {
-"359
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 359:                             displayStuff(1, 0, "G_lim excedido!");
+"357
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 357:                             displayStuff(1, 0, "G_lim excedido!");
 [e ( _displayStuff (3 , , -> 1 `i -> 0 `i :s 21C ]
-"360
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 360:                         }
+"358
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 358:                         }
 }
 [e :U 419 ]
-"361
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 361:                         break;
+"359
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 359:                         break;
 [e $U 412  ]
-"362
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 362:                 }
+"360
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 360:                 }
 }
 [e $U 412  ]
 [e :U 413 ]
@@ -1643,103 +1631,103 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 2 `i 418
  412 ]
 [e :U 412 ]
-"363
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 363:             }
+"361
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 361:             }
 }
 [e :U 410 ]
-"364
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 364:             break;
+"362
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 362:             break;
 [e $U 403  ]
-"366
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 366:         case 4:
+"364
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 364:         case 4:
 [e :U 420 ]
-"367
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 367:             displayStuff(0, 0, "Sistemas:");
+"365
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 365:             displayStuff(0, 0, "Sistemas:");
 [e ( _displayStuff (3 , , -> 0 `i -> 0 `i :s 22C ]
-"368
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 368:             if (currentTemp <= Tlim && currentHumid <= Hlim && currentGas <= Glim) {
+"366
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 366:             if (currentTemp <= Tlim && currentHumid <= Hlim && currentGas <= Glim) {
 [e $ ! && && <= _currentTemp -> _Tlim `f <= _currentHumid -> _Hlim `f <= _currentGas -> _Glim `f 421  ]
 {
-"369
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 369:                 displayStuff(1, 0, "OK");
+"367
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 367:                 displayStuff(1, 0, "OK");
 [e ( _displayStuff (3 , , -> 1 `i -> 0 `i :s 23C ]
-"370
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 370:             } else {
+"368
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 368:             } else {
 }
 [e $U 422  ]
 [e :U 421 ]
 {
-"371
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 371:                 static int systemCycle = 0;
+"369
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 369:                 static int systemCycle = 0;
 [v F3592 `i ~T0 @X0 1 s systemCycle ]
 [i F3592
 -> 0 `i
 ]
-"372
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 372:                 systemCycle++;
+"370
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 370:                 systemCycle++;
 [e ++ F3592 -> 1 `i ]
-"374
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 374:                 if (systemCycle > 3) systemCycle = 0;
+"372
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 372:                 if (systemCycle > 3) systemCycle = 0;
 [e $ ! > F3592 -> 3 `i 423  ]
 [e = F3592 -> 0 `i ]
 [e :U 423 ]
-"376
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 376:                 switch (systemCycle) {
+"374
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 374:                 switch (systemCycle) {
 [e $U 425  ]
 {
-"377
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 377:                     case 0:
+"375
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 375:                     case 0:
 [e :U 426 ]
-"378
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 378:                         if (currentTemp > Tlim) {
+"376
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 376:                         if (currentTemp > Tlim) {
 [e $ ! > _currentTemp -> _Tlim `f 427  ]
 {
-"379
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 379:                             displayStuff(1, 0, "Resfriador ON");
+"377
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 377:                             displayStuff(1, 0, "Resfriador ON");
 [e ( _displayStuff (3 , , -> 1 `i -> 0 `i :s 24C ]
-"380
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 380:                         }
+"378
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 378:                         }
 }
 [e :U 427 ]
-"381
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 381:                         break;
+"379
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 379:                         break;
 [e $U 424  ]
-"382
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 382:                     case 1:
+"380
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 380:                     case 1:
 [e :U 428 ]
-"383
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 383:                         if (currentHumid > Hlim) {
+"381
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 381:                         if (currentHumid > Hlim) {
 [e $ ! > _currentHumid -> _Hlim `f 429  ]
 {
-"384
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 384:                             displayStuff(1, 0, "Humidificador ON");
+"382
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 382:                             displayStuff(1, 0, "Humidificador ON");
 [e ( _displayStuff (3 , , -> 1 `i -> 0 `i :s 25C ]
-"385
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 385:                         }
+"383
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 383:                         }
 }
 [e :U 429 ]
-"386
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 386:                         break;
+"384
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 384:                         break;
 [e $U 424  ]
-"387
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 387:                     case 2:
+"385
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 385:                     case 2:
 [e :U 430 ]
-"388
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 388:                         if (currentGas > Glim) {
+"386
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 386:                         if (currentGas > Glim) {
 [e $ ! > _currentGas -> _Glim `f 431  ]
 {
-"389
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 389:                             displayStuff(1, 0, "Exaustor ON");
+"387
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 387:                             displayStuff(1, 0, "Exaustor ON");
 [e ( _displayStuff (3 , , -> 1 `i -> 0 `i :s 26C ]
-"390
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 390:                         }
+"388
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 388:                         }
 }
 [e :U 431 ]
-"391
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 391:                         break;
+"389
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 389:                         break;
 [e $U 424  ]
-"392
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 392:                 }
+"390
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 390:                 }
 }
 [e $U 424  ]
 [e :U 425 ]
@@ -1748,24 +1736,24 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 2 `i 430
  424 ]
 [e :U 424 ]
-"393
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 393:             }
+"391
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 391:             }
 }
 [e :U 422 ]
+"392
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 392:             break;
+[e $U 403  ]
 "394
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 394:             break;
-[e $U 403  ]
-"396
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 396:         default:
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 394:         default:
 [e :U 432 ]
-"397
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 397:             displayStuff(0, 0, "Menu Inválido");
+"395
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 395:             displayStuff(0, 0, "Menu Inválido");
 [e ( _displayStuff (3 , , -> 0 `i -> 0 `i :s 27C ]
-"398
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 398:             break;
+"396
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 396:             break;
 [e $U 403  ]
-"399
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 399:     }
+"397
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 397:     }
 }
 [e $U 403  ]
 [e :U 404 ]
@@ -1776,12 +1764,12 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 4 `i 420
  432 ]
 [e :U 403 ]
-"400
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 400: }
+"398
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 398: }
 [e :UE 401 ]
 }
-"403
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 403: int readTwoDigitValue(char* prompt) {
+"401
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 401: int readTwoDigitValue(char* prompt) {
 [v _readTwoDigitValue `(i ~T0 @X0 1 ef1`*uc ]
 {
 [e :U _readTwoDigitValue ]
@@ -1790,311 +1778,311 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F3595 `uc ~T0 @X0 -> 3 `i s ]
 [i F3595
 :U ..
-"404
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 404:     char input[3] = {0};
+"402
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 402:     char input[3] = {0};
 -> -> 0 `i `uc
 ..
 ]
 [v _input `uc ~T0 @X0 -> 3 `i a ]
 [e = _input F3595 ]
-"405
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 405:     int digitCount = 0;
+"403
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 403:     int digitCount = 0;
 [v _digitCount `i ~T0 @X0 1 a ]
 [e = _digitCount -> 0 `i ]
-"406
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 406:     char key;
+"404
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 404:     char key;
 [v _key `uc ~T0 @X0 1 a ]
-"408
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 408:     WriteCmdXLCD(0x01);
+"406
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 406:     WriteCmdXLCD(0x01);
 [e ( _WriteCmdXLCD (1 -> -> 1 `i `uc ]
+"407
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 407:     _delay((unsigned long)((2)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"408
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 408:     WriteCmdXLCD(0x02);
+[e ( _WriteCmdXLCD (1 -> -> 2 `i `uc ]
 "409
 [; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 409:     _delay((unsigned long)((2)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 2 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"410
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 410:     WriteCmdXLCD(0x02);
-[e ( _WriteCmdXLCD (1 -> -> 2 `i `uc ]
 "411
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 411:     _delay((unsigned long)((2)*(20000000/4000.0)));
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"413
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 413:     displayStuff(0, 0, prompt);
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 411:     displayStuff(0, 0, prompt);
 [e ( _displayStuff (3 , , -> 0 `i -> 0 `i _prompt ]
-"415
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 415:     while (digitCount < 2) {
+"413
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 413:     while (digitCount < 2) {
 [e $U 434  ]
 [e :U 435 ]
 {
-"416
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 416:         key = readKey();
+"414
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 414:         key = readKey();
 [e = _key ( _readKey ..  ]
-"418
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 418:         if (key >= '0' && key <= '9') {
+"416
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 416:         if (key >= '0' && key <= '9') {
 [e $ ! && >= -> _key `ui -> 48 `ui <= -> _key `ui -> 57 `ui 437  ]
 {
-"419
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 419:             input[digitCount] = key;
+"417
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 417:             input[digitCount] = key;
 [e = *U + &U _input * -> -> _digitCount `ui `ux -> -> # *U &U _input `ui `ux _key ]
-"420
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 420:             displayStuff(1, digitCount, &input[digitCount]);
+"418
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 418:             displayStuff(1, digitCount, &input[digitCount]);
 [e ( _displayStuff (3 , , -> 1 `i _digitCount &U *U + &U _input * -> -> _digitCount `ui `ux -> -> # *U &U _input `ui `ux ]
-"421
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 421:             digitCount++;
+"419
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 419:             digitCount++;
 [e ++ _digitCount -> 1 `i ]
-"422
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 422:             _delay((unsigned long)((200)*(20000000/4000.0)));
+"420
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 420:             _delay((unsigned long)((200)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 200 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"423
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 423:         }
+"421
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 421:         }
 }
 [e :U 437 ]
-"425
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 425:         if (key == 'F') {
+"423
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 423:         if (key == 'F') {
 [e $ ! == -> _key `ui -> 70 `ui 438  ]
 {
-"426
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 426:             return -1;
+"424
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 424:             return -1;
 [e ) -U -> 1 `i ]
 [e $UE 433  ]
-"427
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 427:         }
+"425
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 425:         }
 }
 [e :U 438 ]
-"428
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 428:     }
+"426
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 426:     }
 }
 [e :U 434 ]
-"415
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 415:     while (digitCount < 2) {
+"413
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 413:     while (digitCount < 2) {
 [e $ < _digitCount -> 2 `i 435  ]
 [e :U 436 ]
-"431
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 431:     return (input[0] - '0') * 10 + (input[1] - '0');
+"429
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 429:     return (input[0] - '0') * 10 + (input[1] - '0');
 [e ) -> + * - -> *U + &U _input * -> -> -> 0 `i `ui `ux -> -> # *U &U _input `ui `ux `ui -> 48 `ui -> -> 10 `i `ui - -> *U + &U _input * -> -> -> 1 `i `ui `ux -> -> # *U &U _input `ui `ux `ui -> 48 `ui `i ]
 [e $UE 433  ]
-"432
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 432: }
+"430
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 430: }
 [e :UE 433 ]
 }
 [v $root$_ISR `(v ~T0 @X0 0 e ]
-"435
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 435: void __attribute__((picinterrupt(("")))) ISR() {
+"433
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 433: void __attribute__((picinterrupt(("")))) ISR() {
 [v _ISR `(v ~T36 @X0 1 ef ]
 {
 [e :U _ISR ]
 [f ]
-"436
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 436:     if (INTCONbits.TMR0IF) {
+"434
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 434:     if (INTCONbits.TMR0IF) {
 [e $ ! != -> . . _INTCONbits 0 2 `i -> 0 `i 440  ]
 {
-"437
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 437:         TMR0L = 100;
+"435
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 435:         TMR0L = 100;
 [e = _TMR0L -> -> 100 `i `uc ]
-"438
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 438:         milliseconds++;
+"436
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 436:         milliseconds++;
 [e ++ _milliseconds -> -> 1 `i `Vul ]
-"439
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 439:         if (milliseconds % 1000 == 0) {
+"437
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 437:         if (milliseconds % 1000 == 0) {
 [e $ ! == % _milliseconds -> -> -> 1000 `i `l `ul -> -> -> 0 `i `l `ul 441  ]
 {
-"440
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 440:             if (tak > 1) {
+"438
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 438:             if (tak > 1) {
 [e $ ! > _tak -> 1 `i 442  ]
 {
-"441
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 441:                 tak = 0;
+"439
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 439:                 tak = 0;
 [e = _tak -> 0 `i ]
-"442
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 442:             } else {
+"440
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 440:             } else {
 }
 [e $U 443  ]
 [e :U 442 ]
 {
-"443
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 443:                 tak = 1;
+"441
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 441:                 tak = 1;
 [e = _tak -> 1 `i ]
-"444
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 444:             }
+"442
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 442:             }
 }
 [e :U 443 ]
-"445
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 445:         }
+"443
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 443:         }
 }
 [e :U 441 ]
-"446
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 446:         INTCONbits.TMR0IF = 0;
+"444
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 444:         INTCONbits.TMR0IF = 0;
 [e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-"447
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 447:     }
+"445
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 445:     }
 }
 [e :U 440 ]
-"448
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 448: }
+"446
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 446: }
 [e :UE 439 ]
 }
-"451
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 451: unsigned long millis(void) {
+"449
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 449: unsigned long millis(void) {
 [v _millis `(ul ~T0 @X0 1 ef ]
 {
 [e :U _millis ]
 [f ]
-"452
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 452:     unsigned long ms;
+"450
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 450:     unsigned long ms;
 [v _ms `ul ~T0 @X0 1 a ]
-"454
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 454:     INTCONbits.GIE = 0;
+"452
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 452:     INTCONbits.GIE = 0;
 [e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
-"455
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 455:     ms = milliseconds;
+"453
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 453:     ms = milliseconds;
 [e = _ms _milliseconds ]
-"456
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 456:     INTCONbits.GIE = 1;
+"454
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 454:     INTCONbits.GIE = 1;
 [e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"458
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 458:     return ms;
+"456
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 456:     return ms;
 [e ) _ms ]
 [e $UE 444  ]
-"459
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 459: }
+"457
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 457: }
 [e :UE 444 ]
 }
-"462
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 462: void configureIO(void) {
+"460
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 460: void configureIO(void) {
 [v _configureIO `(v ~T0 @X0 1 ef ]
 {
 [e :U _configureIO ]
 [f ]
-"463
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 463:     TRISB = 0xF0;
+"461
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 461:     TRISB = 0xF0;
 [e = _TRISB -> -> 240 `i `uc ]
-"464
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 464:     TRISAbits.RA3 = 1;
+"462
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 462:     TRISAbits.RA3 = 1;
 [e = . . _TRISAbits 1 3 -> -> 1 `i `uc ]
-"465
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 465:     TRISAbits.RA0 = 1;
+"463
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 463:     TRISAbits.RA0 = 1;
 [e = . . _TRISAbits 1 0 -> -> 1 `i `uc ]
-"466
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 466:     TRISAbits.RA2 = 1;
+"464
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 464:     TRISAbits.RA2 = 1;
 [e = . . _TRISAbits 1 2 -> -> 1 `i `uc ]
-"467
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 467:     TRISDbits.TRISD0 = 0;
+"465
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 465:     TRISDbits.TRISD0 = 0;
 [e = . . _TRISDbits 0 0 -> -> 0 `i `uc ]
-"468
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 468:     TRISDbits.TRISD1 = 0;
+"466
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 466:     TRISDbits.TRISD1 = 0;
 [e = . . _TRISDbits 0 1 -> -> 0 `i `uc ]
-"469
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 469:     TRISCbits.TRISC1 = 0;
+"467
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 467:     TRISCbits.TRISC1 = 0;
 [e = . . _TRISCbits 0 1 -> -> 0 `i `uc ]
-"470
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 470:     TRISCbits.TRISC2 = 0;
+"468
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 468:     TRISCbits.TRISC2 = 0;
 [e = . . _TRISCbits 0 2 -> -> 0 `i `uc ]
-"471
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 471:     PORTDbits.RD0 = 0;
+"469
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 469:     PORTDbits.RD0 = 0;
 [e = . . _PORTDbits 0 0 -> -> 0 `i `uc ]
-"472
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 472:     PORTDbits.RD1 = 0;
+"470
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 470:     PORTDbits.RD1 = 0;
 [e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
-"473
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 473:     PORTDbits.RD2 = 0;
+"471
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 471:     PORTDbits.RD2 = 0;
 [e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
-"474
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 474:     PORTCbits.RC1 = 0;
+"472
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 472:     PORTCbits.RC1 = 0;
 [e = . . _PORTCbits 0 1 -> -> 0 `i `uc ]
-"475
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 475:     PORTCbits.RC2 = 0;
+"473
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 473:     PORTCbits.RC2 = 0;
 [e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-"476
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 476: }
+"474
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 474: }
 [e :UE 445 ]
 }
-"479
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 479: void configureLCD(void) {
+"477
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 477: void configureLCD(void) {
 [v _configureLCD `(v ~T0 @X0 1 ef ]
 {
 [e :U _configureLCD ]
 [f ]
-"480
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 480:     OpenXLCD(0b00101100 & 0b00111000);
+"478
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 478:     OpenXLCD(0b00101100 & 0b00111000);
 [e ( _OpenXLCD (1 -> & -> 44 `i -> 56 `i `uc ]
-"481
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 481:     WriteCmdXLCD(0x01);
+"479
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 479:     WriteCmdXLCD(0x01);
 [e ( _WriteCmdXLCD (1 -> -> 1 `i `uc ]
-"482
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 482:     _delay((unsigned long)((10)*(20000000/4000.0)));
+"480
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 480:     _delay((unsigned long)((10)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"483
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 483:     WriteCmdXLCD(0x02);
+"481
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 481:     WriteCmdXLCD(0x02);
 [e ( _WriteCmdXLCD (1 -> -> 2 `i `uc ]
+"482
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 482:     _delay((unsigned long)((2)*(20000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
+"483
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 483:     WriteCmdXLCD(0x0C);
+[e ( _WriteCmdXLCD (1 -> -> 12 `i `uc ]
 "484
 [; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 484:     _delay((unsigned long)((2)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 2 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
 "485
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 485:     WriteCmdXLCD(0x0C);
-[e ( _WriteCmdXLCD (1 -> -> 12 `i `uc ]
-"486
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 486:     _delay((unsigned long)((2)*(20000000/4000.0)));
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"487
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 487: }
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 485: }
 [e :UE 446 ]
 }
-"490
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 490: void configureInterrupt(void) {
+"488
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 488: void configureInterrupt(void) {
 [v _configureInterrupt `(v ~T0 @X0 1 ef ]
 {
 [e :U _configureInterrupt ]
 [f ]
-"491
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 491:     RCONbits.IPEN = 1;
+"489
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 489:     RCONbits.IPEN = 1;
 [e = . . _RCONbits 5 7 -> -> 1 `i `uc ]
-"492
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 492:     INTCONbits.GIE = 1;
+"490
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 490:     INTCONbits.GIE = 1;
 [e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"493
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 493:     INTCONbits.PEIE = 1;
+"491
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 491:     INTCONbits.PEIE = 1;
 [e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-"496
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 496:     INTCON2bits.TMR0IP = 1;
+"494
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 494:     INTCON2bits.TMR0IP = 1;
 [e = . . _INTCON2bits 1 2 -> -> 1 `i `uc ]
-"497
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 497:     INTCONbits.TMR0IE = 1;
+"495
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 495:     INTCONbits.TMR0IE = 1;
 [e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
-"498
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 498:     INTCONbits.TMR0IF = 0;
+"496
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 496:     INTCONbits.TMR0IF = 0;
 [e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-"501
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 501:     INTCON2bits.RBIP = 0;
+"499
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 499:     INTCON2bits.RBIP = 0;
 [e = . . _INTCON2bits 1 0 -> -> 0 `i `uc ]
-"502
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 502:     INTCONbits.RBIE = 0;
+"500
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 500:     INTCONbits.RBIE = 0;
 [e = . . _INTCONbits 0 3 -> -> 0 `i `uc ]
-"503
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 503:     INTCONbits.RBIF = 0;
+"501
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 501:     INTCONbits.RBIF = 0;
 [e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
-"504
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 504: }
+"502
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 502: }
 [e :UE 447 ]
 }
-"507
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 507: void configureTimer(void) {
+"505
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 505: void configureTimer(void) {
 [v _configureTimer `(v ~T0 @X0 1 ef ]
 {
 [e :U _configureTimer ]
 [f ]
-"508
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 508:     T0CON = 0b11000100;
+"506
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 506:     T0CON = 0b11000100;
 [e = _T0CON -> -> 196 `i `uc ]
-"512
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 512:     TMR0L = 100;
+"510
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 510:     TMR0L = 100;
 [e = _TMR0L -> -> 100 `i `uc ]
-"513
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 513:     INTCONbits.TMR0IF = 0;
+"511
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 511:     INTCONbits.TMR0IF = 0;
 [e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-"514
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 514: }
+"512
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 512: }
 [e :UE 448 ]
 }
-"526
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 526: KeyState keyState = {0};
+"524
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 524: KeyState keyState = {0};
 [v _keyState `S449 ~T0 @X0 1 e ]
 [i _keyState
 :U ..
@@ -2103,8 +2091,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-"529
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 529: char readKey(void) {
+"527
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 527: char readKey(void) {
 [v _readKey `(uc ~T0 @X0 1 ef ]
 {
 [e :U _readKey ]
@@ -2112,8 +2100,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F3615 `Ci ~T0 @X0 -> 4 `i s ]
 [i F3615
 :U ..
-"530
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 530:     const int InvCol[4] = {3, 2, 1, 0};
+"528
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 528:     const int InvCol[4] = {3, 2, 1, 0};
 -> 3 `i
 -> 2 `i
 -> 1 `i
@@ -2122,278 +2110,278 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 [v _InvCol `Ci ~T0 @X0 -> 4 `i a ]
 [e = _InvCol F3615 ]
-"531
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 531:     static unsigned long lastDebounceTime = 0;
+"529
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 529:     static unsigned long lastDebounceTime = 0;
 [v F3617 `ul ~T0 @X0 1 s lastDebounceTime ]
 [i F3617
 -> -> -> 0 `i `l `ul
 ]
-"532
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 532:     static unsigned long lastKeyPressTime = 0;
+"530
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 530:     static unsigned long lastKeyPressTime = 0;
 [v F3618 `ul ~T0 @X0 1 s lastKeyPressTime ]
 [i F3618
 -> -> -> 0 `i `l `ul
 ]
-"533
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 533:     static char lastStableKey = 0;
+"531
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 531:     static char lastStableKey = 0;
 [v F3619 `uc ~T0 @X0 1 s lastStableKey ]
 [i F3619
 -> -> 0 `i `uc
 ]
-"534
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 534:     unsigned long currentTime = millis();
+"532
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 532:     unsigned long currentTime = millis();
 [v _currentTime `ul ~T0 @X0 1 a ]
 [e = _currentTime ( _millis ..  ]
-"535
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 535:     int col, row;
+"533
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 533:     int col, row;
 [v _col `i ~T0 @X0 1 a ]
 [v _row `i ~T0 @X0 1 a ]
-"537
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 537:     for (col = 0; col < 4; col++) {
+"535
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 535:     for (col = 0; col < 4; col++) {
 {
 [e = _col -> 0 `i ]
 [e $ < _col -> 4 `i 451  ]
 [e $U 452  ]
 [e :U 451 ]
 {
-"538
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 538:         LATB = ~(1 << col);
+"536
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 536:         LATB = ~(1 << col);
 [e = _LATB -> ~ << -> 1 `i _col `uc ]
-"539
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 539:         _delay((unsigned long)((5)*(20000000/4000.0)));
+"537
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 537:         _delay((unsigned long)((5)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 5 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"541
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 541:         for (row = 0; row < 4; row++) {
+"539
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 539:         for (row = 0; row < 4; row++) {
 {
 [e = _row -> 0 `i ]
 [e $ < _row -> 4 `i 454  ]
 [e $U 455  ]
 [e :U 454 ]
 {
-"542
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 542:             if (!(PORTB & (1 << (row + 4)))) {
+"540
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 540:             if (!(PORTB & (1 << (row + 4)))) {
 [e $ ! ! != & -> _PORTB `i << -> 1 `i + _row -> 4 `i -> 0 `i 457  ]
 {
-"544
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 544:                 char pressedKey = keymap[row][InvCol[col]];
+"542
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 542:                 char pressedKey = keymap[row][InvCol[col]];
 [v _pressedKey `uc ~T0 @X0 1 a ]
 [e = _pressedKey *U + &U *U + &U _keymap * -> -> _row `ui `ux -> * -> # *U &U *U &U _keymap `ui -> -> 4 `i `ui `ux * -> -> *U + &U _InvCol * -> -> _col `ui `ux -> -> # *U &U _InvCol `ui `ux `ui `ux -> -> # *U &U *U + &U _keymap * -> -> _row `ui `ux -> * -> # *U &U *U &U _keymap `ui -> -> 4 `i `ui `ux `ui `ux ]
-"546
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 546:                 if (pressedKey != lastStableKey) {
+"544
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 544:                 if (pressedKey != lastStableKey) {
 [e $ ! != -> _pressedKey `i -> F3619 `i 458  ]
 {
-"547
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 547:                     lastDebounceTime = currentTime;
+"545
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 545:                     lastDebounceTime = currentTime;
 [e = F3617 _currentTime ]
-"548
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 548:                     lastStableKey = pressedKey;
+"546
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 546:                     lastStableKey = pressedKey;
 [e = F3619 _pressedKey ]
-"549
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 549:                 }
+"547
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 547:                 }
 }
 [e :U 458 ]
-"551
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 551:                 if ((currentTime - lastDebounceTime) > 50) {
+"549
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 549:                 if ((currentTime - lastDebounceTime) > 50) {
 [e $ ! > - _currentTime F3617 -> -> -> 50 `i `l `ul 459  ]
 {
-"552
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 552:                     if ((currentTime - lastKeyPressTime) > 300) {
+"550
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 550:                     if ((currentTime - lastKeyPressTime) > 300) {
 [e $ ! > - _currentTime F3618 -> -> -> 300 `i `l `ul 460  ]
 {
-"553
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 553:                         lastKeyPressTime = currentTime;
+"551
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 551:                         lastKeyPressTime = currentTime;
 [e = F3618 _currentTime ]
-"554
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 554:                         keyState.currentKey = pressedKey;
+"552
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 552:                         keyState.currentKey = pressedKey;
 [e = . _keyState 1 _pressedKey ]
-"555
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 555:                         keyState.lastKey = pressedKey;
+"553
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 553:                         keyState.lastKey = pressedKey;
 [e = . _keyState 0 _pressedKey ]
-"556
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 556:                         return pressedKey;
+"554
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 554:                         return pressedKey;
 [e ) _pressedKey ]
 [e $UE 450  ]
-"557
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 557:                     }
+"555
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 555:                     }
 }
 [e :U 460 ]
-"558
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 558:                 }
+"556
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 556:                 }
 }
 [e :U 459 ]
-"559
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 559:                 return 0;
+"557
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 557:                 return 0;
 [e ) -> -> 0 `i `uc ]
 [e $UE 450  ]
-"560
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 560:             }
+"558
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 558:             }
 }
 [e :U 457 ]
-"561
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 561:         }
+"559
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 559:         }
 }
 [e ++ _row -> 1 `i ]
 [e $ < _row -> 4 `i 454  ]
 [e :U 455 ]
 }
-"562
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 562:     }
+"560
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 560:     }
 }
 [e ++ _col -> 1 `i ]
 [e $ < _col -> 4 `i 451  ]
 [e :U 452 ]
 }
-"564
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 564:     keyState.lastKey = 0;
+"562
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 562:     keyState.lastKey = 0;
 [e = . _keyState 0 -> -> 0 `i `uc ]
-"565
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 565:     lastStableKey = 0;
+"563
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 563:     lastStableKey = 0;
 [e = F3619 -> -> 0 `i `uc ]
-"566
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 566:     return 0;
+"564
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 564:     return 0;
 [e ) -> -> 0 `i `uc ]
 [e $UE 450  ]
-"567
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 567: }
+"565
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 565: }
 [e :UE 450 ]
 }
-"570
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 570: void configureADC(void) {
+"568
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 568: void configureADC(void) {
 [v _configureADC `(v ~T0 @X0 1 ef ]
 {
 [e :U _configureADC ]
 [f ]
-"571
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 571:     ADCON1 = 0b00001011;
+"569
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 569:     ADCON1 = 0b00001011;
 [e = _ADCON1 -> -> 11 `i `uc ]
-"574
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 574:     ADCON2 = 0b10010101;
+"572
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 572:     ADCON2 = 0b10010101;
 [e = _ADCON2 -> -> 149 `i `uc ]
-"579
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 579:     ADCON0bits.ADON = 1;
+"577
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 577:     ADCON0bits.ADON = 1;
 [e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
-"580
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 580: }
+"578
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 578: }
 [e :UE 461 ]
 }
-"583
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 583: unsigned int readAnalog(unsigned char pin) {
+"581
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 581: unsigned int readAnalog(unsigned char pin) {
 [v _readAnalog `(ui ~T0 @X0 1 ef1`uc ]
 {
 [e :U _readAnalog ]
 [v _pin `uc ~T0 @X0 1 r1 ]
 [f ]
-"584
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 584:     unsigned int result = 0;
+"582
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 582:     unsigned int result = 0;
 [v _result `ui ~T0 @X0 1 a ]
 [e = _result -> -> 0 `i `ui ]
-"585
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 585:     if (pin > 12) {
+"583
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 583:     if (pin > 12) {
 [e $ ! > -> _pin `i -> 12 `i 463  ]
 {
-"586
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 586:         return 0;
+"584
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 584:         return 0;
 [e ) -> -> 0 `i `ui ]
 [e $UE 462  ]
-"587
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 587:     }
+"585
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 585:     }
 }
 [e :U 463 ]
-"589
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 589:     ADCON0bits.CHS = pin;
+"587
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 587:     ADCON0bits.CHS = pin;
 [e = . . _ADCON0bits 1 2 _pin ]
-"590
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 590:     _delay((unsigned long)((2)*(20000000/4000.0)));
+"588
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 588:     _delay((unsigned long)((2)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 2 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
-"591
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 591:     ADCON0bits.GO_DONE = 1;
+"589
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 589:     ADCON0bits.GO_DONE = 1;
 [e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
-"593
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 593:     while (ADCON0bits.GO_DONE);
+"591
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 591:     while (ADCON0bits.GO_DONE);
 [e $U 464  ]
 [e :U 465 ]
 [e :U 464 ]
 [e $ != -> . . _ADCON0bits 2 1 `i -> 0 `i 465  ]
 [e :U 466 ]
-"595
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 595:     result = (ADRESH << 8) | ADRESL;
+"593
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 593:     result = (ADRESH << 8) | ADRESL;
 [e = _result -> | << -> _ADRESH `i -> 8 `i -> _ADRESL `i `ui ]
-"596
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 596:     return result;
+"594
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 594:     return result;
 [e ) _result ]
 [e $UE 462  ]
-"597
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 597: }
+"595
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 595: }
 [e :UE 462 ]
 }
-"600
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 600: float tempRead(void) {
+"598
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 598: float tempRead(void) {
 [v _tempRead `(f ~T0 @X0 1 ef ]
 {
 [e :U _tempRead ]
 [f ]
-"601
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 601:     unsigned int rawAnalog = readAnalog(0);
+"599
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 599:     unsigned int rawAnalog = readAnalog(0);
 [v _rawAnalog `ui ~T0 @X0 1 a ]
 [e = _rawAnalog ( _readAnalog (1 -> -> 0 `i `uc ]
-"602
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 602:     float TempC = ((rawAnalog * 5.0) / 1023.0) / 0.01;
+"600
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 600:     float TempC = ((rawAnalog * 5.0) / 1023.0) / 0.01;
 [v _TempC `f ~T0 @X0 1 a ]
 [e = _TempC -> / / * -> _rawAnalog `d .5.0 .1023.0 .0.01 `f ]
-"604
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 604:     return TempC;
+"602
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 602:     return TempC;
 [e ) _TempC ]
 [e $UE 467  ]
-"605
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 605: }
+"603
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 603: }
 [e :UE 467 ]
 }
-"608
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 608: float humidade(void) {
+"606
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 606: float humidade(void) {
 [v _humidade `(f ~T0 @X0 1 ef ]
 {
 [e :U _humidade ]
 [f ]
-"609
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 609:     unsigned int rawAnalog = readAnalog(3);
+"607
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 607:     unsigned int rawAnalog = readAnalog(3);
 [v _rawAnalog `ui ~T0 @X0 1 a ]
 [e = _rawAnalog ( _readAnalog (1 -> -> 3 `i `uc ]
-"610
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 610:     float Humid = ((rawAnalog * 5.0) / 1023.0) * 20;
+"608
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 608:     float Humid = ((rawAnalog * 5.0) / 1023.0) * 20;
 [v _Humid `f ~T0 @X0 1 a ]
 [e = _Humid -> * / * -> _rawAnalog `d .5.0 .1023.0 -> -> 20 `i `d `f ]
-"613
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 613:     return Humid;
+"611
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 611:     return Humid;
 [e ) _Humid ]
 [e $UE 468  ]
-"614
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 614: }
+"612
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 612: }
 [e :UE 468 ]
 }
-"617
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 617: float gasRead(void) {
+"615
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 615: float gasRead(void) {
 [v _gasRead `(f ~T0 @X0 1 ef ]
 {
 [e :U _gasRead ]
 [f ]
-"618
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 618:     unsigned int rawAnalog = readAnalog(2);
+"616
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 616:     unsigned int rawAnalog = readAnalog(2);
 [v _rawAnalog `ui ~T0 @X0 1 a ]
 [e = _rawAnalog ( _readAnalog (1 -> -> 2 `i `uc ]
-"619
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 619:     float gas = ((rawAnalog * 5.0) / 1023.0) * 20;
+"617
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 617:     float gas = ((rawAnalog * 5.0) / 1023.0) * 20;
 [v _gas `f ~T0 @X0 1 a ]
 [e = _gas -> * / * -> _rawAnalog `d .5.0 .1023.0 -> -> 20 `i `d `f ]
-"621
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 621:     return gas;
+"619
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 619:     return gas;
 [e ) _gas ]
 [e $UE 469  ]
-"622
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 622: }
+"620
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 620: }
 [e :UE 469 ]
 }
-"625
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 625: void displayStuff(int row, int column, char *stuff) {
+"623
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 623: void displayStuff(int row, int column, char *stuff) {
 [v _displayStuff `(v ~T0 @X0 1 ef3`i`i`*uc ]
 {
 [e :U _displayStuff ]
@@ -2401,217 +2389,217 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _column `i ~T0 @X0 1 r2 ]
 [v _stuff `*uc ~T0 @X0 1 r3 ]
 [f ]
-"626
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 626:     int LCDWritePosition = (row == 0 ? 0x80 : 0xC0) + column;
+"624
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 624:     int LCDWritePosition = (row == 0 ? 0x80 : 0xC0) + column;
 [v _LCDWritePosition `i ~T0 @X0 1 a ]
 [e = _LCDWritePosition + ? == _row -> 0 `i : -> 128 `i -> 192 `i _column ]
-"629
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 629:     WriteCmdXLCD(LCDWritePosition);
+"627
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 627:     WriteCmdXLCD(LCDWritePosition);
 [e ( _WriteCmdXLCD (1 -> _LCDWritePosition `uc ]
-"630
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 630:     while (*stuff) {
+"628
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 628:     while (*stuff) {
 [e $U 471  ]
 [e :U 472 ]
 {
-"631
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 631:         WriteDataXLCD(*stuff);
+"629
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 629:         WriteDataXLCD(*stuff);
 [e ( _WriteDataXLCD (1 *U _stuff ]
-"632
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 632:         stuff++;
+"630
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 630:         stuff++;
 [e ++ _stuff * -> -> 1 `i `x -> -> # *U _stuff `i `x ]
-"633
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 633:     }
+"631
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 631:     }
 }
 [e :U 471 ]
-"630
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 630:     while (*stuff) {
+"628
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 628:     while (*stuff) {
 [e $ != -> *U _stuff `i -> 0 `i 472  ]
 [e :U 473 ]
-"634
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 634: }
+"632
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 632: }
 [e :UE 470 ]
 }
-"637
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 637: void setCoolerSpeed(int PWMset) {
+"635
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 635: void setCoolerSpeed(int PWMset) {
 [v _setCoolerSpeed `(v ~T0 @X0 1 ef1`i ]
 {
 [e :U _setCoolerSpeed ]
 [v _PWMset `i ~T0 @X0 1 r1 ]
 [f ]
-"640
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 640: }
+"638
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 638: }
 [e :UE 474 ]
 }
-"643
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 643: void setMoist(int moistSet) {
+"641
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 641: void setMoist(int moistSet) {
 [v _setMoist `(v ~T0 @X0 1 ef1`i ]
 {
 [e :U _setMoist ]
 [v _moistSet `i ~T0 @X0 1 r1 ]
 [f ]
-"644
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 644:     if (moistSet == 1) {
+"642
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 642:     if (moistSet == 1) {
 [e $ ! == _moistSet -> 1 `i 476  ]
 {
-"646
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 646:     } else {
+"644
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 644:     } else {
 }
 [e $U 477  ]
 [e :U 476 ]
 {
-"648
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 648:     }
+"646
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 646:     }
 }
 [e :U 477 ]
-"649
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 649: }
+"647
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 647: }
 [e :UE 475 ]
 }
-"652
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 652: void buzzer(int buzzerStatus) {
+"650
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 650: void buzzer(int buzzerStatus) {
 [v _buzzer `(v ~T0 @X0 1 ef1`i ]
 {
 [e :U _buzzer ]
 [v _buzzerStatus `i ~T0 @X0 1 r1 ]
 [f ]
-"653
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 653:     if (buzzerStatus == 1) {
+"651
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 651:     if (buzzerStatus == 1) {
 [e $ ! == _buzzerStatus -> 1 `i 479  ]
 {
-"655
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 655:     } else {
+"653
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 653:     } else {
 }
 [e $U 480  ]
 [e :U 479 ]
 {
-"657
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 657:     }
+"655
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 655:     }
 }
 [e :U 480 ]
-"658
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 658: }
+"656
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 656: }
 [e :UE 478 ]
 }
-"661
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 661: int itoa(int value, char *ptr) {
+"659
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 659: int itoa(int value, char *ptr) {
 [v _itoa `(i ~T0 @X0 1 ef2`i`*uc ]
 {
 [e :U _itoa ]
 [v _value `i ~T0 @X0 1 r1 ]
 [v _ptr `*uc ~T0 @X0 1 r2 ]
 [f ]
-"662
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 662:     int count = 0, temp;
+"660
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 660:     int count = 0, temp;
 [v _count `i ~T0 @X0 1 a ]
 [e = _count -> 0 `i ]
 [v _temp `i ~T0 @X0 1 a ]
-"663
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 663:     char *start = ptr;
+"661
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 661:     char *start = ptr;
 [v _start `*uc ~T0 @X0 1 a ]
 [e = _start _ptr ]
-"665
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 665:     if (ptr == ((void*)0))
+"663
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 663:     if (ptr == ((void*)0))
 [e $ ! == _ptr -> -> -> 0 `i `*v `*uc 482  ]
-"666
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 666:         return 0;
+"664
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 664:         return 0;
 [e ) -> 0 `i ]
 [e $UE 481  ]
 [e :U 482 ]
-"668
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 668:     if (value == 0) {
+"666
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 666:     if (value == 0) {
 [e $ ! == _value -> 0 `i 483  ]
 {
-"669
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 669:         *ptr = '0';
+"667
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 667:         *ptr = '0';
 [e = *U _ptr -> -> 48 `ui `uc ]
-"670
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 670:         ptr[1] = '\0';
+"668
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 668:         ptr[1] = '\0';
 [e = *U + _ptr * -> -> 1 `i `x -> -> # *U _ptr `i `x -> -> 0 `ui `uc ]
-"671
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 671:         return 1;
+"669
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 669:         return 1;
 [e ) -> 1 `i ]
 [e $UE 481  ]
-"672
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 672:     }
+"670
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 670:     }
 }
 [e :U 483 ]
-"674
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 674:     if (value < 0) {
+"672
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 672:     if (value < 0) {
 [e $ ! < _value -> 0 `i 484  ]
 {
-"675
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 675:         value = -value;
+"673
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 673:         value = -value;
 [e = _value -U _value ]
-"676
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 676:         *ptr++ = '-';
+"674
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 674:         *ptr++ = '-';
 [e = *U ++ _ptr * -> -> 1 `i `x -> -> # *U _ptr `i `x -> -> 45 `ui `uc ]
-"677
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 677:         count++;
+"675
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 675:         count++;
 [e ++ _count -> 1 `i ]
-"678
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 678:         start = ptr;
+"676
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 676:         start = ptr;
 [e = _start _ptr ]
-"679
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 679:     }
+"677
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 677:     }
 }
 [e :U 484 ]
-"681
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 681:     temp = value;
+"679
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 679:     temp = value;
 [e = _temp _value ]
-"682
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 682:     while (temp > 0) {
+"680
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 680:     while (temp > 0) {
 [e $U 485  ]
 [e :U 486 ]
 {
-"683
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 683:         temp /= 10;
+"681
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 681:         temp /= 10;
 [e =/ _temp -> 10 `i ]
-"684
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 684:         count++;
+"682
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 682:         count++;
 [e ++ _count -> 1 `i ]
-"685
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 685:     }
+"683
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 683:     }
 }
 [e :U 485 ]
-"682
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 682:     while (temp > 0) {
+"680
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 680:     while (temp > 0) {
 [e $ > _temp -> 0 `i 486  ]
 [e :U 487 ]
-"687
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 687:     ptr[count] = '\0';
+"685
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 685:     ptr[count] = '\0';
 [e = *U + _ptr * -> _count `x -> -> # *U _ptr `i `x -> -> 0 `ui `uc ]
-"689
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 689:     temp = value;
+"687
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 687:     temp = value;
 [e = _temp _value ]
-"690
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 690:     while (temp > 0) {
+"688
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 688:     while (temp > 0) {
 [e $U 488  ]
 [e :U 489 ]
 {
-"691
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 691:         ptr[--count] = temp % 10 + '0';
+"689
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 689:         ptr[--count] = temp % 10 + '0';
 [e = *U + _ptr * -> =- _count -> 1 `i `x -> -> # *U _ptr `i `x -> + -> % _temp -> 10 `i `ui -> 48 `ui `uc ]
-"692
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 692:         temp /= 10;
+"690
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 690:         temp /= 10;
 [e =/ _temp -> 10 `i ]
-"693
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 693:     }
+"691
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 691:     }
 }
 [e :U 488 ]
-"690
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 690:     while (temp > 0) {
+"688
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 688:     while (temp > 0) {
 [e $ > _temp -> 0 `i 489  ]
 [e :U 490 ]
-"695
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 695:     return count + (start != ptr);
+"693
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 693:     return count + (start != ptr);
 [e ) + _count -> != _start _ptr `i ]
 [e $UE 481  ]
-"696
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 696: }
+"694
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 694: }
 [e :UE 481 ]
 }
-"699
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 699: void floatToString(float value, char *buffer, int precision) {
+"697
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 697: void floatToString(float value, char *buffer, int precision) {
 [v _floatToString `(v ~T0 @X0 1 ef3`f`*uc`i ]
 {
 [e :U _floatToString ]
@@ -2619,133 +2607,133 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _buffer `*uc ~T0 @X0 1 r2 ]
 [v _precision `i ~T0 @X0 1 r3 ]
 [f ]
-"700
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 700:     int intPart;
+"698
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 698:     int intPart;
 [v _intPart `i ~T0 @X0 1 a ]
-"701
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 701:     int i, index = 0;
+"699
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 699:     int i, index = 0;
 [v _i `i ~T0 @X0 1 a ]
 [v _index `i ~T0 @X0 1 a ]
 [e = _index -> 0 `i ]
-"702
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 702:     char intStr[12];
+"700
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 700:     char intStr[12];
 [v _intStr `uc ~T0 @X0 -> 12 `i a ]
-"704
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 704:     if (value < 0) {
+"702
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 702:     if (value < 0) {
 [e $ ! < _value -> -> 0 `i `f 492  ]
 {
-"705
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 705:         *buffer++ = '-';
+"703
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 703:         *buffer++ = '-';
 [e = *U ++ _buffer * -> -> 1 `i `x -> -> # *U _buffer `i `x -> -> 45 `ui `uc ]
-"706
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 706:         value = -value;
+"704
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 704:         value = -value;
 [e = _value -U _value ]
-"707
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 707:     }
+"705
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 705:     }
 }
 [e :U 492 ]
-"709
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 709:     intPart = (int)value;
+"707
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 707:     intPart = (int)value;
 [e = _intPart -> _value `i ]
-"710
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 710:     value -= intPart;
+"708
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 708:     value -= intPart;
 [e =- _value -> _intPart `f ]
-"712
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 712:     if(intPart == 0) {
+"710
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 710:     if(intPart == 0) {
 [e $ ! == _intPart -> 0 `i 493  ]
 {
-"713
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 713:         intStr[index++] = '0';
+"711
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 711:         intStr[index++] = '0';
 [e = *U + &U _intStr * -> -> ++ _index -> 1 `i `ui `ux -> -> # *U &U _intStr `ui `ux -> -> 48 `ui `uc ]
-"714
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 714:     } else {
+"712
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 712:     } else {
 }
 [e $U 494  ]
 [e :U 493 ]
 {
-"715
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 715:         int temp = intPart;
+"713
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 713:         int temp = intPart;
 [v _temp `i ~T0 @X0 1 a ]
 [e = _temp _intPart ]
-"716
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 716:         index = 0;
+"714
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 714:         index = 0;
 [e = _index -> 0 `i ]
-"717
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 717:         do {
+"715
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 715:         do {
 [e :U 497 ]
 {
-"718
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 718:             intStr[index++] = (temp % 10) + '0';
+"716
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 716:             intStr[index++] = (temp % 10) + '0';
 [e = *U + &U _intStr * -> -> ++ _index -> 1 `i `ui `ux -> -> # *U &U _intStr `ui `ux -> + -> % _temp -> 10 `i `ui -> 48 `ui `uc ]
-"719
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 719:             temp /= 10;
+"717
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 717:             temp /= 10;
 [e =/ _temp -> 10 `i ]
-"720
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 720:         } while (temp > 0);
+"718
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 718:         } while (temp > 0);
 }
 [e $ > _temp -> 0 `i 497  ]
 [e :U 496 ]
-"721
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 721:     }
+"719
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 719:     }
 }
 [e :U 494 ]
-"723
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 723:     for (i = 0; i < index; i++) {
+"721
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 721:     for (i = 0; i < index; i++) {
 {
 [e = _i -> 0 `i ]
 [e $U 501  ]
 [e :U 498 ]
 {
-"724
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 724:         buffer[i] = intStr[index - i - 1];
+"722
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 722:         buffer[i] = intStr[index - i - 1];
 [e = *U + _buffer * -> _i `x -> -> # *U _buffer `i `x *U + &U _intStr * -> -> - - _index _i -> 1 `i `ui `ux -> -> # *U &U _intStr `ui `ux ]
-"725
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 725:     }
+"723
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 723:     }
 }
 [e ++ _i -> 1 `i ]
 [e :U 501 ]
 [e $ < _i _index 498  ]
 [e :U 499 ]
 }
-"726
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 726:     buffer += index;
+"724
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 724:     buffer += index;
 [e =+ _buffer * -> _index `x -> -> # *U _buffer `i `x ]
-"728
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 728:     *buffer++ = '.';
+"726
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 726:     *buffer++ = '.';
 [e = *U ++ _buffer * -> -> 1 `i `x -> -> # *U _buffer `i `x -> -> 46 `ui `uc ]
-"730
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 730:     for (i = 0; i < precision; i++) {
+"728
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 728:     for (i = 0; i < precision; i++) {
 {
 [e = _i -> 0 `i ]
 [e $U 505  ]
 [e :U 502 ]
 {
-"731
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 731:         value *= 10;
+"729
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 729:         value *= 10;
 [e =* _value -> -> 10 `i `f ]
-"732
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 732:         int digit = (int)value;
+"730
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 730:         int digit = (int)value;
 [v _digit `i ~T0 @X0 1 a ]
 [e = _digit -> _value `i ]
-"733
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 733:         *buffer++ = digit + '0';
+"731
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 731:         *buffer++ = digit + '0';
 [e = *U ++ _buffer * -> -> 1 `i `x -> -> # *U _buffer `i `x -> + -> _digit `ui -> 48 `ui `uc ]
-"734
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 734:         value -= digit;
+"732
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 732:         value -= digit;
 [e =- _value -> _digit `f ]
-"735
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 735:     }
+"733
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 733:     }
 }
 [e ++ _i -> 1 `i ]
 [e :U 505 ]
 [e $ < _i _precision 502  ]
 [e :U 503 ]
 }
-"737
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 737:     *buffer = '\0';
+"735
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 735:     *buffer = '\0';
 [e = *U _buffer -> -> 0 `ui `uc ]
-"738
-[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 738: }
+"736
+[; ;C:\Users\JeeJ\MPLABXProjects\ProjetoF_micro.X\main.c: 736: }
 [e :UE 491 ]
 }
 [a 17C 76 101 105 116 117 114 97 115 0 ]

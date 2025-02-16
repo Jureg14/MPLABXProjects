@@ -248,12 +248,12 @@ void main(void) {
         } else if (currentTemp < Tlim - 10) { // Se a temperatura estiver abaixo do limite (com margem de 2 graus)
             PORTDbits.RD0 = 0;    // Desligar o LED de alarme de temperatura
             PORTCbits.RC2 = 0;    // Desligar o cooler
-            PORTCbits.RC1 = 1;    // Ligar o aquecedor
+            //PORTCbits.RC1 = 1;    // Ligar o aquecedor
 
         } else {
             PORTDbits.RD0 = 0;    // Desligar o LED de alarme de temperatura
             PORTCbits.RC2 = 0;    // Desligar o cooler
-            PORTCbits.RC1 = 0;   // Desligar o aquecedor
+            //PORTCbits.RC1 = 0;   // Desligar o aquecedor
         }
 
         if (currentHumid > Hlim) { // Se a umidade estiver acima do limite
@@ -267,11 +267,9 @@ void main(void) {
         if (currentGas > Glim) {   // Se a concentração de gás estiver acima do limite
             PORTDbits.RD2 = 1;    // Ligar o LED de alarme de gás (RD2)
             setCoolerSpeed(255); // Exemplo: Definir o cooler para velocidade máxima como exaustor (a função setCoolerSpeed precisa de implementação PWM)
-            PORTCbits.RC2 = 1;    // Ligar o exaustor
         } else {
             PORTDbits.RD2 = 0;    // Desligar o LED de alarme de gás
             setCoolerSpeed(0);   // Definir a velocidade do cooler para 0 quando o gás estiver dentro do limite
-            PORTCbits.RC2 = 0;   // Desligar o exaustor
         }
 
         lastKey = pressed_key;      // Atualizar a última tecla pressionada para a próxima iteração para detectar eventos de tecla pressionada

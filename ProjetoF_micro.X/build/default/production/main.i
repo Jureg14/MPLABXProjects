@@ -6127,12 +6127,12 @@ void main(void) {
         } else if (currentTemp < Tlim - 10) {
             PORTDbits.RD0 = 0;
             PORTCbits.RC2 = 0;
-            PORTCbits.RC1 = 1;
+
 
         } else {
             PORTDbits.RD0 = 0;
             PORTCbits.RC2 = 0;
-            PORTCbits.RC1 = 0;
+
         }
 
         if (currentHumid > Hlim) {
@@ -6146,11 +6146,9 @@ void main(void) {
         if (currentGas > Glim) {
             PORTDbits.RD2 = 1;
             setCoolerSpeed(255);
-            PORTCbits.RC2 = 1;
         } else {
             PORTDbits.RD2 = 0;
             setCoolerSpeed(0);
-            PORTCbits.RC2 = 0;
         }
 
         lastKey = pressed_key;
