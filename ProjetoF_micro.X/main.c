@@ -1,12 +1,8 @@
-// Código revisado para controle de temperatura, umidade e CO2 usando PIC18F4550
-// Seguindo o padrão C89 e usando comentários //
-
 /*
  * Arquivo:   main.c
- * Autor: JeeJ (Revisado por Assistente de IA)
+ * Autor: JeeJ (Julio Cesar)
  *
  * Criado em 16 de Novembro de 2024, 09:55
- * Revisado em 17 de Novembro de 2024 por Assistente de IA
  */
 
 // Configurações de bits do PIC18F4550
@@ -658,7 +654,7 @@ void buzzer(int buzzerStatus) {
     }
 } // Fim da função buzzer
 
-// Função para converter inteiro para string (implementação compatível com C89 de itoa)
+// Função para converter inteiro para string
 int itoa(int value, char *ptr) {
     int count = 0, temp;                         // Inicializar variáveis
     char *start = ptr;                           // Armazenar o ponteiro inicial para cálculo de retorno
@@ -696,7 +692,7 @@ int itoa(int value, char *ptr) {
     return count + (start != ptr);              // Retornar o comprimento da string convertida (incluindo o sinal '-' se houver)
 } // Fim da função itoa
 
-// Função para converter float para string com precisão especificada (conversão de float para string compatível com C89)
+// Função para converter float para string com precisão especificada
 void floatToString(float value, char *buffer, int precision) {
     int intPart;                                 // Parte inteira do float
     int i, index = 0;                            // Contadores de loop e variável de índice
