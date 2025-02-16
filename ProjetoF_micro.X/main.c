@@ -106,14 +106,16 @@ int Hlim = 50;                              // Limite padrão de umidade
 int Glim = 20;                              // Limite padrão de gás
 
 // Protótipos de funções
-char readKey(void);
-unsigned int readAnalog(unsigned char pin);
-void displayStuff(int row, int column, char *stuff);
-void configureIO(void);
-void configureADC(void);
-void configureLCD(void);
+    // --- Funções que agrupam certas configurções para facilitar a leitura do codigo ---
+void configureIO(void); //Agrupa quase todas as configurações de pinos de IO
+void configureADC(void); // Configuração do conversor analógico-digital
+void configureLCD(void); 
 void configureInterrupt(void);
 void configureTimer(void);
+    // --- Funções de funcionalidades ---
+char readKey(void);
+unsigned int readAnalog(unsigned char pin); // Função para ler valores analógicos do pino especificado
+void displayStuff(int row, int column, char *stuff); // Função para simplificar o uso do LCD
 unsigned long millis(void);
 int readTwoDigitValue(char* prompt);
 void displayMenu(int menuIndex);
@@ -126,6 +128,7 @@ void setCoolerSpeed(int PWMset); // Função de controle PWM para o cooler (não
 void setMoist(int moistSet);     // Função para controlar o umidificador (não implementada)
 void buzzer(int buzzerStatus);     // Função para controlar o buzzer (não implementada)
 void ISR(void);                 // Protótipo da rotina de serviço de interrupção
+
 
 // Função principal - ponto de entrada do programa
 void main(void) {
@@ -248,12 +251,12 @@ void main(void) {
         } else if (currentTemp < Tlim - 10) { // Se a temperatura estiver abaixo do limite (com margem de 2 graus)
             PORTDbits.RD0 = 0;    // Desligar o LED de alarme de temperatura
             PORTCbits.RC2 = 0;    // Desligar o cooler
-            //PORTCbits.RC1 = 1;    // Ligar o aquecedor
+            //PORTCbits.RC1 = 1;    // Ligar o aquecedor (desabilitado por simplicidade)
 
         } else {
             PORTDbits.RD0 = 0;    // Desligar o LED de alarme de temperatura
             PORTCbits.RC2 = 0;    // Desligar o cooler
-            //PORTCbits.RC1 = 0;   // Desligar o aquecedor
+            //PORTCbits.RC1 = 0;   // Desligar o aquecedor  (desabilitado por simplicidade)
         }
 
         if (currentHumid > Hlim) { // Se a umidade estiver acima do limite
